@@ -1,0 +1,11 @@
+// ---------------------------------------------------------------
+//  middle-line
+//
+// > usage
+// > @include middle-line(40);
+//
+// ---------------------------------------------------------------
+@mixin middle-line($height){
+    height: $height + px;
+    line-height: $height + px;
+}

@@ -1,0 +1,31 @@
+// ---------------------------------------------------------------
+//  position
+//
+// > usage
+// > @include absolute-top-left(20px, 30px);
+//
+// ---------------------------------------------------------------
+
+@mixin absolute-top-left($top: 0, $left: 0) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
+
+@mixin absolute-top-right($top: 0, $right: 0) {
+  position: absolute;
+  top: $top;
+  right: $right;
+}
+
+@mixin absolute-bottom-left($bottom: 0, $left: 0) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute-bottom-right($bottom: 0, $right: 0) {
+  position: absolute;
+  bottom: $bottom;
+  right: $right;
+}

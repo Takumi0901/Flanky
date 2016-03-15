@@ -1,0 +1,118 @@
+// ---------------------------------------------------------------
+//	Base-Size
+// ---------------------------------------------------------------
+$base-size: 										8;
+$max-width:											1200px;
+$breakpoint:										768px;
+
+
+// ---------------------------------------------------------------
+//	Font
+// ---------------------------------------------------------------
+$font-family-base: 							Arial,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
+$font-size-base: 								14px;
+
+
+// ---------------------------------------------------------------
+//	Line-hieght
+// ---------------------------------------------------------------
+$line-height-base: 							1.4;
+
+// ---------------------------------------------------------------
+//	Base-color
+// ---------------------------------------------------------------
+$base-color: 										#f1f1f1;
+$base-color-white: 							#fff;
+$base-color-text: 							#515151;
+$base-alert:										#f73b6a;
+$base-success:									#3c763d;
+
+$base-color-gray-darken-8: 			darken($base-color, 8%);
+$base-color-gray-darken-10: 		darken($base-color, 10%);
+$base-color-gray-darken-20: 		darken($base-color, 20%);
+$base-color-gray-darken-30: 		darken($base-color, 30%);
+$base-color-gray-darken-40: 		darken($base-color, 40%);
+$base-color-gray-darken-50: 		darken($base-color, 50%);
+$base-color-gray-darken-60: 		darken($base-color, 60%);
+$base-color-gray-darken-70: 		darken($base-color, 70%);
+$base-color-gray-darken-80: 		darken($base-color, 80%);
+$base-color-gray-darken-90: 		darken($base-color, 90%);
+
+
+// ---------------------------------------------------------------
+//	Content-color
+// ---------------------------------------------------------------
+$default-color: 								$base-color-gray-darken-10;
+$primary-color: 								#4bd5f2;
+$secondary-color: 							#2dd885;
+$highlight-color: 							#f24b4b;
+
+
+// ---------------------------------------------------------------
+//	Card
+// ---------------------------------------------------------------
+$card-color:										$base-color-white;
+
+
+// ---------------------------------------------------------------
+//	Text-color
+// ---------------------------------------------------------------
+$text-color-white: 							$base-color-white;
+$text-color-lighten:						$base-color-gray-darken-20;
+$text-color-link-hover:					$base-color-gray-darken-30;
+
+$text-color-primary:						$primary-color;
+$text-color-secondary:					$secondary-color;
+$text-color-highlight:					$highlight-color;
+$text-color-alert:							$base-alert;
+$text-color-success:						$base-success;
+
+
+// ---------------------------------------------------------------
+//	Background-color
+// ---------------------------------------------------------------
+$bg-white: 											$base-color-white;
+$bg-default: 										$base-color-gray-darken-8;
+$bg-primary:										$primary-color;
+$bg-secondary:									$secondary-color;
+$bg-highlight:									$highlight-color;
+$bg-alert:											$base-alert;
+$bg-alert-b:										lighten($base-alert, 35%);
+$bg-success:										lighten($base-success, 45%);
+
+
+
+// ---------------------------------------------------------------
+//	Border-color
+// ---------------------------------------------------------------
+$border-white: 									$base-color-white;
+$border-default: 								$base-color-gray-darken-30;
+$border-dark: 									$base-color-gray-darken-70;
+$border-lighten: 								$base-color-gray-darken-8;
+
+$border-primary:								$primary-color;
+$border-secondary:							$secondary-color;
+$border-highlight:							$highlight-color;
+$border-alert:									lighten($base-alert, 30%);
+$border-success:								lighten($base-success, 30%);
+
+
+
+// ---------------------------------------------------------------
+//	Hero
+// ---------------------------------------------------------------
+$hero-color-a:									$primary-color;
+$hero-color-b:									$secondary-color;
+
+
+
+// ---------------------------------------------------------------
+//	Margin
+// ---------------------------------------------------------------
+$margin-base:										$base-size + px;
+$margin-small:									$base-size / 2 + px;
+$margin-large:									$base-size * 2 + px;
+$margin-large-x:								$base-size * 3 + px;
+$margin-large-xx:								$base-size * 4 + px;
+$margin-large-xxx:							$base-size * 5 + px;
+$margin-large-xxxx:							$base-size * 6 + px;

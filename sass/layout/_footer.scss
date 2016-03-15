@@ -1,0 +1,21 @@
+/* footer
+--------------------------------------------------------- */
+.l-footer{
+	background: url('../img/common/footer-bg.png') no-repeat right bottom;
+	background-size: 320px 52px;
+	
+	&__inner{
+		margin:0 $margin-large-base 0;
+		padding:$margin-large-base 0 $margin-large-base;
+	}
+
+	&__content{
+		border-top: solid 1px $border-color-gray;
+		// color: $text-color-white;
+		text-align: center;
+		padding-top: $margin-base;
+		margin: $margin-base -12px 0;
+		font-size: 10px;
+	}
+
+}
