@@ -1,0 +1,114 @@
+/*
+# menu
+
+```
+<div class="c-container">
+    <ul class="c-menu">
+        <li class="c-menu__item">
+            <a href="#">
+                メニュー1
+                <i class="c-menu__item__icon fa fa-angle-right"></i>
+            </a>
+        </li>
+        <li class="c-menu__item">
+            <a href="#">
+                メニュー2
+                <i class="c-menu__item__icon fa fa-angle-right"></i>
+            </a>
+        </li>
+        <li class="c-menu__item">
+            <a href="#">
+                メニュー3
+                <i class="c-menu__item__icon fa fa-angle-right"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="c-container">
+    <ul class="c-menu c-menu--border">
+        <li class="c-menu__item">
+            <a href="#">
+                メニュー1
+                <i class="c-menu__item__icon fa fa-angle-right"></i>
+            </a>
+        </li>
+        <li class="c-menu__item">
+            <a href="#">
+                メニュー2
+                <i class="c-menu__item__icon fa fa-angle-right"></i>
+            </a>
+        </li>
+        <li class="c-menu__item">
+            <a href="#">
+                メニュー3
+                <i class="c-menu__item__icon fa fa-angle-right"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="c-container">
+    <div class="c-card c-card--full">
+        <ul class="c-menu">
+            <li class="c-menu__item">
+                <a href="#">
+                    メニュー1
+                    <i class="c-menu__item__icon fa fa-angle-right"></i>
+                </a>
+            </li>
+            <li class="c-menu__item">
+                <a href="#">
+                    メニュー2
+                    <i class="c-menu__item__icon fa fa-angle-right"></i>
+                </a>
+            </li>
+            <li class="c-menu__item">
+                <a href="#">
+                    メニュー3
+                    <i class="c-menu__item__icon fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+```
+
+ */
+.c-menu{
+	list-style: none;
+}
+
+.c-menu--border{
+	border-top: solid 1px $border-lighten;
+	
+	.c-menu__item:last-child{
+		border-bottom: solid 1px $border-lighten;	
+	}
+}
+
+.c-menu__item{
+	border-bottom: solid 1px $border-lighten;
+	position: relative;
+	padding: $margin-small;
+	
+	&:last-child{
+		border: 0;
+	}
+
+	a{
+		display: block;
+		padding: $margin-base $margin-large-xx $margin-base $margin-base;
+		text-decoration: none;
+		
+		&:hover{
+			background: $bg-default;
+		}
+	}
+}
+
+.c-menu__item__icon{
+	position: absolute;
+	right: $margin-large;
+	top: 50%;
+	margin-top: -8px;
+	color: $text-color-lighten;
+}

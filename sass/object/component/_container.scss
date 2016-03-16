@@ -1,0 +1,25 @@
+/* 
+# container
+
+```
+<div class="c-container">
+    コンテンツ
+</div>
+```
+*/
+
+.c-container{
+	margin:0 $margin-large $margin-large-x;
+}
+
+.c-container--small{
+	margin:0 $margin-large-x $margin-large-x;
+}
+
+.c-container--x-small{
+	margin:0 $margin-large-xx $margin-large-x;
+}
+
+.c-container--full{
+	margin: 0 0 $margin-large-x;
+}

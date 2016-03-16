@@ -1,0 +1,15 @@
+/* header
+--------------------------------------------------------- */
+.l-header{
+	background: url('../img/common/head.jpg') repeat-x !important;
+	@include middle-line(44);
+}
+
+.l-header__home{
+	@include absolute-top-left(50%, $margin-large-base);
+	margin-top: -22px;
+}
+
+.l-header__logo{
+	text-align: center;
+}
