@@ -1,0 +1,13 @@
+// ---------------------------------------------------------------
+//  circle
+//
+// > usage
+// > @include circle(50);
+//
+// ---------------------------------------------------------------
+@mixin circle($size){
+    width: $size + px;
+    text-align: center;
+    @include middle-line($size);
+    @include border-radius-per(100%);
+}

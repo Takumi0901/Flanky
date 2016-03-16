@@ -1,0 +1,254 @@
+/*
+# form-control
+
+formデザイン
+
+```
+<div class="c-container">
+    <form class="c-form">
+        <h3 class="c-form__title">テキスト<span class="c-form__reqiured">必須</span></h3>
+        <p><input type="text"></p>
+
+        <h3 class="c-form__title">URL<span class="c-form__reqiured">必須</span></h3>
+        <p><input type="url"></p>
+
+        <h3 class="c-form__title">パスワード<span class="c-form__reqiured">必須</span></h3>
+        <p><input type="password"></p>
+
+        <h3 class="c-form__title">メール<span class="c-form__reqiured">必須</span></h3>
+        <p><input type="email"></p>
+
+        <h3 class="c-form__title">テキストエリア<span class="c-form__reqiured">必須</span></h3>
+        <p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+        </p>
+
+        <h3 class="c-form__title">チェックボックス</h3>
+        <p>
+            <input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
+            <input type="checkbox" name="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
+        </p>
+
+        <h3 class="c-form__title">ラジオボタン</h3>
+        <p>
+            <input type="radio" name="radio" id="radio1"><label for="radio1">radio1</label>
+            <input type="radio" name="radio" id="radio2"><label for="radio2">radio2</label>
+        </p>
+        
+        <h3 class="c-form__title">セレクト</h3>
+        <p>
+            <div class="c-form__select">
+                <label><select> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></label>
+            </div>
+        </p>
+
+        <button type="submit" class="c-btn c-btn-default--flat">Submit</button>
+    </form>
+</div>
+
+<div class="c-container">
+    <form class="c-form">
+        <table class="c-form__table">
+            <tr>
+                <th>テキスト</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th>チェックボックス</th>
+                <td>
+                    <input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
+                    <input type="checkbox" name="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
+                </td>
+            </tr>
+            <tr>
+                <th>ラジオボタン</th>
+                <td>
+                    <input type="radio" name="radio" id="radio1"><label for="radio1">radio1</label>
+                    <input type="radio" name="radio" id="radio2"><label for="radio2">radio2</label>
+                </td>
+            </tr>
+            <tr>
+                <th>セレクト</th>
+                <td>
+                    <div class="c-form__select">
+                        <label><select> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>テキストエリア</th>
+                <td>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+```
+
+*/
+
+.c-form{
+	
+	input[type=text],
+	input[type=url],
+	input[type=password],
+	input[type=email],
+	textarea,
+	select{
+		background: $bg-white;
+	  display: block;
+	  border: solid 1px $border-lighten;
+	  padding: $margin-base $margin-large;
+	  width: 100%;
+	}
+}
+
+.c-form__select{
+	position: relative;
+	margin-bottom: 0;
+}
+
+.c-form__select label:after{
+	bottom: 30%;
+	right: 16px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-top-color: $base-color-gray-darken-60;
+	border-width: 6px;
+	margin-left: 6px;
+}
+
+.c-form__title{
+	font-size: 14px;
+	margin-bottom: $margin-base;
+}
+
+.c-form__reqiured{
+	background: $bg-alert;
+	font-size: 10px;
+	color: $text-color-white;
+	padding: $margin-small $margin-base;
+	margin: 0 $margin-small;
+	@include border-radius(10);
+	vertical-align: 1px;
+}
+
+
+// radio checkbox　default style
+.c-form input[type=radio],
+.c-form input[type=checkbox] {
+    display: inline-block;
+    margin-right: 6px;
+}
+.c-form input[type=radio] + label,
+.c-form input[type=checkbox] + label,
+.c-form label input[type=checkbox]{
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+    font-size: 14px;
+    line-height: 30px;
+    cursor: pointer;
+}
+ 
+@media (min-width: 1px) {
+    .c-form input[type=radio],
+    .c-form input[type=checkbox] {
+        display: none;
+        margin: 0;
+    }
+    .c-form input[type=radio] + label,
+    .c-form input[type=checkbox] + label,
+    .c-form label input[type=checkbox] {
+        padding: 0 0 0 24px;
+    }
+    .c-form input[type=radio] + label::before,
+    .c-form input[type=checkbox] + label::before,
+    .c-form label input[type=checkbox]::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin-top: -9px;
+        background-color: white;
+    }
+    .c-form input[type=radio] + label::before {
+        border: 2px solid #c2ced2;
+        border-radius: 30px;
+    }
+    .c-form input[type=checkbox] + label::before,
+    .c-form label input[type=checkbox]::before {
+        border: 2px solid #c2ced2;
+    }
+    .c-form input[type=radio]:checked + label::after,
+    .c-form input[type=checkbox]:checked + label::after,
+    .c-form label input[type=checkbox]:checked::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+    }
+    .c-form input[type=radio]:checked + label::after {
+        left: 5px;
+        width: 8px;
+        height: 8px;
+        margin-top: -4px; 
+        background: #19c5ff;
+        border-radius: 8px;
+    }
+    .c-form input[type=checkbox]:checked + label::after,
+    .c-form label input[type=checkbox]:checked::after {
+        left: 3px;
+        width: 16px;
+        height: 8px;
+        margin-top: -8px;
+        border-left: 3px solid #12b4eb;
+        border-bottom: 3px solid #12b4eb;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+}
+
+
+.c-form__table{
+	width: 100%;
+	
+	tr{
+		border-bottom: solid 1px $border-lighten;
+	}
+
+    tr:last-child{
+        border-bottom: none;
+    }
+
+	th{
+		width: 20%;
+		font-weight: normal;
+		text-align: left;
+		padding: $margin-large $margin-large;
+		font-size: 12px;
+	}
+
+	td{
+		width: 80%;
+		padding: $margin-large $margin-large;
+	}
+}
+
+.c-form__table--border{
+    border-top: solid 1px $border-lighten;
+    border-bottom: solid 1px $border-lighten;
+}
