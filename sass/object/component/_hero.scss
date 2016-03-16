@@ -1,0 +1,57 @@
+/*
+# hero
+
+```
+<div class="c-hero c-hero--anim">
+    <div class="c-hero__inner">
+        <h2 class="c-hero__inner__title">Hero</h2>
+        <p class="c-hero__inner__text">
+            13歳でFCバルセロナに入団し、17歳でトップチームデビューして以降、7度のリーガ・エスパニョーラ優勝、<br>
+            4度のUEFAチャンピオンズリーグ優勝に貢献。自身も5回の世界最優秀選手賞FIFAバロンドールを受賞し[注 2]、<br>
+            2008-09シーズンから2011-12シーズンまで4季連続のチャンピオンズリーグ得点王を獲得。
+        </p>
+    </div>
+</div>
+```
+
+ */
+
+.c-hero{
+	background: $bg-primary;
+	margin-bottom: $margin-large;
+	padding: $margin-large-xx $margin-large;
+}
+
+.c-hero__inner{
+	width: auto;
+}
+
+.c-hero__inner__title{
+	font-size: 32px;
+	color: $text-color-white;
+	font-weight: normal;
+	margin-bottom: $margin-large;
+}
+
+.c-hero__inner__text{
+	color: $text-color-white;
+	margin-bottom: $margin-large;
+}
+
+
+.c-hero--anim{
+	background: linear-gradient(270deg, $hero-color-a, $hero-color-b);
+	background-size: 400% 400%;
+	-webkit-animation: bgAnimation 30s ease infinite;
+	-moz-animation: bgAnimation 30s ease infinite;
+	-o-animation: bgAnimation 30s ease infinite;
+	animation: bgAnimation 30s ease infinite;
+	position: relative;
+}
+
+@media ( min-width : $breakpoint ) {
+	.c-hero__inner{
+		max-width: $max-width;
+		margin: 0 auto;
+	}
+}

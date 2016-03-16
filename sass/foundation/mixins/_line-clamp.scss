@@ -1,0 +1,14 @@
+// ---------------------------------------------------------------
+//  line-clamp
+//
+// > usage
+// > @include line-clamp(3);
+//
+// ---------------------------------------------------------------
+@mixin line-clamp($size){
+    display: box;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: $size;
+    -webkit-box-orient: vertical;
+}

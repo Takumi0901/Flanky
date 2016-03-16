@@ -1,0 +1,26 @@
+// ---------------------------------------------------------------
+//  button-border-color
+// ---------------------------------------------------------------
+@mixin button-ghost-color($base-color, $text-color, $border-width) {
+  color: $base-color-white !important;
+  border: $base-color solid $border-width;
+  
+  @include border-radius(5);
+  
+  &:link{
+    color: $text-color;
+  }
+  &:hover, &:active, &:focus {
+    color: $text-color !important;
+    background-color: $base-color;
+    border: $base-color solid $border-width;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover{
+          border-color: $base-color;
+          color: $base-color !important;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+/* ### padding
+--------------------------------------------------------- */
+
+// Top padding
+@for $value from 1 to 10 {
+    .u-pt-#{$value * $base-size - $base-size} {
+        padding-top: $base-size * $value - $base-size !important;
+    }
+}
+
+// Right padding
+@for $value from 1 to 10 {
+    .u-pr-#{$value * $base-size - $base-size} {
+        padding-right: $base-size * $value - $base-size !important;
+    }
+}
+
+// Bottom padding
+@for $value from 1 to 10 {
+    .u-pb-#{$value * $base-size - $base-size} {
+        padding-bottom: $base-size * $value - $base-size !important;
+    }
+}
+
+// Left padding
+@for $value from 1 to 10 {
+    .u-pl-#{$value * $base-size - $base-size} {
+        padding-left: $base-size * $value - $base-size !important;
+    }
+}

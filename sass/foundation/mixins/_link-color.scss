@@ -1,0 +1,16 @@
+// ---------------------------------------------------------------
+//  link-color
+//
+// > usage
+// > @include link-color(#345fc9);
+//
+// ---------------------------------------------------------------
+@mixin link-color($color) {
+	&:link{
+		color: $color;
+	}
+
+	&:hover, &:active, &:focus {
+		color: lighten($color, 20%);
+	}
+}
