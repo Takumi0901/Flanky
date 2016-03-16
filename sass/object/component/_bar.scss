@@ -1,0 +1,45 @@
+/*
+# bar
+
+```
+<div class="c-bar">
+    <div class="c-bar__inner">
+        bar
+    </div>
+</div>
+```
+
+ */
+
+.c-bar{
+	display: block;
+	background: $bg-white;
+	@include middle-line(56);
+	border-bottom: 1px solid $border-lighten;
+	
+	h1,h2,h3,h4,h5,p{
+		margin:0;
+	}
+}
+
+.c-bar__inner{
+	position: relative;
+	width: auto;
+	padding: 0 $margin-large;
+}
+
+.c-bar__inner__btn{
+	display: block;
+	
+	&:hover{
+		background: $bg-default;
+	}
+}
+
+@media ( min-width : $breakpoint ) {
+	.c-bar__inner{
+		position: relative;
+		max-width: $max-width;
+		margin: 0 auto;
+	}
+}

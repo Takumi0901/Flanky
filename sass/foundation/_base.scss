@@ -1,0 +1,50 @@
+html,body {
+	overflow-y: hidden;
+}
+
+html{
+	background: $base-color;
+}
+
+body {
+	height: 100%;
+    color: $base-color-text;
+    background: $base-color;
+    word-wrap: break-word;
+    font-size: $font-size-base;
+    font-family: $font-family-base;
+    line-height: $line-height-base;
+    -webkit-text-size-adjust: 100%
+}
+
+address{
+	font-style: normal;
+}
+
+a {
+    color: inherit;
+    cursor: pointer;
+	color: $base-color-text;
+    
+    &:link{
+        color: $base-color-text;
+    }
+    
+	&:hover, &:focus, &:active {
+        color: $text-color-link-hover;
+    	text-decoration: none;
+    }
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: $margin-large;
+}
+
+p{
+    margin-bottom: $margin-large;
+}
+
+input[type="radio"]{
+    margin-left: $margin-large;
+    margin-right: $margin-base;
+}

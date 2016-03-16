@@ -1,0 +1,52 @@
+/*
+# table
+
+```
+<div class="c-container">
+    <table class="c-table">
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>hoghoe</td>
+                <td>fugafuga</td>
+                <td>bakabka</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>hoghoe</td>
+                <td>fugafuga</td>
+                <td>bakabka</td>
+            </tr>
+    </table>
+</div>
+```
+
+ */
+
+.c-table{
+	width: 100%;
+
+	td,th{
+		text-align: left;
+		padding: $margin-base;
+	}
+    tr{
+        border-bottom: solid 1px $border-lighten;
+    }
+    tr:last-child{
+        border-bottom: none;
+    }
+    tr:hover{
+        background: $bg-default;
+    }
+}
+
+.c-table--border{
+    border-top: solid 1px $border-lighten;
+    border-bottom: solid 1px $border-lighten;
+}

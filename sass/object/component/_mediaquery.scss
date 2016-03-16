@@ -1,0 +1,33 @@
+/*
+# mediaquery
+
+```
+<div class="c-mediaquery--sp">
+
+</div>
+
+<div class="c-mediaquery--pc">
+
+</div>
+```
+
+ */
+
+.c-mediaquery--sp{
+	display: block;
+}
+
+.c-mediaquery--pc{
+	display: none;
+}
+
+
+@media ( min-width : $breakpoint ) {
+	.c-mediaquery--sp{
+		display: none;
+	}
+
+	.c-mediaquery--pc{
+		display: block;
+	}
+}
