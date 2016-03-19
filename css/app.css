@@ -2239,11 +2239,11 @@ card、containerと組み合わせて使う
   text-align: center;
 }
 
-.c-tab__body.is-hidden {
+.c-tab__body.is-hidden, .c-tab__body[aria-hidden="true"] {
   display: none;
 }
 
-.c-tab__menu__item.is-active a {
+.c-tab__menu__item.is-active a, .c-tab__menu__item a[aria-selected="true"] {
   border-bottom: solid 2px #4bd5f2;
 }
 
