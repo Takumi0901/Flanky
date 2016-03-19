@@ -252,7 +252,7 @@ a:link {
   color: #515151;
 }
 a:hover, a:focus, a:active {
-  color: #a5a5a5;
+  color: #a4a4a4;
   text-decoration: none;
 }
 
@@ -440,7 +440,7 @@ input[type="radio"] {
  */
 .c-alert {
   color: #f73b6a;
-  background: #fee7ec;
+  background: #fee6ec;
   border: solid 1px #fdceda;
   padding: 8px 16px;
 }
@@ -550,7 +550,7 @@ input[type="radio"] {
 
 .c-btn-default--border {
   color: #515151 !important;
-  border: #a5a5a5 solid 2px;
+  border: #a4a4a4 solid 2px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -560,12 +560,12 @@ input[type="radio"] {
 }
 .c-btn-default--border:hover, .c-btn-default--border:active, .c-btn-default--border:focus {
   color: #fff !important;
-  background-color: #a5a5a5;
-  border: #a5a5a5 solid 2px;
+  background-color: #a4a4a4;
+  border: #a4a4a4 solid 2px;
 }
 .c-btn-default--border.disabled:hover, .c-btn-default--border[disabled]:hover, fieldset[disabled] .c-btn-default--border:hover {
-  border-color: #a5a5a5;
-  color: #a5a5a5 !important;
+  border-color: #a4a4a4;
+  color: #a4a4a4 !important;
 }
 
 .c-btn-primary--border {
@@ -860,7 +860,7 @@ containerと併用して使う
   position: fixed;
   top: 0;
   z-index: 900;
-  padding-top: 72px;
+  padding-top: 72pxpx;
   width: 300px;
   height: 100%;
   background: #fff;
@@ -932,7 +932,6 @@ containerと併用して使う
   height: 32px;
   position: absolute;
   top: 50%;
-  margin-top: -16px;
 }
 
 .c-drawer-btn.is-right {
@@ -945,7 +944,7 @@ containerと併用して使う
 
 .c-drawer-btn__icon {
   position: relative;
-  top: 15px;
+  top: 16px-1;
   left: 5px;
   display: block;
   width: 24px;
@@ -1012,7 +1011,7 @@ containerと併用して使う
 
 .c-drawer-fixed-bar.is-slideout {
   -webkit-transition: -webkit-transform 0.3s;
-  -webkit-transform: translate3d(0, -72px, 0);
+  -webkit-transform: translate3d(0, -72pxpx, 0);
 }
 
 /*
@@ -2533,147 +2532,147 @@ card、containerと組み合わせて使う
   margin-left: auto !important;
 }
 
-.u-mt-0px {
+.u-mt-0 {
   margin-top: 0px !important;
 }
 
-.u-mt-8px {
+.u-mt-8 {
   margin-top: 8px !important;
 }
 
-.u-mt-16px {
+.u-mt-16 {
   margin-top: 16px !important;
 }
 
-.u-mt-24px {
+.u-mt-24 {
   margin-top: 24px !important;
 }
 
-.u-mt-32px {
+.u-mt-32 {
   margin-top: 32px !important;
 }
 
-.u-mt-40px {
+.u-mt-40 {
   margin-top: 40px !important;
 }
 
-.u-mt-48px {
+.u-mt-48 {
   margin-top: 48px !important;
 }
 
-.u-mt-56px {
+.u-mt-56 {
   margin-top: 56px !important;
 }
 
-.u-mt-64px {
+.u-mt-64 {
   margin-top: 64px !important;
 }
 
-.u-mr-0px {
+.u-mr-0 {
   margin-right: 0px !important;
 }
 
-.u-mr-8px {
+.u-mr-8 {
   margin-right: 8px !important;
 }
 
-.u-mr-16px {
+.u-mr-16 {
   margin-right: 16px !important;
 }
 
-.u-mr-24px {
+.u-mr-24 {
   margin-right: 24px !important;
 }
 
-.u-mr-32px {
+.u-mr-32 {
   margin-right: 32px !important;
 }
 
-.u-mr-40px {
+.u-mr-40 {
   margin-right: 40px !important;
 }
 
-.u-mr-48px {
+.u-mr-48 {
   margin-right: 48px !important;
 }
 
-.u-mr-56px {
+.u-mr-56 {
   margin-right: 56px !important;
 }
 
-.u-mr-64px {
+.u-mr-64 {
   margin-right: 64px !important;
 }
 
-.u-mb-0px {
+.u-mb-0 {
   margin-bottom: 0px !important;
 }
 
-.u-mb-8px {
+.u-mb-8 {
   margin-bottom: 8px !important;
 }
 
-.u-mb-16px {
+.u-mb-16 {
   margin-bottom: 16px !important;
 }
 
-.u-mb-24px {
+.u-mb-24 {
   margin-bottom: 24px !important;
 }
 
-.u-mb-32px {
+.u-mb-32 {
   margin-bottom: 32px !important;
 }
 
-.u-mb-40px {
+.u-mb-40 {
   margin-bottom: 40px !important;
 }
 
-.u-mb-48px {
+.u-mb-48 {
   margin-bottom: 48px !important;
 }
 
-.u-mb-56px {
+.u-mb-56 {
   margin-bottom: 56px !important;
 }
 
-.u-mb-64px {
+.u-mb-64 {
   margin-bottom: 64px !important;
 }
 
-.u-ml-0px {
+.u-ml-0 {
   margin-left: 0px !important;
 }
 
-.u-ml-8px {
+.u-ml-8 {
   margin-left: 8px !important;
 }
 
-.u-ml-16px {
+.u-ml-16 {
   margin-left: 16px !important;
 }
 
-.u-ml-24px {
+.u-ml-24 {
   margin-left: 24px !important;
 }
 
-.u-ml-32px {
+.u-ml-32 {
   margin-left: 32px !important;
 }
 
-.u-ml-40px {
+.u-ml-40 {
   margin-left: 40px !important;
 }
 
-.u-ml-48px {
+.u-ml-48 {
   margin-left: 48px !important;
 }
 
-.u-ml-56px {
+.u-ml-56 {
   margin-left: 56px !important;
 }
 
-.u-ml-64px {
+.u-ml-64 {
   margin-left: 64px !important;
 }
 
@@ -2694,147 +2693,147 @@ card、containerと組み合わせて使う
 
 /* ### padding
 --------------------------------------------------------- */
-.u-pt-0px {
+.u-pt-0 {
   padding-top: 0px !important;
 }
 
-.u-pt-8px {
+.u-pt-8 {
   padding-top: 8px !important;
 }
 
-.u-pt-16px {
+.u-pt-16 {
   padding-top: 16px !important;
 }
 
-.u-pt-24px {
+.u-pt-24 {
   padding-top: 24px !important;
 }
 
-.u-pt-32px {
+.u-pt-32 {
   padding-top: 32px !important;
 }
 
-.u-pt-40px {
+.u-pt-40 {
   padding-top: 40px !important;
 }
 
-.u-pt-48px {
+.u-pt-48 {
   padding-top: 48px !important;
 }
 
-.u-pt-56px {
+.u-pt-56 {
   padding-top: 56px !important;
 }
 
-.u-pt-64px {
+.u-pt-64 {
   padding-top: 64px !important;
 }
 
-.u-pr-0px {
+.u-pr-0 {
   padding-right: 0px !important;
 }
 
-.u-pr-8px {
+.u-pr-8 {
   padding-right: 8px !important;
 }
 
-.u-pr-16px {
+.u-pr-16 {
   padding-right: 16px !important;
 }
 
-.u-pr-24px {
+.u-pr-24 {
   padding-right: 24px !important;
 }
 
-.u-pr-32px {
+.u-pr-32 {
   padding-right: 32px !important;
 }
 
-.u-pr-40px {
+.u-pr-40 {
   padding-right: 40px !important;
 }
 
-.u-pr-48px {
+.u-pr-48 {
   padding-right: 48px !important;
 }
 
-.u-pr-56px {
+.u-pr-56 {
   padding-right: 56px !important;
 }
 
-.u-pr-64px {
+.u-pr-64 {
   padding-right: 64px !important;
 }
 
-.u-pb-0px {
+.u-pb-0 {
   padding-bottom: 0px !important;
 }
 
-.u-pb-8px {
+.u-pb-8 {
   padding-bottom: 8px !important;
 }
 
-.u-pb-16px {
+.u-pb-16 {
   padding-bottom: 16px !important;
 }
 
-.u-pb-24px {
+.u-pb-24 {
   padding-bottom: 24px !important;
 }
 
-.u-pb-32px {
+.u-pb-32 {
   padding-bottom: 32px !important;
 }
 
-.u-pb-40px {
+.u-pb-40 {
   padding-bottom: 40px !important;
 }
 
-.u-pb-48px {
+.u-pb-48 {
   padding-bottom: 48px !important;
 }
 
-.u-pb-56px {
+.u-pb-56 {
   padding-bottom: 56px !important;
 }
 
-.u-pb-64px {
+.u-pb-64 {
   padding-bottom: 64px !important;
 }
 
-.u-pl-0px {
+.u-pl-0 {
   padding-left: 0px !important;
 }
 
-.u-pl-8px {
+.u-pl-8 {
   padding-left: 8px !important;
 }
 
-.u-pl-16px {
+.u-pl-16 {
   padding-left: 16px !important;
 }
 
-.u-pl-24px {
+.u-pl-24 {
   padding-left: 24px !important;
 }
 
-.u-pl-32px {
+.u-pl-32 {
   padding-left: 32px !important;
 }
 
-.u-pl-40px {
+.u-pl-40 {
   padding-left: 40px !important;
 }
 
-.u-pl-48px {
+.u-pl-48 {
   padding-left: 48px !important;
 }
 
-.u-pl-56px {
+.u-pl-56 {
   padding-left: 56px !important;
 }
 
-.u-pl-64px {
+.u-pl-64 {
   padding-left: 64px !important;
 }
 

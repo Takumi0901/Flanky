@@ -7,7 +7,6 @@
 // ---------------------------------------------------------------
 
 // Base
-$base-size							: 8px;
 $base-width							: 300px;
 
 // Color
@@ -40,12 +39,12 @@ $hamburger-menu-color			: $text-color-primary;
 $hamburger-menu-bg				: $color-base;
 
 // Size
-$hamburger-menu-size			: $base-size * 4;
-$hamburger-bar-size				: $base-size * 3;
+$hamburger-menu-size			: $base-size * 4 + px;
+$hamburger-bar-size				: $base-size * 3 + px;
 
 // animation / position
-$hamburger-menu-translate-y		: $base-size;
-$hamburger-menu-position		: $base-size * 2;
+$hamburger-menu-translate-y		: $base-size + px;
+$hamburger-menu-position		: $base-size * 2 + px;
 
 
 // ---------------------------------------------------------------
@@ -63,7 +62,7 @@ $drawer-z-index					: $z-index-base - 100;
 $overlay-z-index				: $z-index-base - 200;
 
 // padding
-$drawer-padding					: $fixed-bar-height + $base-size * 2;
+$drawer-padding					: $fixed-bar-height + $base-size * 2 + px;
 
 // overlay
 $overlay-bg						: $color-overlay;
@@ -80,7 +79,7 @@ $fixed-bar-bg					: $color-base;
 $fixed-bar-z-index				: $z-index-base;
 
 // animarion
-$fixed-bar-translate			: $fixed-bar-height + $base-size * 2;
+$fixed-bar-translate			: $fixed-bar-height + $base-size * 2 + px;
 
 
 // ---------------------------------------------------------------
@@ -187,7 +186,6 @@ $fixed-bar-translate			: $fixed-bar-height + $base-size * 2;
 	height: $hamburger-menu-size;
 	position: absolute;
 	top: 50%;
-	margin-top: -$hamburger-menu-position;
 }
 
 
