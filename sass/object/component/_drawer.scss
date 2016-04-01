@@ -62,7 +62,7 @@ $drawer-z-index					: $z-index-base - 100;
 $overlay-z-index				: $z-index-base - 200;
 
 // padding
-$drawer-padding					: $fixed-bar-height + $base-size * 2 + px;
+$drawer-padding					: $fixed-bar-height + $base-size * 2;
 
 // overlay
 $overlay-bg						: $color-overlay;
@@ -79,7 +79,7 @@ $fixed-bar-bg					: $color-base;
 $fixed-bar-z-index				: $z-index-base;
 
 // animarion
-$fixed-bar-translate			: $fixed-bar-height + $base-size * 2 + px;
+$fixed-bar-translate			: $fixed-bar-height + $base-size * 2;
 
 
 // ---------------------------------------------------------------
@@ -100,12 +100,12 @@ $fixed-bar-translate			: $fixed-bar-height + $base-size * 2 + px;
 //	drawer - side
 // ---------------------------------------------------------------
 .c-drawer.is-right{
-	right: 0;
+	right: -$drawer-size;
 	-webkit-transition: -webkit-transform $animate-speed;
 	        transition:         transform $animate-speed;
 	transition-property: box-shadow, transform, visibility;
-	-webkit-transform: translateX($drawer-size);
-	        transform: translateX($drawer-size);
+	-webkit-transform: translateX(0);
+	        transform: translateX(0);
 }
 
 .c-drawer.is-left{
@@ -137,8 +137,8 @@ $fixed-bar-translate			: $fixed-bar-height + $base-size * 2 + px;
 .c-drawer.is-right.is-open{
 	-webkit-transition: -webkit-transform $animate-speed;
 	        transition:         transform $animate-speed;
-	-webkit-transform: translate3d(0, 0, 0);
-	        transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(-$drawer-size, 0, 0);
+	        transform: translate3d(-$drawer-size, 0, 0);
 }
 
 // ---------------------------------------------------------------

@@ -860,19 +860,19 @@ containerと併用して使う
   position: fixed;
   top: 0;
   z-index: 900;
-  padding-top: 72pxpx;
+  padding-top: 72px;
   width: 300px;
   height: 100%;
   background: #fff;
 }
 
 .c-drawer.is-right {
-  right: 0;
+  right: -300px;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition-property: box-shadow, transform, visibility;
-  -webkit-transform: translateX(300px);
-  transform: translateX(300px);
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
 }
 
 .c-drawer.is-left {
@@ -900,8 +900,8 @@ containerと併用して使う
 .c-drawer.is-right.is-open {
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(-300px, 0, 0);
+  transform: translate3d(-300px, 0, 0);
 }
 
 .c-drawer-inner {
@@ -1010,7 +1010,7 @@ containerと併用して使う
 
 .c-drawer-fixed-bar.is-slideout {
   -webkit-transition: -webkit-transform 0.3s;
-  -webkit-transform: translate3d(0, -72pxpx, 0);
+  -webkit-transform: translate3d(0, -72px, 0);
 }
 
 /*
