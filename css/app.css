@@ -810,6 +810,7 @@ containerと併用して使う
   display: box;
   display: -webkit-box;
   overflow: hidden;
+  text-overflow: ellipsis;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
@@ -1811,6 +1812,7 @@ card、containerと組み合わせて使う
   display: box;
   display: -webkit-box;
   overflow: hidden;
+  text-overflow: ellipsis;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
