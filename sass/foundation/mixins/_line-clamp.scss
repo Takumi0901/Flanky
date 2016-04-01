@@ -9,7 +9,6 @@
     display: box;
     display: -webkit-box;
     overflow: hidden;
-    text-overflow: ellipsis;
     -webkit-line-clamp: $size;
     -webkit-box-orient: vertical;
 }
