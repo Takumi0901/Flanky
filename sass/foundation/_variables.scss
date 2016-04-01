@@ -22,27 +22,17 @@ $line-height-base: 							1.4;
 //	Base-color
 // ---------------------------------------------------------------
 $base-color: 										#f1f1f1;
+$base-color-lighten:			 			#fcfcfc;
 $base-color-white: 							#fff;
 $base-color-text: 							#515151;
+$base-color-border:							#9e9e9e;
 $base-alert:										#f73b6a;
 $base-success:									#3c763d;
-
-$base-color-gray-darken-8: 			darken($base-color, 8%);
-$base-color-gray-darken-10: 		darken($base-color, 10%);
-$base-color-gray-darken-20: 		darken($base-color, 20%);
-$base-color-gray-darken-30: 		darken($base-color, 30%);
-$base-color-gray-darken-40: 		darken($base-color, 40%);
-$base-color-gray-darken-50: 		darken($base-color, 50%);
-$base-color-gray-darken-60: 		darken($base-color, 60%);
-$base-color-gray-darken-70: 		darken($base-color, 70%);
-$base-color-gray-darken-80: 		darken($base-color, 80%);
-$base-color-gray-darken-90: 		darken($base-color, 90%);
 
 
 // ---------------------------------------------------------------
 //	Content-color
 // ---------------------------------------------------------------
-$default-color: 								$base-color-gray-darken-10;
 $primary-color: 								#4bd5f2;
 $secondary-color: 							#2dd885;
 $highlight-color: 							#f24b4b;
@@ -58,8 +48,8 @@ $card-color:										$base-color-white;
 //	Text-color
 // ---------------------------------------------------------------
 $text-color-white: 							$base-color-white;
-$text-color-lighten:						$base-color-gray-darken-20;
-$text-color-link-hover:					$base-color-gray-darken-30;
+$text-color-lighten:						lighten($base-color-text, 40%);
+$text-color-link-hover:					lighten($base-color-text, 30%);
 
 $text-color-primary:						$primary-color;
 $text-color-secondary:					$secondary-color;
@@ -72,7 +62,7 @@ $text-color-success:						$base-success;
 //	Background-color
 // ---------------------------------------------------------------
 $bg-white: 											$base-color-white;
-$bg-default: 										$base-color-gray-darken-8;
+$bg-default: 										$base-color-lighten;
 $bg-primary:										$primary-color;
 $bg-secondary:									$secondary-color;
 $bg-highlight:									$highlight-color;
@@ -86,9 +76,9 @@ $bg-success:										lighten($base-success, 45%);
 //	Border-color
 // ---------------------------------------------------------------
 $border-white: 									$base-color-white;
-$border-default: 								$base-color-gray-darken-30;
-$border-dark: 									$base-color-gray-darken-70;
-$border-lighten: 								$base-color-gray-darken-8;
+$border-default: 								$base-color-border;
+$border-dark: 									darken($border-default, 35%);
+$border-lighten: 								lighten($border-default, 28%);
 
 $border-primary:								$primary-color;
 $border-secondary:							$secondary-color;

@@ -77,11 +77,10 @@
 	    	display: inline-block;
 	    	padding: $margin-large $margin-large-xx;
 	    	text-decoration: none;
-	    	color: $text-color-primary;
+	    	color: $text-color-lighten;
 	    	
 	    	&:hover{
-	    		background: $bg-default;
-	    		border-bottom: solid 2px $border-lighten;
+	    		color: $text-color-primary;
 	    	}
 	    }
 		}
@@ -124,4 +123,5 @@
 
 .c-tab__menu__item.is-active a, .c-tab__menu__item a[aria-selected="true"]{
 	border-bottom: solid 2px $border-primary;
+	color: $text-color-primary;
 }

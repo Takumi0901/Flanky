@@ -252,7 +252,7 @@ a:link {
   color: #515151;
 }
 a:hover, a:focus, a:active {
-  color: #a4a4a4;
+  color: #9e9e9e;
   text-decoration: none;
 }
 
@@ -469,7 +469,7 @@ input[type="radio"] {
   background: #fff;
   height: 56px;
   line-height: 56px;
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #e5e5e5;
 }
 .c-bar h1, .c-bar h2, .c-bar h3, .c-bar h4, .c-bar h5, .c-bar p {
   margin: 0;
@@ -485,7 +485,7 @@ input[type="radio"] {
   display: block;
 }
 .c-bar__inner__btn:hover {
-  background: #dddddd;
+  background: #fcfcfc;
 }
 
 @media (min-width: 768px) {
@@ -550,7 +550,7 @@ input[type="radio"] {
 
 .c-btn-default--border {
   color: #515151 !important;
-  border: #a4a4a4 solid 2px;
+  border: #9e9e9e solid 2px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -560,12 +560,12 @@ input[type="radio"] {
 }
 .c-btn-default--border:hover, .c-btn-default--border:active, .c-btn-default--border:focus {
   color: #fff !important;
-  background-color: #a4a4a4;
-  border: #a4a4a4 solid 2px;
+  background-color: #9e9e9e;
+  border: #9e9e9e solid 2px;
 }
 .c-btn-default--border.disabled:hover, .c-btn-default--border[disabled]:hover, fieldset[disabled] .c-btn-default--border:hover {
-  border-color: #a4a4a4;
-  color: #a4a4a4 !important;
+  border-color: #9e9e9e;
+  color: #9e9e9e !important;
 }
 
 .c-btn-primary--border {
@@ -651,7 +651,7 @@ input[type="radio"] {
 .c-btn-default--flat {
   color: #515151 !important;
   background-color: #fff;
-  border: solid 1px #dddddd;
+  border: solid 1px #e5e5e5;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -663,11 +663,11 @@ input[type="radio"] {
 .c-btn-default--flat:hover, .c-btn-default--flat:active, .c-btn-default--flat:focus {
   color: #6b6b6b !important;
   background-color: white;
-  border: solid 1px #ececec;
+  border: solid 1px whitesmoke;
 }
 .c-btn-default--flat.disabled, .c-btn-default--flat[disabled], fieldset[disabled] .c-btn-default--flat {
   background-color: #fff;
-  border-color: #dddddd;
+  border-color: #e5e5e5;
 }
 
 .c-btn-primary--flat {
@@ -795,7 +795,7 @@ containerと併用して使う
 }
 
 .c-card__header {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #e5e5e5;
   padding: 16px 16px 0;
 }
 
@@ -815,7 +815,7 @@ containerと併用して使う
 }
 
 .c-card__bottom {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #e5e5e5;
   padding: 8px 16px;
   margin: 0;
 }
@@ -1167,7 +1167,7 @@ formデザイン
 .c-form select {
   background: #fff;
   display: block;
-  border: solid 1px #dddddd;
+  border: solid 1px #e5e5e5;
   padding: 8px 16px;
   width: 100%;
 }
@@ -1186,7 +1186,7 @@ formデザイン
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-top-color: #585858;
+  border-top-color: #454545;
   border-width: 6px;
   margin-left: 6px;
 }
@@ -1301,7 +1301,7 @@ formデザイン
   width: 100%;
 }
 .c-form__table tr {
-  border-bottom: solid 1px #dddddd;
+  border-bottom: solid 1px #e5e5e5;
 }
 .c-form__table tr:last-child {
   border-bottom: none;
@@ -1319,8 +1319,8 @@ formデザイン
 }
 
 .c-form__table--border {
-  border-top: solid 1px #dddddd;
-  border-bottom: solid 1px #dddddd;
+  border-top: solid 1px #e5e5e5;
+  border-bottom: solid 1px #e5e5e5;
 }
 
 /*
@@ -1926,14 +1926,14 @@ card、containerと組み合わせて使う
 }
 
 .c-menu--border {
-  border-top: solid 1px #dddddd;
+  border-top: solid 1px #e5e5e5;
 }
 .c-menu--border .c-menu__item:last-child {
-  border-bottom: solid 1px #dddddd;
+  border-bottom: solid 1px #e5e5e5;
 }
 
 .c-menu__item {
-  border-bottom: solid 1px #dddddd;
+  border-bottom: solid 1px #e5e5e5;
   position: relative;
   padding: 4px;
 }
@@ -1946,7 +1946,7 @@ card、containerと組み合わせて使う
   text-decoration: none;
 }
 .c-menu__item a:hover {
-  background: #dddddd;
+  background: #fcfcfc;
 }
 
 .c-menu__item__icon {
@@ -1954,7 +1954,7 @@ card、containerと組み合わせて使う
   right: 16px;
   top: 50%;
   margin-top: -8px;
-  color: #bebebe;
+  color: #b7b7b7;
 }
 
 /*
@@ -2048,7 +2048,7 @@ card、containerと組み合わせて使う
 }
 
 .c-modal__header {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #e5e5e5;
   padding: 16px;
   font-weight: bold;
   font-size: 16px;
@@ -2061,7 +2061,7 @@ card、containerと組み合わせて使う
 }
 
 .c-modal__bottom {
-  border-top: 1px solid #dddddd;
+  border-top: 1px solid #e5e5e5;
   padding: 16px;
 }
 
@@ -2125,7 +2125,7 @@ card、containerと組み合わせて使う
   text-decoration: none;
 }
 .c-nav__item a:hover {
-  background: #dddddd;
+  background: #fcfcfc;
 }
 
 /*
@@ -2190,7 +2190,7 @@ card、containerと組み合わせて使う
   width: 100%;
   list-style: none;
   overflow: hidden;
-  border-bottom: solid 1px #dddddd;
+  border-bottom: solid 1px #e5e5e5;
   margin-bottom: 16px;
 }
 .c-tab__menu__item {
@@ -2207,11 +2207,10 @@ card、containerと組み合わせて使う
   display: inline-block;
   padding: 16px 32px;
   text-decoration: none;
-  color: #4bd5f2;
+  color: #b7b7b7;
 }
 .c-tab__menu__item a:hover {
-  background: #dddddd;
-  border-bottom: solid 2px #dddddd;
+  color: #4bd5f2;
 }
 .c-tab__body {
   width: 100%;
@@ -2244,6 +2243,7 @@ card、containerと組み合わせて使う
 
 .c-tab__menu__item.is-active a, .c-tab__menu__item a[aria-selected="true"] {
   border-bottom: solid 2px #4bd5f2;
+  color: #4bd5f2;
 }
 
 /*
@@ -2283,18 +2283,18 @@ card、containerと組み合わせて使う
   padding: 8px;
 }
 .c-table tr {
-  border-bottom: solid 1px #dddddd;
+  border-bottom: solid 1px #e5e5e5;
 }
 .c-table tr:last-child {
   border-bottom: none;
 }
 .c-table tr:hover {
-  background: #dddddd;
+  background: #fcfcfc;
 }
 
 .c-table--border {
-  border-top: solid 1px #dddddd;
-  border-bottom: solid 1px #dddddd;
+  border-top: solid 1px #e5e5e5;
+  border-bottom: solid 1px #e5e5e5;
 }
 
 /*
@@ -2321,7 +2321,7 @@ card、containerと組み合わせて使う
 
 .c-text--secondary {
   font-size: 12px;
-  color: #bebebe;
+  color: #b7b7b7;
 }
 
 /*
@@ -2351,7 +2351,7 @@ card、containerと組み合わせて使う
 }
 
 .c-title__sub-text {
-  color: #bebebe;
+  color: #b7b7b7;
   font-size: 12px;
   display: inline-block;
   margin-left: 16px;
