@@ -6,11 +6,11 @@
 //
 // ---------------------------------------------------------------
 @mixin link-color($color) {
-	&:link{
-		color: $color;
-	}
+  &:link{
+    color: $color;
+  }
 
-	&:hover, &:active, &:focus {
-		color: lighten($color, 20%);
-	}
+  &:hover, &:active, &:focus {
+    color: lighten($color, 20%);
+  }
 }

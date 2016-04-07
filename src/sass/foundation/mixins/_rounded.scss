@@ -6,9 +6,9 @@
 //
 // ---------------------------------------------------------------
 @mixin rounded($height, $display: inline-block){
-    $space: round($height / 2) + px;
-    display: $display;
-    padding: 0 $space;
-    @include border-radius($height);
-    @include middle-line($height);
+  $space: round($height / 2) + px;
+  display: $display;
+  padding: 0 $space;
+  @include border-radius($height);
+  @include middle-line($height);
 }

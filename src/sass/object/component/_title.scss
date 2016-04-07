@@ -11,24 +11,24 @@
 */
 
 .c-title{
-	position: relative;
-	margin-top: $margin-large;
+  position: relative;
+  margin-top: $margin-large;
 }
 
 .c-title--primary{
-	font-size: 18px;
-	font-weight: 700;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .c-title--secondary{
-	font-size: 16px;
-	font-weight: 700;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .c-title__sub-text{
-	color: $text-color-lighten;
-	font-size: 12px;
-	display: inline-block;
-	margin-left: $margin-large;
-	font-weight: normal;
+  color: $text-color-lighten;
+  font-size: 12px;
+  display: inline-block;
+  margin-left: $margin-large;
+  font-weight: normal;
 }

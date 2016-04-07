@@ -17,41 +17,41 @@
  */
 
 .c-hero{
-	background: $bg-primary;
-	margin-bottom: $margin-large;
-	padding: $margin-large-xx $margin-large;
+  background: $bg-primary;
+  margin-bottom: $margin-large;
+  padding: $margin-large-xx $margin-large;
 }
 
 .c-hero__inner{
-	width: auto;
+  width: auto;
 }
 
 .c-hero__inner__title{
-	font-size: 32px;
-	color: $text-color-white;
-	font-weight: normal;
-	margin-bottom: $margin-large;
+  font-size: 32px;
+  color: $text-color-white;
+  font-weight: normal;
+  margin-bottom: $margin-large;
 }
 
 .c-hero__inner__text{
-	color: $text-color-white;
-	margin-bottom: $margin-large;
+  color: $text-color-white;
+  margin-bottom: $margin-large;
 }
 
 
 .c-hero--anim{
-	background: linear-gradient(270deg, $hero-color-a, $hero-color-b);
-	background-size: 400% 400%;
-	-webkit-animation: bgAnimation 30s ease infinite;
-	-moz-animation: bgAnimation 30s ease infinite;
-	-o-animation: bgAnimation 30s ease infinite;
-	animation: bgAnimation 30s ease infinite;
-	position: relative;
+  background: linear-gradient(270deg, $hero-color-a, $hero-color-b);
+  background-size: 400% 400%;
+  -webkit-animation: bgAnimation 30s ease infinite;
+  -moz-animation: bgAnimation 30s ease infinite;
+  -o-animation: bgAnimation 30s ease infinite;
+  animation: bgAnimation 30s ease infinite;
+  position: relative;
 }
 
 @media ( min-width : $breakpoint ) {
-	.c-hero__inner{
-		max-width: $max-width;
-		margin: 0 auto;
-	}
+  .c-hero__inner{
+    max-width: $max-width;
+    margin: 0 auto;
+  }
 }

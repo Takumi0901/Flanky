@@ -6,7 +6,7 @@
 //
 // ---------------------------------------------------------------
 @mixin box-shadow($horizontal: 10px, $vertical: 10px, $blur: 0px, $shadow: 0px, $color: #000000){
-	-webkit-box-shadow: $horizontal $vertical $blur $shadow $color;
-	-moz-box-shadow: $horizontal $vertical $blur $shadow $color;
-	box-shadow: $horizontal $vertical $blur $shadow $color;
-}
+  -webkit-box-shadow: $horizontal $vertical $blur $shadow $color;
+  -moz-box-shadow: $horizontal $vertical $blur $shadow $color;
+  box-shadow: $horizontal $vertical $blur $shadow $color;
+} 

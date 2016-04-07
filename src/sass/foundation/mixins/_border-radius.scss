@@ -8,12 +8,12 @@
 // ---------------------------------------------------------------
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius + px;
-     -moz-border-radius: $radius + px;
-          border-radius: $radius + px;
+  -moz-border-radius: $radius + px;
+  border-radius: $radius + px;
 }
 
 @mixin border-radius-per($radius) {
   -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-          border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
 }

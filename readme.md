@@ -53,8 +53,8 @@ UTF-8(BOMなし)
 <h3>スマホの文字サイズ調整</h3>
 ``` css
 body {
-	  -webkit-text-size-adjust: 100%;
-	}
+    -webkit-text-size-adjust: 100%;
+  }
 ```
 
 ## OGP
@@ -91,7 +91,7 @@ role属性(ランドマーク属性)とは、WEBページを構成する要素�
 <h3>header</h3>
 ``` html
 <header role="banner">
-	<h1>ロゴ</h1>
+  <h1>ロゴ</h1>
 </header>
 ```
 bannerはヘッダーを表します。基本的にページ内で1個だけです。
@@ -99,7 +99,7 @@ bannerはヘッダーを表します。基本的にページ内で1個だけで�
 <h3>nav</h3>
 ``` html
 <nav role="navigation">
-	グローバルナビ
+  グローバルナビ
 </nav>
 ```
 navigationはドキュメントや関連するドキュメントのナビゲーションを示します。ちなみに、navはリンク先が主要なページのときに使うのが適切なので、グローバルナビは当てはまりますね。
@@ -112,7 +112,7 @@ navigationはドキュメントや関連するドキュメントのナビゲー�
 <h3>main</h3>
 ``` html
 <main role="main">
-	メインコンテンツ
+  メインコンテンツ
 </main>
 ```
 mainはドキュメントのうち主要なコンテンツを示します。ページに 1 つのみ。
@@ -121,7 +121,7 @@ mainはドキュメントのうち主要なコンテンツを示します。ペ�
 <h3>aside</h3>
 ``` html
 <aside role="complementary">
-	サイドコンテンツ
+  サイドコンテンツ
 </aside>
 ```
 complementaryはドキュメントを補助する情報を示します。asideが適切だと思います。
@@ -129,7 +129,7 @@ complementaryはドキュメントを補助する情報を示します。aside�
 <h3>footer</h3>
 ``` html
 <footer role="contentinfo">
-	フッター
+  フッター
 </footer>
 ```
 
@@ -143,39 +143,39 @@ contentinfoは、コンテンツに関する著作権やプライバシー情報
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="keywords" content="">
-	<meta property="og:title" content="タイトル">
-	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://任意のURL">
-	<meta property="og:image" content="http://任意のURL/og_image.png">
-	<meta property="og:site_name" content="">
-	<meta property="og:description" content="" />
-	<meta property="fb:app_id" content="任意のID">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/app.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta property="og:title" content="タイトル">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://任意のURL">
+  <meta property="og:image" content="http://任意のURL/og_image.png">
+  <meta property="og:site_name" content="">
+  <meta property="og:description" content="" />
+  <meta property="fb:app_id" content="任意のID">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-	<header role="banner">
-		<h1>ロゴ</h1>
-	</header>
-	<nav role="navigation">
-		グローバルナビ
-	</nav>
-	<main role="main">
-		メインコンテンツ
-	</main>
-	<aside role="complementary">
-		サイドコンテンツ
-	</aside>
-	<footer role="contentinfo">
-		フッター
-	</footer>
+  <header role="banner">
+    <h1>ロゴ</h1>
+  </header>
+  <nav role="navigation">
+    グローバルナビ
+  </nav>
+  <main role="main">
+    メインコンテンツ
+  </main>
+  <aside role="complementary">
+    サイドコンテンツ
+  </aside>
+  <footer role="contentinfo">
+    フッター
+  </footer>
 
-	<script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/jquery-1.11.2.min.js"></script>
 
 </body>
 </html>
@@ -183,7 +183,7 @@ contentinfoは、コンテンツに関する著作権やプライバシー情報
 
 ``` css
 body {
-	-webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 ```
 

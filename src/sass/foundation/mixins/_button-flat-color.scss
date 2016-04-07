@@ -20,7 +20,7 @@
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-      background-color: $background;
-      border-color: $border-color;
+    background-color: $background;
+    border-color: $border-color;
   }
 }

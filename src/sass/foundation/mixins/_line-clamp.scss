@@ -6,9 +6,9 @@
 //
 // ---------------------------------------------------------------
 @mixin line-clamp($size){
-    display: box;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: $size;
-    -webkit-box-orient: vertical;
+  display: box;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: $size;
+  -webkit-box-orient: vertical;
 }

@@ -6,6 +6,6 @@
 //
 // ---------------------------------------------------------------
 @mixin middle-line($height){
-    height: $height + px;
-    line-height: $height + px;
+  height: $height + px;
+  line-height: $height + px;
 }

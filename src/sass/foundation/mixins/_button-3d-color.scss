@@ -22,7 +22,7 @@
   fieldset[disabled] & {
     &:hover{
       background-color: $background;
-          border-color: $base-color;
+      border-color: $base-color;
     }
   }
 }

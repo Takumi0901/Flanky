@@ -770,17 +770,17 @@ containerと併用して使う
 
 ```
 <div class="c-container">
-    <div class="c-card">
-        <div class="c-card__header">
-            <h3>Header</h3>
-        </div>
-        <div class="c-card__content">
-            コンテンツ
-        </div>
-        <div class="c-card__bottom">
-            Bottom
-        </div>
+  <div class="c-card">
+    <div class="c-card__header">
+      <h3>Header</h3>
     </div>
+    <div class="c-card__content">
+        コンテンツ
+    </div>
+    <div class="c-card__bottom">
+      Bottom
+    </div>
+  </div>
 </div>
 ```
 
@@ -1020,17 +1020,17 @@ containerと併用して使う
 
 ```
 <div class="c-flex">
-	<div class="c-flex__menu">
-		<div class="c-flex__menu__item">
-			ボックス1
-		</div>
-		<div class="c-flex__menu__item">
-			ボックス2
-		</div>
-		<div class="c-flex__menu__item">
-			ボックス3
-		</div>
-	</div>
+  <div class="c-flex__menu">
+    <div class="c-flex__menu__item">
+      ボックス1
+    </div>
+    <div class="c-flex__menu__item">
+      ボックス2
+    </div>
+    <div class="c-flex__menu__item">
+      ボックス3
+    </div>
+  </div>
 </div>
 ```
 

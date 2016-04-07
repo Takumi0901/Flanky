@@ -7,57 +7,57 @@ containerと併用して使う
 
 ```
 <div class="c-container">
-    <div class="c-card">
-        <div class="c-card__header">
-            <h3>Header</h3>
-        </div>
-        <div class="c-card__content">
-            コンテンツ
-        </div>
-        <div class="c-card__bottom">
-            Bottom
-        </div>
+  <div class="c-card">
+    <div class="c-card__header">
+      <h3>Header</h3>
     </div>
+    <div class="c-card__content">
+        コンテンツ
+    </div>
+    <div class="c-card__bottom">
+      Bottom
+    </div>
+  </div>
 </div>
 ```
 
 */
 
 .c-card{
-	display: block;
-	background: $card-color;
-	margin-bottom: $margin-large;
-	@include box-shadow(0, 0, 2px, 0, rgba(10, 2, 4, .23));
+  display: block;
+  background: $card-color;
+  margin-bottom: $margin-large;
+  @include box-shadow(0, 0, 2px, 0, rgba(10, 2, 4, .23));
 }
 
 .c-card__header{
-	border-bottom: 1px solid $border-lighten;
-	padding: $margin-large	$margin-large 0;
+  border-bottom: 1px solid $border-lighten;
+  padding: $margin-large  $margin-large 0;
 }
 
 .c-card__content{
-	padding: $margin-large;
-	
-	p{
-		margin-bottom: $margin-base;
-	}
+  padding: $margin-large;
+  
+  p{
+    margin-bottom: $margin-base;
+  }
 }
 
 .c-card__content__clamp{
-	@include line-clamp(3);
+  @include line-clamp(3);
 }
 
 .c-card__bottom{
-	border-top: 1px solid $border-lighten;
-	padding: $margin-base $margin-large;
-	margin: 0;
-	
-	p{
-		margin: 0;
-	}
+  border-top: 1px solid $border-lighten;
+  padding: $margin-base $margin-large;
+  margin: 0;
+  
+  p{
+    margin: 0;
+  }
 }
 
 .c-card__thumb{
-	width: 100%;
-	margin-bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
 }

@@ -96,12 +96,12 @@ formデザイン
 	input[type=email],
 	textarea,
 	select{
-		background: $bg-white;
-	  display: block;
-	  border: solid 1px $border-lighten;
-	  padding: $margin-base $margin-large;
-	  width: 100%;
-	}
+    background: $bg-white;
+    display: block;
+    border: solid 1px $border-lighten;
+    padding: $margin-base $margin-large;
+    width: 100%;
+  }
 }
 
 .c-form__select{
@@ -142,84 +142,84 @@ formデザイン
 // radio checkbox　default style
 .c-form input[type=radio],
 .c-form input[type=checkbox] {
-    display: inline-block;
-    margin-right: 6px;
+  display: inline-block;
+  margin-right: 6px;
 }
 .c-form input[type=radio] + label,
 .c-form input[type=checkbox] + label,
 .c-form label input[type=checkbox]{
-    position: relative;
-    display: inline-block;
-    margin-right: 12px;
-    font-size: 14px;
-    line-height: 30px;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-right: 12px;
+  font-size: 14px;
+  line-height: 30px;
+  cursor: pointer;
 }
- 
+
 @media (min-width: 1px) {
-    .c-form input[type=radio],
-    .c-form input[type=checkbox] {
-        display: none;
-        margin: 0;
-    }
-    .c-form input[type=radio] + label,
-    .c-form input[type=checkbox] + label,
-    .c-form label input[type=checkbox] {
-        padding: 0 0 0 24px;
-    }
-    .c-form input[type=radio] + label::before,
-    .c-form input[type=checkbox] + label::before,
-    .c-form label input[type=checkbox]::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        display: block;
-        width: 18px;
-        height: 18px;
-        margin-top: -9px;
-        background-color: white;
-    }
-    .c-form input[type=radio] + label::before {
-        border: 2px solid #c2ced2;
-        border-radius: 30px;
-    }
-    .c-form input[type=checkbox] + label::before,
-    .c-form label input[type=checkbox]::before {
-        border: 2px solid #c2ced2;
-    }
-    .c-form input[type=radio]:checked + label::after,
-    .c-form input[type=checkbox]:checked + label::after,
-    .c-form label input[type=checkbox]:checked::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        display: block;
-    }
-    .c-form input[type=radio]:checked + label::after {
-        left: 5px;
-        width: 8px;
-        height: 8px;
-        margin-top: -4px; 
-        background: #19c5ff;
-        border-radius: 8px;
-    }
-    .c-form input[type=checkbox]:checked + label::after,
-    .c-form label input[type=checkbox]:checked::after {
-        left: 3px;
-        width: 16px;
-        height: 8px;
-        margin-top: -8px;
-        border-left: 3px solid #12b4eb;
-        border-bottom: 3px solid #12b4eb;
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-    }
+  .c-form input[type=radio],
+  .c-form input[type=checkbox] {
+    display: none;
+    margin: 0;
+  }
+  .c-form input[type=radio] + label,
+  .c-form input[type=checkbox] + label,
+  .c-form label input[type=checkbox] {
+    padding: 0 0 0 24px;
+  }
+  .c-form input[type=radio] + label::before,
+  .c-form input[type=checkbox] + label::before,
+  .c-form label input[type=checkbox]::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
+    background-color: white;
+  }
+  .c-form input[type=radio] + label::before {
+    border: 2px solid #c2ced2;
+    border-radius: 30px;
+  }
+  .c-form input[type=checkbox] + label::before,
+  .c-form label input[type=checkbox]::before {
+    border: 2px solid #c2ced2;
+  }
+  .c-form input[type=radio]:checked + label::after,
+  .c-form input[type=checkbox]:checked + label::after,
+  .c-form label input[type=checkbox]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+  }
+  .c-form input[type=radio]:checked + label::after {
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    margin-top: -4px; 
+    background: #19c5ff;
+    border-radius: 8px;
+  }
+  .c-form input[type=checkbox]:checked + label::after,
+  .c-form label input[type=checkbox]:checked::after {
+    left: 3px;
+    width: 16px;
+    height: 8px;
+    margin-top: -8px;
+    border-left: 3px solid #12b4eb;
+    border-bottom: 3px solid #12b4eb;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
 }
 
 
@@ -230,25 +230,25 @@ formデザイン
 		border-bottom: solid 1px $border-lighten;
 	}
 
-    tr:last-child{
-        border-bottom: none;
-    }
+  tr:last-child{
+    border-bottom: none;
+  }
 
-	th{
-		width: 20%;
-		font-weight: normal;
-		text-align: left;
-		padding: $margin-large $margin-large;
-		font-size: 12px;
-	}
+  th{
+    width: 20%;
+    font-weight: normal;
+    text-align: left;
+    padding: $margin-large $margin-large;
+    font-size: 12px;
+  }
 
-	td{
-		width: 80%;
-		padding: $margin-large $margin-large;
-	}
+  td{
+    width: 80%;
+    padding: $margin-large $margin-large;
+  }
 }
 
 .c-form__table--border{
-    border-top: solid 1px $border-lighten;
-    border-bottom: solid 1px $border-lighten;
+  border-top: solid 1px $border-lighten;
+  border-bottom: solid 1px $border-lighten;
 }

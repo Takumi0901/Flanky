@@ -29,24 +29,24 @@
  */
 
 .c-table{
-	width: 100%;
+  width: 100%;
 
-	td,th{
-		text-align: left;
-		padding: $margin-base;
-	}
-    tr{
-        border-bottom: solid 1px $border-lighten;
-    }
-    tr:last-child{
-        border-bottom: none;
-    }
-    tr:hover{
-        background: $bg-default;
-    }
+  td,th{
+    text-align: left;
+    padding: $margin-base;
+  }
+  tr{
+    border-bottom: solid 1px $border-lighten;
+  }
+  tr:last-child{
+    border-bottom: none;
+  }
+  tr:hover{
+    background: $bg-default;
+  }
 }
 
 .c-table--border{
-    border-top: solid 1px $border-lighten;
-    border-bottom: solid 1px $border-lighten;
+  border-top: solid 1px $border-lighten;
+  border-bottom: solid 1px $border-lighten;
 }

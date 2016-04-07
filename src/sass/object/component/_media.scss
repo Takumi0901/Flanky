@@ -40,34 +40,34 @@ card、containerと組み合わせて使う
 */
 
 .c-media{
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .c-media__left{
-	float: left;
-	width: 40%;
-    max-width: 320px;
-	
-	img{
-		padding-right: $margin-large;
-	}
+  float: left;
+  width: 40%;
+  max-width: 320px;
+  
+  img{
+    padding-right: $margin-large;
+  }
 }
 
 .c-media__right{
-	float: right;
-	width: 40%;
-    max-width: 320px;
-	
-	img{
-		padding-left: $margin-large;
-	}
+  float: right;
+  width: 40%;
+  max-width: 320px;
+  
+  img{
+    padding-left: $margin-large;
+  }
 }
 
 .c-media__text{
-	float: left;
-	width: 60%;
+  float: left;
+  width: 60%;
 }
 
 .c-media__text__clmap{
-    @include line-clamp(3);
+  @include line-clamp(3);
 }

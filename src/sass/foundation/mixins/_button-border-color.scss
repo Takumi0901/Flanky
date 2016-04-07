@@ -19,8 +19,8 @@
   &[disabled],
   fieldset[disabled] & {
     &:hover{
-          border-color: $base-color;
-          color: $base-color !important;
+      border-color: $base-color;
+      color: $base-color !important;
     }
   }
 }

@@ -14,20 +14,20 @@
  */
 
 .c-mediaquery--sp{
-	display: block;
+  display: block;
 }
 
 .c-mediaquery--pc{
-	display: none;
+  display: none;
 }
 
 
 @media ( min-width : $breakpoint ) {
-	.c-mediaquery--sp{
-		display: none;
-	}
+  .c-mediaquery--sp{
+    display: none;
+  }
 
-	.c-mediaquery--pc{
-		display: block;
-	}
+  .c-mediaquery--pc{
+    display: block;
+  }
 }

@@ -49,20 +49,20 @@ inline-blockでのレイアウト用
 */
 
 .c-inline {
-    display: block;
+  display: block;
 }
 
 // justify
 .c-inline--justify {
-    text-align: justify;
-    text-justify: distribute-all-lines;
-    font-size: 0;
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  font-size: 0;
 }
 
 .c-inline--justify:after {
-    display: inline-block;
-    width: 100%;
-    content: "";
+  display: inline-block;
+  width: 100%;
+  content: "";
 }
 
 .c-inline--right{
@@ -74,29 +74,29 @@ inline-blockでのレイアウト用
 }
 
 .c-inline__cell {
-    display: inline-block;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    vertical-align: top;
-    text-align: left;
-    text-justify: auto;
-    font-size: 14px;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: top;
+  text-align: left;
+  text-justify: auto;
+  font-size: 14px;
 }
 
 
 // vertical-align
 .c-inline__cell--middle {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .c-inline__cell--bottom {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 .c-inline__cell--middle {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 .c-inline__cell--top {
-    vertical-align: top;
+  vertical-align: top;
 }
