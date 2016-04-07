@@ -62,121 +62,159 @@ $var-col-gutters:				2%;
 $var-col-width:					$var-max-width / $var-col;
 $var-col-width-gutters:			($var-max-width + $var-col-gutters) / $var-col;
 
-.c-grid { 
-	width: $var-max-width;
-	margin: 0 auto;
-	letter-spacing: -0.35em;
+.c-grid{
+	display:-webkit-flex; // safari（PC）用
+	display:-ms-flexbox; // IE10
+	display: flex;
+	-ms-flex-flow:wrap; // IE10用
+  -webkit-flow:wrap; // safari（PC）用
+	flex-wrap: wrap;
 	
-	&--right{
-		text-align: right;
+	&--top{
+		-webkit-box-align: start; // Androidブラウザ用
+    -ms-flex-align: start; // IE10
+    -webkit-align-items:flex-start; // safari（PC）用
+		align-items: flex-start;
+	}
+
+	&--middle{
+		-webkit-box-align: center; // Androidブラウザ用
+    -ms-flex-align: center; // IE10
+    -webkit-align-items:center; // safari（PC）用
+		align-items: center;
+	}
+
+	&--bottom{
+		-webkit-box-align: end; // Androidブラウザ用
+    -ms-flex-align: end; // IE10
+    -webkit-align-items:flex-end; // safari（PC）用
+		align-items: flex-end;
+	}
+
+	&--stretch{
+		-webkit-box-align:stretch; // Androidブラウザ用
+    -ms-flex-align:stretch; // IE10
+    -webkit-align-items:stretch; // safari（PC）用
+		align-items: stretch;
+	}
+
+	&--baseline{
+		-webkit-box-align: baseline; // Androidブラウザ用
+    -ms-flex-align: baseline; // IE10
+    -webkit-align-items:baseline; // safari（PC）用
+		align-items: baseline;
+	}
+
+	&--left{
+		-webkit-box-pack:start; // Androidブラウザ用
+    -ms-flex-pack:start; // IE10
+    -webkit-justify-content:flex-start; // safari（PC）用
+		justify-content: flex-start;
 	}
 
 	&--center{
-		text-align: center;
+		-webkit-box-pack:center; // Androidブラウザ用
+    -ms-flex-pack:center; // IE10
+    -webkit-justify-content:center; // safari（PC）用
+		justify-content: center;
 	}
 
-	&--justify {
-		display: block;
-		text-align: justify;
-		text-justify: distribute-all-lines;
-		
-		&:after{
-			content: '';
-			display: inline-block;
-			width: $var-max-width;
-		}
+	&--right{
+		-webkit-box-pack:end; // Androidブラウザ用
+    -ms-flex-pack:end; // IE10
+    -webkit-justify-content:flex-end; // safari（PC）用
+		justify-content: flex-end;
 	}
 
-	&--middle &__col{
-		vertical-align: middle;
-	}
-
-	&--top &__col{
-		vertical-align: top;
-	}
-
-	&--bottom &__col{
-		vertical-align: bottom;
-	}
-
-	&__col{
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
-		display: block;
-		width: $var-max-width;
-		vertical-align: top;
-		letter-spacing: normal;
-		word-spacing: normal;
-		word-wrap: break-word;
-		
-		&--middle{
-			vertical-align: middle;
-		}
-
-		&--top{
-			vertical-align: top;
-		}
-
-		&--bottom{
-			vertical-align: bottom;
-		}
+	&--between{
+		-webkit-box-pack:justify; // Androidブラウザ用
+    -ms-flex-pack:justify; // IE10
+    -webkit-justify-content:space-between; // safari（PC）用
+		justify-content: space-between;
 	}
 }
 
 
-@media ( min-width : $var-breakpoint ) {
+.c-grid__col{
+	box-sizing: border-box;
+	-ms-flex:0 0 auto;
+	-webkit-flex-shrink: 1;
+	flex-shrink: 0;
 	
-	.c-grid{
-
-		&--gutters &__col{
-			margin-left: $var-col-gutters;
-			
-			&:first-child{
-				margin-left: 0;
-			}	
+	&--full{
+		-ms-flex:1 0 auto;
+		-webkit-box-flex: 1;
+	  -webkit-flex-grow: 1;
+		flex-grow: 1;
+	}
+	
+	@for $i from 1 through $var-col{
+		&--#{$i + of + $var-col}{
+			width: $var-col-width * $i;
 		}
+	}
+}
 
-		&__col{
-			display: inline-block;
-			width: auto;
+.c-grid--gutters .c-grid__col{
+	margin-left: $var-col-gutters;
+	
+	&:first-child{
+		margin: 0;
+	}
+	
+	@for $i from 1 through $var-col{
+		&--#{$i + of + $var-col}{
+			width: $var-col-width-gutters * $i - $var-col-gutters;
+		}
+	}
+}
+
+.c-grid--query{
+		display: block;
+	
+	.c-grid__col{
+		width: 100% !important;
+		display: block !important;
+	}
+}
+
+.c-grid--query.c-grid--gutters .c-grid__col{
+	margin-left: 0;
+}
+
+@media ( min-width : $var-breakpoint ) {
+	.c-grid--query{
+		display:-webkit-flex; // safari（PC）用
+		display:-ms-flexbox; // IE10
+		display: flex;
+		-ms-flex-flow:wrap; // IE10用
+	  -webkit-flow:wrap; // safari（PC）用
+		flex-wrap: wrap;
+		
+		.c-grid__col{
+			box-sizing: border-box;
+			-ms-flex:0 0 auto;
+			-webkit-flex-shrink: 1;
+			flex-shrink: 0;
 			
 			@for $i from 1 through $var-col{
-				&--#{$i}{
-					width: $var-col-width * $i;
+				&--#{$i + of + $var-col}{
+					width: $var-col-width * $i !important;
 				}
 			}
 		}
-
-		&__offset{
-			@for $i from 1 through $var-col{
-				&--#{$i}{
-					margin-right: $var-col-width * $i;
-				}
+	}
+	.c-grid--query.c-grid--gutters .c-grid__col{
+		margin-left: $var-col-gutters;
+		
+		&:first-child{
+			margin: 0;
+		}
+		
+		@for $i from 1 through $var-col{
+			&--#{$i + of + $var-col}{
+				width: $var-col-width-gutters * $i - $var-col-gutters !important;
 			}
 		}
-
-		&--gutters &__col{
-			@for $i from 1 through $var-col - 1{
-				&--#{$i}{
-					width: $var-col-width-gutters * $i - $var-col-gutters;
-				}
-			}
-			&--#{$var-col}{
-				width: $var-max-width;
-			}
-		}
-
-		&--gutters &__offset{
-			@for $i from 1 through $var-col - 1{
-				&--#{$i}{
-					margin-right: $var-col-width-gutters * $i;
-				}
-			}
-
-			&--#{$var-col}{
-				margin-right: $var-max-width;
-			}
-		}
-	}	
+	}
 }

@@ -23,10 +23,10 @@
 	<header role="banner" class="c-drawer-fixed-bar c-bar">
 		<div class="c-bar__inner">
 		  <div class="c-grid c-grid--gutters">
-			<div class="c-grid__col c-grid__col--4">
+			<div class="c-grid__col c-grid__col--4of12">
 				<h1>Flanky</h1>
 			</div>
-			<div class="c-grid__col c-grid__col--8">
+			<div class="c-grid__col c-grid__col--8of12">
 				<span class="c-drawer-btn c-mediaquery--sp">
 					<i class="c-drawer-btn__icon"></i>
 				</span>
@@ -97,12 +97,12 @@
 			</ul>
 		</div>
 		<div class="c-container">
-			<div class="c-grid c-grid--gutters">
-				<div class="c-grid__col c-grid__col--9">
+			<div class="c-grid c-grid--query c-grid--gutters">
+				<div class="c-grid__col c-grid__col--9of12">
 					<section>
 						<h2 class="c-title c-title--primary">Card<span class="c-title__sub-text">カードデザイン</span></h2>
-						<div class="c-grid c-grid--gutters">
-							<div class="c-grid__col c-grid__col--4">
+						<div class="c-grid c-grid--query">
+							<div class="c-grid__col c-grid__col--4of12">
 								<div class="c-card">
 									<p class="c-card__thumb">
 										<img src="img/messi.jpg" width="100%" alt="">
@@ -127,7 +127,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="c-grid__col c-grid__col--4">
+							<div class="c-grid__col c-grid__col--4of12">
 								<div class="c-card">
 									<p class="c-card__thumb">
 										<img src="img/cr7.jpg" width="100%" alt="">
@@ -152,7 +152,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="c-grid__col c-grid__col--4">
+							<div class="c-grid__col c-grid__col--4of12">
 								<div class="c-card">
 									<p class="c-card__thumb">
 										<img src="img/neymar.jpg" width="100%" alt="">
@@ -360,7 +360,7 @@
 						</div>
 					</section>
 				</div>
-				<div class="c-grid__col c-grid__col--3">
+				<div class="c-grid__col c-grid__col--3of12">
 					<aside>
 						<h2 class="c-title c-title--primary">Menu<span class="c-title__sub-text">メニュー</span></h2>
 						<div class="c-card">
