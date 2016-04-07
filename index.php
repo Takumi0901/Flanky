@@ -7,8 +7,8 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<title>Document</title>
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/app.min.css">
+	<link rel="stylesheet" href="dist/css/font-awesome.min.css">
+	<link rel="stylesheet" href="dist/css/app.min.css">
 	<style>
 	  .box {
 		  padding: 8px 16px;
@@ -105,7 +105,7 @@
 							<div class="c-grid__col c-grid__col--4of12">
 								<div class="c-card">
 									<p class="c-card__thumb">
-										<img src="img/messi.jpg" width="100%" alt="">
+										<img src="dist/img/messi.jpg" width="100%" alt="">
 									</p>
 									<div class="c-card__content">
 										<h2>リオネル・メッシ</h2>
@@ -130,7 +130,7 @@
 							<div class="c-grid__col c-grid__col--4of12">
 								<div class="c-card">
 									<p class="c-card__thumb">
-										<img src="img/cr7.jpg" width="100%" alt="">
+										<img src="dist/img/cr7.jpg" width="100%" alt="">
 									</p>
 									<div class="c-card__content">
 										<h2>クリスティアーノ・ロナウド</h2>
@@ -155,7 +155,7 @@
 							<div class="c-grid__col c-grid__col--4of12">
 								<div class="c-card">
 									<p class="c-card__thumb">
-										<img src="img/neymar.jpg" width="100%" alt="">
+										<img src="dist/img/neymar.jpg" width="100%" alt="">
 									</p>
 									<div class="c-card__content">
 										<h2>ネイマール</h2>
@@ -191,7 +191,7 @@
 								<li class="c-menu__item">
 									<a href="#" class="c-media">
 										<div class="c-media__left">
-											<img src="img/messi.jpg" width="100%" alt="">
+											<img src="dist/img/messi.jpg" width="100%" alt="">
 										</div>
 										<div class="c-media__text">
 											<h3>リオネル・メッシ</h3>
@@ -213,7 +213,7 @@
 								<li class="c-menu__item">
 									<a href="#" class="c-media">
 										<div class="c-media__left">
-											<img src="img/cr7.jpg" width="100%" alt="">
+											<img src="dist/img/cr7.jpg" width="100%" alt="">
 										</div>
 										<div class="c-media__text">
 											<h3>クリスティアーノ・ロナウド</h3>
@@ -235,7 +235,7 @@
 								<li class="c-menu__item">
 									<a href="#" class="c-media">
 										<div class="c-media__left">
-											<img src="img/neymar.jpg" width="100%" alt="">
+											<img src="dist/img/neymar.jpg" width="100%" alt="">
 										</div>
 										<div class="c-media__text">
 											<h3>ネイマール</h3>
@@ -409,9 +409,9 @@
 		フッター
 	</footer>
 
-	<script src="js/jquery-2.1.1.min.js"></script>
-	<script src="js/jquery.simpledrawer.js"></script>
-	<script src="js/main.js"></script>
+	<script src="dist/js/jquery-2.1.1.min.js"></script>
+	<script src="dist/js/jquery.simpledrawer.js"></script>
+	<script src="dist/js/main.js"></script>
 
 </body>
 </html>

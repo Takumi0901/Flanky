@@ -10,10 +10,10 @@ var gulp 				= require('gulp');
 
 
 gulp.task('sass', function() {
-  return sass('sass/app.scss', { style: 'expanded', sourcemap: true })
+  return sass('src/sass/app.scss', { style: 'expanded', sourcemap: true })
       .pipe(plumber())
       .on('error', sass.logError)
-      .pipe(gulp.dest('./css'))
+      .pipe(gulp.dest('dist/css'))
       .pipe(header('@charset "utf-8";\n'))
       .pipe(cssmin())
       .pipe(rename({
@@ -21,29 +21,29 @@ gulp.task('sass', function() {
       }))
       .pipe(sourcemaps.write('maps', {
         includeContent: false,
-        sourceRoot: '../../sass/'
+        sourceRoot: '../../src/sass/'
       }))
-      .pipe(gulp.dest('./css'))
+      .pipe(gulp.dest('dist/css'))
 });
 
-gulp.task('styledocco', function() {
-  gulp.src('css/app.css')
-    .pipe(plumber())
-    .pipe(styledocco({
-      out: 'docs',
-      name: 'My Project',
-      'no-minify': true
-    }));
-});
+// gulp.task('styledocco', function() {
+//   gulp.src('css/app.css')
+//     .pipe(plumber())
+//     .pipe(styledocco({
+//       out: 'docs',
+//       name: 'My Project',
+//       'no-minify': true
+//     }));
+// });
 
 
 gulp.task('watch', function(){
-    gulp.watch('sass/**/**/*', function(event) {
+    gulp.watch('dist/sass/**/**/*', function(event) {
         gulp.run('sass');
     });
-    gulp.watch('css/app.css', function(event) {
-        gulp.run('styledocco');
-    });
+    // gulp.watch('css/app.css', function(event) {
+    //     gulp.run('styledocco');
+    // });
 });
  
 gulp.task('default', function(){
