@@ -1,0 +1,12 @@
+/* wrapper
+--------------------------------------------------------- */
+.l-wrapper{
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 $margin-large $margin-large-xxxx;
+  display: block;
+}
+
+.l-wrapper--top{
+  padding: 72px $margin-large $margin-large;
+}

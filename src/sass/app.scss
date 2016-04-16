@@ -9,7 +9,7 @@
 ## Sanitize
 ----------------------------------------------- */
 @import "foundation/sanitize";
-
+ 
 /*
 ## Base
 ----------------------------------------------- */
@@ -23,6 +23,13 @@
 
 
 /* ---------------------------------------------------
+ # Layout
+--------------------------------------------------- */
+@import "layout/footer";
+@import "layout/wrapper";
+
+
+/* ---------------------------------------------------
  # Object
 --------------------------------------------------- */
 
@@ -30,14 +37,21 @@
 # Component
 ----------------------------------------------- */
 @import "object/component/alert";
+@import "object/component/avatar";
 @import "object/component/bar";
+@import "object/component/breadcrumb";
 @import "object/component/btn";
 @import "object/component/card";
 @import "object/component/container";
 @import "object/component/drawer";
+@import "object/component/effect";
 @import "object/component/flex";
+@import "object/component/floating-menu";
 @import "object/component/form";
 @import "object/component/inline";
+@import "object/component/label";
+@import "object/component/link";
+@import "object/component/loading";
 @import "object/component/grid";
 @import "object/component/hero";
 @import "object/component/media";
@@ -48,8 +62,18 @@
 @import "object/component/tab";
 @import "object/component/table";
 @import "object/component/text";
+@import "object/component/thumb";
 @import "object/component/title";
 
+
+/*
+# Project
+----------------------------------------------- */
+@import "object/project/calender";
+@import "object/project/carousel";
+@import "object/project/color-picker";
+@import "object/project/grand-top";
+ 
 
 /*
 # Utility

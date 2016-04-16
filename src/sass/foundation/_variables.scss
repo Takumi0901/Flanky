@@ -63,12 +63,13 @@ $text-color-success:            $base-success;
 // ---------------------------------------------------------------
 $bg-white:                      $base-color-white;
 $bg-default:                    $base-color-lighten;
+$bg-default-darken:             darken($bg-default, 10%);
 $bg-primary:                    $primary-color;
 $bg-secondary:                  $secondary-color;
 $bg-highlight:                  $highlight-color;
 $bg-alert:                      $base-alert;
 $bg-alert-b:                    lighten($base-alert, 35%);
-$bg-success:                    lighten($base-success, 45%);
+$bg-success:                    lighten($base-success, 20%);
 
 
 

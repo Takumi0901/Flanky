@@ -257,11 +257,11 @@ a:hover, a:focus, a:active {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 p {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 input[type="radio"] {
@@ -269,6 +269,12 @@ input[type="radio"] {
   margin-right: 8px;
 }
 
+@media (min-width: 768px) {
+  a:hover img {
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+  }
+}
 /*
 ## Animations
 ----------------------------------------------- */
@@ -417,6 +423,32 @@ input[type="radio"] {
   }
 }
 /* ---------------------------------------------------
+ # Layout
+--------------------------------------------------- */
+/* footer
+--------------------------------------------------------- */
+.l-footer {
+  text-align: center;
+  color: #b7b7b7;
+  font-size: 10px;
+  border-top: 1px #e5e5e5 solid;
+  padding: 24px 0;
+}
+
+/* wrapper
+--------------------------------------------------------- */
+.l-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px 48px;
+  display: block;
+}
+
+.l-wrapper--top {
+  padding: 72px 16px 16px;
+}
+
+/* ---------------------------------------------------
  # Object
 --------------------------------------------------- */
 /*
@@ -426,30 +458,55 @@ input[type="radio"] {
 # alert
 
 ```
-<div class="c-container">
-    <p class="c-alert">
-        alert
-    </p>
-
-    <p class="c-alert--success">
-        alert
-    </p>
-</div>
+<p class="c-alert">alert</p>
 ```
 
  */
 .c-alert {
   color: #f73b6a;
-  background: #fee7ec;
+  background: #fee6ec;
   border: solid 1px #fdceda;
   padding: 8px 16px;
 }
 
 .c-alert--success {
   color: #3c763d;
-  background: #bbdcbc;
+  background: #67b168;
   border: solid 1px #88c389;
   padding: 8px 16px;
+}
+
+/*
+# avatar
+
+```
+<div class="c-avatar"><img src="dist/img/messi.jpg" width="100%" alt=""></div>
+```
+*/
+.c-avatar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.c-avatar img {
+  margin-left: -30px;
+  width: 120px;
+}
+
+.c-avatar--large {
+  position: relative;
+  width: 240px;
+  height: 240px;
+}
+.c-avatar--large img {
+  margin-left: -120px;
+  width: 480px;
 }
 
 /*
@@ -457,9 +514,9 @@ input[type="radio"] {
 
 ```
 <div class="c-bar">
-    <div class="c-bar__inner">
-        bar
-    </div>
+  <div class="c-bar__inner">
+    bar
+  </div>
 </div>
 ```
 
@@ -473,6 +530,21 @@ input[type="radio"] {
 }
 .c-bar h1, .c-bar h2, .c-bar h3, .c-bar h4, .c-bar h5, .c-bar p {
   margin: 0;
+}
+.c-bar--small {
+  height: 32px;
+  line-height: 32px;
+  color: #fff;
+}
+.c-bar--black {
+  background: #4bd5f2;
+}
+.c-bar--fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
 }
 
 .c-bar__inner {
@@ -495,31 +567,72 @@ input[type="radio"] {
     margin: 0 auto;
   }
 }
+/* 
+#beadcrumb
+
+```
+<div class="c-breadcrumb">
+  <ul class="c-inline c-breadcrumb__inner">
+    <li class="c-inline__cell">
+     <a href="#">Home</a> <i class="fa fa-angle-right"></i>
+   </li>
+   <li class="c-inline__cell">
+     <a href="#">hogehoge</a>
+   </li>
+ </ul>
+</div>
+```
+
+*/
+.c-breadcrumb {
+  width: 100%;
+  padding: 72px 0 16px;
+  background: #fff;
+  color: #b7b7b7;
+}
+.c-breadcrumb a {
+  color: #b7b7b7;
+}
+.c-breadcrumb a:hover {
+  color: #9e9e9e;
+}
+
+.c-breadcrumb__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+  .c-breadcrumb {
+    padding: 72px 0 16px;
+  }
+}
 /*
 # btn
 
 ```
 <p>
-    <a class="c-btn c-btn-default--border" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--border" href="#">ボタン</a>
-    <a class="c-btn c-btn-highlight--border" href="#">ボタン</a>
-    <a class="c-btn c-btn-default--ghost" href="#">ボタン</a>
+  <a class="c-btn c-btn-default--border" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--border" href="#">ボタン</a>
+  <a class="c-btn c-btn-highlight--border" href="#">ボタン</a>
+  <a class="c-btn c-btn-default--ghost" href="#">ボタン</a>
 </p>
 <p>
-    <a class="c-btn c-btn-default--flat" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--flat" href="#">ボタン</a>
-    <a class="c-btn c-btn-highlight--flat" href="#">ボタン</a>
+  <a class="c-btn c-btn-default--flat" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat" href="#">ボタン</a>
+  <a class="c-btn c-btn-highlight--flat" href="#">ボタン</a>
 </p>
 
 <p>
-    <a class="c-btn c-btn-primary--flat c-btn--jumbo" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--flat c-btn--large" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--flat" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--flat c-btn--small" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--flat c-btn--tiny" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat c-btn--jumbo" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat c-btn--large" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat c-btn--small" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat c-btn--tiny" href="#">ボタン</a>
 </p>
 <p>
-    <a class="c-btn c-btn-primary--flat c-btn--block" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat c-btn--block" href="#">ボタン</a>
 </p>
 ```
 
@@ -761,6 +874,70 @@ input[type="radio"] {
   width: 100%;
 }
 
+.c-btn--circle {
+  width: 80px;
+  height: 80px;
+  display: table;
+  padding: 0;
+  line-height: 20px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 12px 0 rgba(10, 2, 4, 0.4);
+  -moz-box-shadow: 0 0 12px 0 rgba(10, 2, 4, 0.4);
+  box-shadow: 0 0 12px 0 rgba(10, 2, 4, 0.4);
+}
+.c-btn--circle__inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.c-btn-panel {
+  background: #fff;
+  padding: 32px;
+  display: block;
+  -webkit-box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+  -moz-box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+  box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition-property: box-shadow;
+}
+.c-btn-panel:link, .c-btn-panel:active, .c-btn-panel:visited {
+  color: #4bd5f2;
+  text-decoration: none;
+}
+.c-btn-panel:hover {
+  color: #4bd5f2;
+  text-decoration: none;
+  -webkit-box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
+  -moz-box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
+  box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition-property: box-shadow;
+}
+.c-btn-panel:hover .c-btn-panel__arrow {
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition-property: transform;
+  -webkit-transform: translateX(4px);
+  transform: translateX(4px);
+}
+.c-btn-panel__icon {
+  font-size: 64px;
+}
+.c-btn-panel__text {
+  font-size: 16px;
+}
+.c-btn-panel__arrow {
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition-property: transform;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
 /*
 # card
 
@@ -787,11 +964,17 @@ containerと併用して使う
 */
 .c-card {
   display: block;
+  width: 100%;
   background: #fff;
   margin-bottom: 16px;
+  position: relative;
   -webkit-box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
   -moz-box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
   box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
+}
+
+.c-card--ov-x {
+  overflow-x: scroll;
 }
 
 .c-card__header {
@@ -802,8 +985,14 @@ containerと併用して使う
 .c-card__content {
   padding: 16px;
 }
+.c-card__content h2 {
+  height: 40px;
+}
 .c-card__content p {
   margin-bottom: 8px;
+}
+.c-card__content--border {
+  border-top: 1px solid #e5e5e5;
 }
 
 .c-card__content__clamp {
@@ -828,12 +1017,65 @@ containerと併用して使う
   margin-bottom: 0;
 }
 
+.c-card__check-mark {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  font-size: 32px;
+  text-align: center;
+  color: #fff;
+  background: #e0e0e0;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+  -moz-box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+  box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+}
+.c-card__check-mark.is-active {
+  background: #67b168;
+}
+
+.c-card__favorite-mark {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  font-size: 24px;
+  text-align: center;
+  color: #fff;
+  background: #e0e0e0;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+  -moz-box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+  box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+}
+.c-card__favorite-mark.is-active {
+  background: #f24b4b;
+}
+
 /* 
 # container
 
 ```
 <div class="c-container">
-    コンテンツ
+  コンテンツ
+</div>
+<div class="c-container--small">
+  コンテンツ
+</div>
+<div class="c-container--x-small">
+  コンテンツ
+</div>
+<div class="c-container--full">
+  コンテンツ
 </div>
 ```
 */
@@ -855,7 +1097,7 @@ containerと併用して使う
 
 /*
 # drawer
- */
+*/
 .c-drawer {
   position: fixed;
   top: 0;
@@ -931,6 +1173,7 @@ containerと併用して使う
   height: 32px;
   position: absolute;
   top: 50%;
+  right: 16px;
 }
 
 .c-drawer-btn.is-right {
@@ -1014,6 +1257,58 @@ containerと併用して使う
 }
 
 /*
+# effect
+
+a自体のスタイルは適用しない方針
+
+```
+<a href="#" class="c-effect--border">hoge</a>
+```
+
+*/
+.c-effect--ov--border {
+  position: relative;
+}
+.c-effect--ov--border:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #4bd5f2;
+  content: '';
+  opacity: 0;
+  -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+  -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+  transition: height 0.3s, opacity 0.3s, transform 0.3s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+.c-effect--ov--border:hover::after, .c-effect--ov--border:focus::after {
+  height: 2px;
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+.c-effect--ov--slide:hover .fa {
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition-property: transform;
+  -webkit-transform: translateX(4px);
+  transform: translateX(4px);
+}
+.c-effect--ov--slide .fa {
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition-property: transform;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/*
 # flex
 
 フレックスレイアウト
@@ -1070,6 +1365,28 @@ containerと併用して使う
   justify-content: flex-end;
 }
 
+/* 
+# floating-menu
+
+主に中にボタンが入る
+
+```
+<div class="c-floating-menu">
+  <a href="#" class="c-btn c-btn-primary--flat c-btn--circle">
+    <span class="c-btn--circle__inner">
+      <span class="u-fz-12">CSV</span>
+    </span>
+  </a>
+</div>
+```
+
+*/
+.c-floating-menu {
+  position: fixed;
+  right: 10%;
+  bottom: 5%;
+}
+
 /*
 # form-control
 
@@ -1077,90 +1394,90 @@ formデザイン
 
 ```
 <div class="c-container">
-    <form class="c-form">
-        <h3 class="c-form__title">テキスト<span class="c-form__reqiured">必須</span></h3>
-        <p><input type="text"></p>
+  <form class="c-form">
+    <h3 class="c-form__title">テキスト<span class="c-form__reqiured">必須</span></h3>
+    <p><input type="text"></p>
 
-        <h3 class="c-form__title">URL<span class="c-form__reqiured">必須</span></h3>
-        <p><input type="url"></p>
+    <h3 class="c-form__title">URL<span class="c-form__reqiured">必須</span></h3>
+    <p><input type="url"></p>
 
-        <h3 class="c-form__title">パスワード<span class="c-form__reqiured">必須</span></h3>
-        <p><input type="password"></p>
+    <h3 class="c-form__title">パスワード<span class="c-form__reqiured">必須</span></h3>
+    <p><input type="password"></p>
 
-        <h3 class="c-form__title">メール<span class="c-form__reqiured">必須</span></h3>
-        <p><input type="email"></p>
+    <h3 class="c-form__title">メール<span class="c-form__reqiured">必須</span></h3>
+    <p><input type="email"></p>
 
-        <h3 class="c-form__title">テキストエリア<span class="c-form__reqiured">必須</span></h3>
-        <p>
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-        </p>
+    <h3 class="c-form__title">テキストエリア<span class="c-form__reqiured">必須</span></h3>
+    <p>
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+    </p>
 
-        <h3 class="c-form__title">チェックボックス</h3>
-        <p>
-            <input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
-            <input type="checkbox" name="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
-        </p>
+    <h3 class="c-form__title">チェックボックス</h3>
+    <p>
+      <input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
+      <input type="checkbox" name="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
+    </p>
 
-        <h3 class="c-form__title">ラジオボタン</h3>
-        <p>
-            <input type="radio" name="radio" id="radio1"><label for="radio1">radio1</label>
-            <input type="radio" name="radio" id="radio2"><label for="radio2">radio2</label>
-        </p>
-        
-        <h3 class="c-form__title">セレクト</h3>
-        <p>
-            <div class="c-form__select">
-                <label><select> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></label>
-            </div>
-        </p>
-
-        <button type="submit" class="c-btn c-btn-default--flat">Submit</button>
-    </form>
+    <h3 class="c-form__title">ラジオボタン</h3>
+    <p>
+      <input type="radio" name="radio" id="radio1"><label for="radio1">radio1</label>
+      <input type="radio" name="radio" id="radio2"><label for="radio2">radio2</label>
+    </p>
+    
+    <h3 class="c-form__title">セレクト</h3>
+    <p>
+      <div class="c-form__select">
+        <label><select> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></label>
+      </div>
+    </p>
+    <button type="submit" class="c-btn c-btn-default--flat">Submit</button>
+  </form>
 </div>
 
 <div class="c-container">
-    <form class="c-form">
-        <table class="c-form__table">
-            <tr>
-                <th>テキスト</th>
-                <td><input type="text"></td>
-            </tr>
-            <tr>
-                <th>チェックボックス</th>
-                <td>
-                    <input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
-                    <input type="checkbox" name="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
-                </td>
-            </tr>
-            <tr>
-                <th>ラジオボタン</th>
-                <td>
-                    <input type="radio" name="radio" id="radio1"><label for="radio1">radio1</label>
-                    <input type="radio" name="radio" id="radio2"><label for="radio2">radio2</label>
-                </td>
-            </tr>
-            <tr>
-                <th>セレクト</th>
-                <td>
-                    <div class="c-form__select">
-                        <label><select> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></label>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <th>テキストエリア</th>
-                <td>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                </td>
-            </tr>
-        </table>
-    </form>
+  <form class="c-form">
+    <table class="c-form__table">
+      <tr>
+        <th>テキスト</th>
+        <td><input type="text"></td>
+      </tr>
+      <tr>
+          <th>チェックボックス</th>
+          <td>
+            <input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
+            <input type="checkbox" name="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
+          </td>
+      </tr>
+      <tr>
+          <th>ラジオボタン</th>
+          <td>
+            <input type="radio" name="radio" id="radio1"><label for="radio1">radio1</label>
+            <input type="radio" name="radio" id="radio2"><label for="radio2">radio2</label>
+          </td>
+      </tr>
+      <tr>
+          <th>セレクト</th>
+          <td>
+            <div class="c-form__select">
+              <label><select> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></label>
+            </div>
+          </td>
+      </tr>
+      <tr>
+        <th>テキストエリア</th>
+        <td>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </td>
+      </tr>
+    </table>
+  </form>
 </div>
 ```
 
 */
 .c-form input[type=text],
 .c-form input[type=url],
+.c-form input[type=tel],
 .c-form input[type=password],
 .c-form input[type=email],
 .c-form textarea,
@@ -1170,6 +1487,25 @@ formデザイン
   border: solid 1px #e5e5e5;
   padding: 8px 16px;
   width: 100%;
+  -webkit-appearance: none;
+  font-size: 14px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.c-form__search {
+  position: relative;
+}
+.c-form__search input[type=text] {
+  padding-left: 24px;
+}
+.c-form__search__icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  margin-top: -9px;
+  color: #b7b7b7;
 }
 
 .c-form__select {
@@ -1223,6 +1559,40 @@ formデザイン
   font-size: 14px;
   line-height: 30px;
   cursor: pointer;
+}
+
+.c-form input[type=checkbox].c-form__color-picker {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+.c-form input[type=checkbox].c-form__color-picker + label::before,
+.c-form input[type=checkbox].c-form__color-picker + label::after {
+  display: none;
+}
+
+.c-form input[type=checkbox].c-form__color-picker + label {
+  padding: 0;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+  border: solid 1px #fff;
+  -webkit-box-shadow: 0 0 1px 0 #9e9e9e;
+  -moz-box-shadow: 0 0 1px 0 #9e9e9e;
+  box-shadow: 0 0 1px 0 #9e9e9e;
+  vertical-align: text-bottom;
+  text-indent: -99999em;
+}
+
+.c-form input[type=checkbox].c-form__color-picker:checked + label {
+  border: solid 2px #454545;
+}
+
+.c-form input[type=checkbox].c-form__color-picker:checked + label::after,
+.c-form label input[type=checkbox].c-form__color-picker:checked::after {
+  display: none;
 }
 
 @media (min-width: 1px) {
@@ -1307,15 +1677,22 @@ formデザイン
   border-bottom: none;
 }
 .c-form__table th {
-  width: 20%;
+  width: 100%;
   font-weight: normal;
   text-align: left;
   padding: 16px 16px;
   font-size: 12px;
+  position: relative;
+  display: block;
 }
 .c-form__table td {
-  width: 80%;
-  padding: 16px 16px;
+  width: 100%;
+  padding: 0 16px 16px;
+  display: block;
+}
+.c-form__table .c-form__reqiured {
+  position: static;
+  margin-left: 16px;
 }
 
 .c-form__table--border {
@@ -1323,6 +1700,24 @@ formデザイン
   border-bottom: solid 1px #e5e5e5;
 }
 
+@media (min-width: 768px) {
+  .c-form__table th {
+    width: 30%;
+    position: relative;
+    display: table-cell;
+  }
+  .c-form__table td {
+    width: 70%;
+    display: table-cell;
+    padding: 16px 16px;
+  }
+  .c-form__table .c-form__reqiured {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    margin-top: -11px;
+  }
+}
 /*
 # inline
  
@@ -1422,6 +1817,81 @@ inline-blockでのレイアウト用
   vertical-align: top;
 }
 
+/* 
+#label
+
+```
+<span class="c-label">ラベル</span>
+```
+
+*/
+.c-label {
+  display: inline-block;
+  padding: 4px 16px;
+  background: #2dd885;
+  font-size: 12px;
+  margin-left: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.c-label--disable {
+  background: #f9f9f9;
+}
+
+/* link
+--------------------------------------------------------- */
+.c-link--white {
+  color: #fff;
+}
+.c-link--white:link {
+  color: #fff;
+  text-decoration: none;
+}
+.c-link--white:hover, .c-link--white:focus, .c-link--white:active {
+  color: #f2f2f2;
+}
+
+/* 
+# loading
+
+```
+<div class="c-loading">
+  <i class="c-loading__spinner fa fa-spinner"></i>
+</div>
+```
+
+*/
+.c-loading {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.c-loading__spinner {
+  font-size: 48px;
+  display: inline-block;
+  -webkit-animation-name: rotateThis;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-name: rotateThis;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotateThis {
+  from {
+    -webkit-transform: scale(0.5) rotate(0deg);
+    transform: scale(0.5) rotate(0deg);
+  }
+  to {
+    -webkit-transform: scale(0.5) rotate(360deg);
+    transform: scale(0.5) rotate(360deg);
+  }
+}
 /*
 # grid
 
@@ -1485,6 +1955,7 @@ inline-blockでのレイアウト用
   -ms-flex-flow: wrap;
   -webkit-flow: wrap;
   flex-wrap: wrap;
+  list-style: none;
 }
 .c-grid--top {
   -webkit-box-align: start;
@@ -1541,6 +2012,61 @@ inline-blockでのレイアウト用
   justify-content: space-between;
 }
 
+.c-grid--gutters > .c-grid__col {
+  margin-left: 3%;
+}
+.c-grid--gutters > .c-grid__col:first-child {
+  margin: 0;
+}
+.c-grid--gutters > .c-grid__col--1of12 {
+  width: 5.58333%;
+}
+.c-grid--gutters > .c-grid__col--2of12 {
+  width: 14.16667%;
+}
+.c-grid--gutters > .c-grid__col--3of12 {
+  width: 22.75%;
+}
+.c-grid--gutters > .c-grid__col--4of12 {
+  width: 31.33333%;
+}
+.c-grid--gutters > .c-grid__col--5of12 {
+  width: 39.91667%;
+}
+.c-grid--gutters > .c-grid__col--6of12 {
+  width: 48.5%;
+}
+.c-grid--gutters > .c-grid__col--7of12 {
+  width: 57.08333%;
+}
+.c-grid--gutters > .c-grid__col--8of12 {
+  width: 65.66667%;
+}
+.c-grid--gutters > .c-grid__col--9of12 {
+  width: 74.25%;
+}
+.c-grid--gutters > .c-grid__col--10of12 {
+  width: 82.83333%;
+}
+.c-grid--gutters > .c-grid__col--11of12 {
+  width: 91.41667%;
+}
+.c-grid--gutters > .c-grid__col--12of12 {
+  width: 100%;
+}
+
+.c-grid--query {
+  display: block;
+}
+.c-grid--query > .c-grid__col {
+  width: 100% !important;
+  display: block !important;
+}
+
+.c-grid--query.c-grid--gutters > .c-grid__col {
+  margin-left: 0;
+}
+
 .c-grid__col {
   box-sizing: border-box;
   -ms-flex: 0 0 auto;
@@ -1590,61 +2116,6 @@ inline-blockでのレイアウト用
   width: 100%;
 }
 
-.c-grid--gutters .c-grid__col {
-  margin-left: 2%;
-}
-.c-grid--gutters .c-grid__col:first-child {
-  margin: 0;
-}
-.c-grid--gutters .c-grid__col--1of12 {
-  width: 6.5%;
-}
-.c-grid--gutters .c-grid__col--2of12 {
-  width: 15%;
-}
-.c-grid--gutters .c-grid__col--3of12 {
-  width: 23.5%;
-}
-.c-grid--gutters .c-grid__col--4of12 {
-  width: 32%;
-}
-.c-grid--gutters .c-grid__col--5of12 {
-  width: 40.5%;
-}
-.c-grid--gutters .c-grid__col--6of12 {
-  width: 49%;
-}
-.c-grid--gutters .c-grid__col--7of12 {
-  width: 57.5%;
-}
-.c-grid--gutters .c-grid__col--8of12 {
-  width: 66%;
-}
-.c-grid--gutters .c-grid__col--9of12 {
-  width: 74.5%;
-}
-.c-grid--gutters .c-grid__col--10of12 {
-  width: 83%;
-}
-.c-grid--gutters .c-grid__col--11of12 {
-  width: 91.5%;
-}
-.c-grid--gutters .c-grid__col--12of12 {
-  width: 100%;
-}
-
-.c-grid--query {
-  display: block;
-}
-.c-grid--query .c-grid__col {
-  width: 100% !important;
-  display: block !important;
-}
-
-.c-grid--query.c-grid--gutters .c-grid__col {
-  margin-left: 0;
-}
-
 @media (min-width: 768px) {
   .c-grid--query {
     display: -webkit-flex;
@@ -1654,89 +2125,89 @@ inline-blockでのレイアウト用
     -webkit-flow: wrap;
     flex-wrap: wrap;
   }
-  .c-grid--query .c-grid__col {
+  .c-grid--query > .c-grid__col {
     box-sizing: border-box;
     -ms-flex: 0 0 auto;
     -webkit-flex-shrink: 1;
     flex-shrink: 0;
   }
-  .c-grid--query .c-grid__col--1of12 {
+  .c-grid--query > .c-grid__col--1of12 {
     width: 8.33333% !important;
   }
-  .c-grid--query .c-grid__col--2of12 {
+  .c-grid--query > .c-grid__col--2of12 {
     width: 16.66667% !important;
   }
-  .c-grid--query .c-grid__col--3of12 {
+  .c-grid--query > .c-grid__col--3of12 {
     width: 25% !important;
   }
-  .c-grid--query .c-grid__col--4of12 {
+  .c-grid--query > .c-grid__col--4of12 {
     width: 33.33333% !important;
   }
-  .c-grid--query .c-grid__col--5of12 {
+  .c-grid--query > .c-grid__col--5of12 {
     width: 41.66667% !important;
   }
-  .c-grid--query .c-grid__col--6of12 {
+  .c-grid--query > .c-grid__col--6of12 {
     width: 50% !important;
   }
-  .c-grid--query .c-grid__col--7of12 {
+  .c-grid--query > .c-grid__col--7of12 {
     width: 58.33333% !important;
   }
-  .c-grid--query .c-grid__col--8of12 {
+  .c-grid--query > .c-grid__col--8of12 {
     width: 66.66667% !important;
   }
-  .c-grid--query .c-grid__col--9of12 {
+  .c-grid--query > .c-grid__col--9of12 {
     width: 75% !important;
   }
-  .c-grid--query .c-grid__col--10of12 {
+  .c-grid--query > .c-grid__col--10of12 {
     width: 83.33333% !important;
   }
-  .c-grid--query .c-grid__col--11of12 {
+  .c-grid--query > .c-grid__col--11of12 {
     width: 91.66667% !important;
   }
-  .c-grid--query .c-grid__col--12of12 {
+  .c-grid--query > .c-grid__col--12of12 {
     width: 100% !important;
   }
 
-  .c-grid--query.c-grid--gutters .c-grid__col {
-    margin-left: 2%;
+  .c-grid--query.c-grid--gutters > .c-grid__col {
+    margin-left: 3%;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col:first-child {
+  .c-grid--query.c-grid--gutters > .c-grid__col:first-child {
     margin: 0;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--1of12 {
-    width: 6.5% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--1of12 {
+    width: 5.58333% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--2of12 {
-    width: 15% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--2of12 {
+    width: 14.16667% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--3of12 {
-    width: 23.5% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--3of12 {
+    width: 22.75% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--4of12 {
-    width: 32% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--4of12 {
+    width: 31.33333% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--5of12 {
-    width: 40.5% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--5of12 {
+    width: 39.91667% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--6of12 {
-    width: 49% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--6of12 {
+    width: 48.5% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--7of12 {
-    width: 57.5% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--7of12 {
+    width: 57.08333% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--8of12 {
-    width: 66% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--8of12 {
+    width: 65.66667% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--9of12 {
-    width: 74.5% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--9of12 {
+    width: 74.25% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--10of12 {
-    width: 83% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--10of12 {
+    width: 82.83333% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--11of12 {
-    width: 91.5% !important;
+  .c-grid--query.c-grid--gutters > .c-grid__col--11of12 {
+    width: 91.41667% !important;
   }
-  .c-grid--query.c-grid--gutters .c-grid__col--12of12 {
+  .c-grid--query.c-grid--gutters > .c-grid__col--12of12 {
     width: 100% !important;
   }
 }
@@ -1745,38 +2216,24 @@ inline-blockでのレイアウト用
 
 ```
 <div class="c-hero c-hero--anim">
-    <div class="c-hero__inner">
-        <h2 class="c-hero__inner__title">Hero</h2>
-        <p class="c-hero__inner__text">
-            13歳でFCバルセロナに入団し、17歳でトップチームデビューして以降、7度のリーガ・エスパニョーラ優勝、<br>
-            4度のUEFAチャンピオンズリーグ優勝に貢献。自身も5回の世界最優秀選手賞FIFAバロンドールを受賞し[注 2]、<br>
-            2008-09シーズンから2011-12シーズンまで4季連続のチャンピオンズリーグ得点王を獲得。
-        </p>
-    </div>
+  <div class="c-hero__inner">
+    <h2 class="c-hero__inner__title">Hero</h2>
+    <p class="c-hero__inner__text">
+      13歳でFCバルセロナに入団し、17歳でトップチームデビューして以降、7度のリーガ・エスパニョーラ優勝、<br>
+      4度のUEFAチャンピオンズリーグ優勝に貢献。自身も5回の世界最優秀選手賞FIFAバロンドールを受賞し[注 2]、<br>
+      2008-09シーズンから2011-12シーズンまで4季連続のチャンピオンズリーグ得点王を獲得。
+    </p>
+  </div>
 </div>
 ```
 
  */
 .c-hero {
-  background: #4bd5f2;
-  margin-bottom: 16px;
-  padding: 32px 16px;
-}
-
-.c-hero__inner {
-  width: auto;
-}
-
-.c-hero__inner__title {
-  font-size: 32px;
-  color: #fff;
-  font-weight: normal;
-  margin-bottom: 16px;
-}
-
-.c-hero__inner__text {
-  color: #fff;
-  margin-bottom: 16px;
+  margin: 0 0 32px;
+  padding: 32px 16px 16px;
+  border-bottom: 2px solid #e5e5e5;
+  border-top: 2px solid #e5e5e5;
+  position: relative;
 }
 
 .c-hero--anim {
@@ -1789,10 +2246,42 @@ inline-blockでのレイアウト用
   position: relative;
 }
 
+.c-hero--bg {
+  background-size: 120%;
+  height: 0;
+  padding-top: 40%;
+}
+
+.c-hero__inner {
+  width: auto;
+  padding: 0 16px;
+}
+
+.c-hero__inner__title {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+.c-hero__inner__text {
+  margin-bottom: 16px;
+}
+
+.c-hero__icon {
+  position: absolute;
+  bottom: -8%;
+  left: 10%;
+  border: solid #fff 2px;
+  -webkit-box-shadow: 0 0 12px 0 rgba(10, 2, 4, 0.4);
+  -moz-box-shadow: 0 0 12px 0 rgba(10, 2, 4, 0.4);
+  box-shadow: 0 0 12px 0 rgba(10, 2, 4, 0.4);
+}
+
 @media (min-width: 768px) {
   .c-hero__inner {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 16px 0 48px;
   }
 }
 /* 
@@ -1802,64 +2291,33 @@ card、containerと組み合わせて使う
 
 ```
 <div class="c-container">
-    <div class="c-media">
-        <div class="c-media__left">
-            <img src="http://wild-styles.com/wp-content/uploads/2014/06/wildstyles_messi02.jpg" width="100%" alt="">
-        </div>
-        <div class="c-media__text">
-            right
-        </div>
+  <div class="c-media">
+    <div class="c-media__left">
+      <img src="http://wild-styles.com/wp-content/uploads/2014/06/wildstyles_messi02.jpg" width="100%" alt="">
     </div>
-</div>
-<div class="c-container">
-    <div class="c-media">
-        <div class="c-media__right">
-            <img src="http://wild-styles.com/wp-content/uploads/2014/06/wildstyles_messi02.jpg" width="100%" alt="">
-        </div>
-        <div class="c-media__text">
-            left
-        </div>
+    <div class="c-media__text">
+      right
     </div>
-</div>
-<div class="c-container">
-    <div class="c-card">
-        <div class="c-media c-card__content">
-            <div class="c-media__right">
-                <img src="http://wild-styles.com/wp-content/uploads/2014/06/wildstyles_messi02.jpg" width="100%" alt="">
-            </div>
-            <div class="c-media__text">
-                left
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 ```
 */
 .c-media {
-  overflow: hidden;
+  display: table;
+  width: 100%;
+  position: relative;
 }
 
-.c-media__left {
-  float: left;
-  width: 40%;
-  max-width: 320px;
-}
-.c-media__left img {
+.c-media__content {
+  display: table-cell;
+  vertical-align: middle;
   padding-right: 16px;
 }
 
 .c-media__right {
-  float: right;
-  width: 40%;
-  max-width: 320px;
-}
-.c-media__right img {
-  padding-left: 16px;
-}
-
-.c-media__text {
-  float: left;
-  width: 60%;
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
 }
 
 .c-media__text__clmap {
@@ -1875,11 +2333,11 @@ card、containerと組み合わせて使う
 
 ```
 <div class="c-mediaquery--sp">
-
+  Sp Only
 </div>
 
 <div class="c-mediaquery--pc">
-
+  Pc Only
 </div>
 ```
 
@@ -1906,72 +2364,26 @@ card、containerと組み合わせて使う
 
 ```
 <div class="c-container">
-    <ul class="c-menu">
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー1
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー2
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー3
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-<div class="c-container">
-    <ul class="c-menu c-menu--border">
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー1
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー2
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー3
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-<div class="c-container">
-    <div class="c-card c-card--full">
-        <ul class="c-menu">
-            <li class="c-menu__item">
-                <a href="#">
-                    メニュー1
-                    <i class="c-menu__item__icon fa fa-angle-right"></i>
-                </a>
-            </li>
-            <li class="c-menu__item">
-                <a href="#">
-                    メニュー2
-                    <i class="c-menu__item__icon fa fa-angle-right"></i>
-                </a>
-            </li>
-            <li class="c-menu__item">
-                <a href="#">
-                    メニュー3
-                    <i class="c-menu__item__icon fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
+  <ul class="c-menu">
+    <li class="c-menu__item">
+      <a href="#">
+        メニュー1
+        <i class="c-menu__item__icon fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li class="c-menu__item">
+      <a href="#">
+        メニュー2
+        <i class="c-menu__item__icon fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li class="c-menu__item">
+      <a href="#">
+        メニュー3
+        <i class="c-menu__item__icon fa fa-angle-right"></i>
+      </a>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -1991,17 +2403,28 @@ card、containerと組み合わせて使う
   border-bottom: solid 1px #e5e5e5;
   position: relative;
   padding: 4px;
+  display: block;
 }
 .c-menu__item:last-child {
   border: 0;
 }
 .c-menu__item a {
   display: block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
   padding: 8px 32px 8px 8px;
   text-decoration: none;
 }
 .c-menu__item a:hover {
   background: #f9f9f9;
+}
+.c-menu__item a.is-active {
+  background: #4bd5f2;
+  color: #fff;
+}
+.c-menu__item a.is-active:hover {
+  background: #7be0f5;
 }
 
 .c-menu__item__icon {
@@ -2017,31 +2440,31 @@ card、containerと組み合わせて使う
 
 ```
 <div class="c-container">
-    <p>
-        <a href="#groupSuccesModal" class="c-btn c-btn-primary--flat js-modal-btn">modal</a>
-    </p>
-    <div id="groupSuccesModal" class="js-modal c-modal">
-        <div class="c-modal__header">
-            モーダルタイトル
-        </div>
-        <div class="c-modal__content">
-            modal
-        </div>
-        <div class="c-modal__bottom">
-            <button class="c-btn c-btn-default--flat js-modal-close-btn">閉じる</button>
-        </div>
-        <i class="js-modal-close-btn c-modal__close fa fa-times-circle"></i>
+  <p>
+    <a href="#groupSuccesModal" class="c-btn c-btn-primary--flat js-modal-btn">modal</a>
+  </p>
+  <div id="groupSuccesModal" class="js-modal c-modal">
+    <div class="c-modal__header">
+      モーダルタイトル
     </div>
+    <div class="c-modal__content">
+      modal
+    </div>
+    <div class="c-modal__bottom">
+      <button class="c-btn c-btn-default--flat js-modal-close-btn">閉じる</button>
+    </div>
+    <i class="js-modal-close-btn c-modal__close fa fa-times-circle"></i>
+  </div>
 </div>
 ```
 
  */
 .c-modal {
   display: none;
-  width: 80%;
+  width: 94%;
   position: absolute;
   top: 100px;
-  left: 10%;
+  left: 3%;
   z-index: 900;
   background: #fff;
   -webkit-box-shadow: 0 0 8px rgba(10, 2, 4, 0.5);
@@ -2118,6 +2541,7 @@ card、containerと組み合わせて使う
 .c-modal__bottom {
   border-top: 1px solid #e5e5e5;
   padding: 16px;
+  text-align: right;
 }
 
 .c-modal__close {
@@ -2136,23 +2560,29 @@ card、containerと組み合わせて使う
   left: 0;
 }
 
+@media (min-width: 768px) {
+  .c-modal {
+    width: 60%;
+    left: 20%;
+  }
+}
 /*
 # nav
 
 ```
 <ul class="c-nav c-nav--right">
-    <li class="c-nav__item">
-        <a href="#">メニュー1</a>
-    </li>
-    <li class="c-nav__item">
-        <a href="#">メニュー2</a>
-    </li>
-    <li class="c-nav__item">
-        <a href="#">メニュー3</a>
-    </li>
-    <li class="c-nav__item">
-        <a href="#">メニュー4</a>
-    </li>
+  <li class="c-nav__item">
+    <a href="#">メニュー1</a>
+  </li>
+  <li class="c-nav__item">
+    <a href="#">メニュー2</a>
+  </li>
+  <li class="c-nav__item">
+    <a href="#">メニュー3</a>
+  </li>
+  <li class="c-nav__item">
+    <a href="#">メニュー4</a>
+  </li>
 </ul>
 ```
 
@@ -2179,9 +2609,6 @@ card、containerと組み合わせて使う
   padding: 0 24px;
   text-decoration: none;
 }
-.c-nav__item a:hover {
-  background: #f9f9f9;
-}
 
 /*
 # tab
@@ -2189,30 +2616,6 @@ card、containerと組み合わせて使う
 ```
 <div class="c-container">
   <div class="c-tab js-tab">
-    <ul class="c-tab__menu">
-      <li class="c-tab__menu__item is-active">
-        <a href="#" class="c-tab-btn c-tab-btn--sp js-tab-btn" data-tabid="1">
-          tab1
-        </a>
-      </li>
-      <li class="c-tab__menu__item">
-        <a href="#" class="c-tab-btn c-tab-btn--basic js-tab-btn" data-tabid="2">
-          tab2
-        </a>
-      </li>
-    </ul>
-
-    <div class="c-tab__body js-tab-body" data-contentid="1">
-      コンテンツ1
-    </div>
-    <div class="c-tab__body js-tab-body is-hidden" data-contentid="2">
-      コンテンツ2
-    </div>
-  </div>
-</div>
-
-<div class="c-container">
-  <div class="c-tab c-tab--full js-tab">
     <ul class="c-tab__menu">
       <li class="c-tab__menu__item is-active">
         <a href="#" class="c-tab-btn c-tab-btn--sp js-tab-btn" data-tabid="1">
@@ -2244,7 +2647,6 @@ card、containerと組み合わせて使う
 .c-tab__menu {
   width: 100%;
   list-style: none;
-  overflow: hidden;
   border-bottom: solid 1px #e5e5e5;
   margin-bottom: 16px;
 }
@@ -2299,6 +2701,20 @@ card、containerと組み合わせて使う
 .c-tab__menu__item.is-active a, .c-tab__menu__item a[aria-selected="true"] {
   border-bottom: solid 2px #4bd5f2;
   color: #4bd5f2;
+  position: relative;
+}
+.c-tab__menu__item.is-active a:after, .c-tab__menu__item a[aria-selected="true"]:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: #4bd5f2;
+  border-width: 8px;
+  margin-left: -8px;
 }
 
 /*
@@ -2306,26 +2722,26 @@ card、containerと組み合わせて使う
 
 ```
 <div class="c-container">
-    <table class="c-table">
-            <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-            </tr>
-            <tr>
-                <th>1</th>
-                <td>hoghoe</td>
-                <td>fugafuga</td>
-                <td>bakabka</td>
-            </tr>
-            <tr>
-                <th>2</th>
-                <td>hoghoe</td>
-                <td>fugafuga</td>
-                <td>bakabka</td>
-            </tr>
-    </table>
+  <table class="c-table">
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>hoghoe</td>
+      <td>fugafuga</td>
+      <td>bakabka</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>hoghoe</td>
+      <td>fugafuga</td>
+      <td>bakabka</td>
+    </tr>
+  </table>
 </div>
 ```
 
@@ -2347,9 +2763,26 @@ card、containerと組み合わせて使う
   background: #f9f9f9;
 }
 
-.c-table--border {
-  border-top: solid 1px #e5e5e5;
+.c-table--bordered {
+  width: 100%;
+}
+.c-table--bordered td, .c-table--bordered th {
+  text-align: left;
+  padding: 8px;
+  border-left: solid 1px #e5e5e5;
+}
+.c-table--bordered td:first-child, .c-table--bordered th:first-child {
+  border: 0;
+}
+.c-table--bordered tr {
   border-bottom: solid 1px #e5e5e5;
+}
+.c-table--bordered tr:last-child {
+  border-bottom: none;
+}
+
+.c-table--padding td, .c-table--padding th {
+  padding: 16px 8px;
 }
 
 /*
@@ -2379,6 +2812,32 @@ card、containerと組み合わせて使う
   color: #b7b7b7;
 }
 
+/* 
+#thumb
+
+```
+<p class="c-thumb"><img src="dist/img/7560647B_8_D_500.jpg" width="100%" alt=""></p>
+```
+
+*/
+.c-thumb {
+  padding: 4px;
+  border: 2px solid #e5e5e5;
+}
+.c-thumb:hover, .c-thumb.is-active {
+  background: #9e9e9e;
+  border-color: #9e9e9e;
+}
+
+.c-thumb--small, .c-thumb--medium {
+  padding: 2px;
+  border: 1px solid #e5e5e5;
+}
+
+.c-thumb--max-200 {
+  max-width: 200px;
+}
+
 /*
 # title
 
@@ -2392,7 +2851,6 @@ card、containerと組み合わせて使う
 */
 .c-title {
   position: relative;
-  margin-top: 16px;
 }
 
 .c-title--primary {
@@ -2413,6 +2871,184 @@ card、containerと組み合わせて使う
   font-weight: normal;
 }
 
+/*
+# Project
+----------------------------------------------- */
+/* 
+# calender
+
+```
+<table class="p-calender u-mb-24">
+  <tr>
+    <th>日</th>
+    <th>月</th>
+    <th>火</th>
+    <th>水</th>
+    <th>木</th>
+    <th>金</th>
+    <th>土</th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td><span class="p-calender__num">1</span></td>
+    <td><span class="p-calender__num">2</span></td>
+  </tr>
+
+  ・・・
+  
+</table>
+```
+
+*/
+.p-calender {
+  width: 100%;
+}
+.p-calender tr {
+  border-bottom: solid 1px #e5e5e5;
+}
+.p-calender tr:last-child {
+  border-bottom: none;
+}
+.p-calender td, .p-calender th {
+  text-align: left;
+  padding: 8px;
+  width: 100%/7;
+  text-align: center;
+  font-size: 11px;
+}
+.p-calender td:hover, .p-calender td.is-active {
+  background: #e0e0e0;
+}
+.p-calender td:last-child, .p-calender td:first-child {
+  color: #b7b7b7;
+}
+.p-calender__num {
+  padding: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+.p-calender .is-today .p-calender__num {
+  background: #f24b4b;
+  color: #fff;
+}
+
+/* 
+#carousel
+
+grid,thumbとの組み合わせ
+
+```
+<div class="p-carousel">
+  <p class="p-carousel__image c-thumb"><img src="dist/img/7560647B_8_D_500.jpg" width="100%" alt=""></p>
+
+  <ul class="p-carousel__menu c-grid c-grid--gutters">
+    <li class="c-grid__col c-grid__col--2of12 c-thumb c-thumb--small is-active"><img src="dist/img/7560647B_8_D_500.jpg" width="100%" alt=""></li>
+    <li class="c-grid__col c-grid__col--2of12 c-thumb c-thumb--small"><img src="dist/img/7560647B_8_D_500.jpg" width="100%" alt=""></li>
+    <li class="c-grid__col c-grid__col--2of12 c-thumb c-thumb--small"><img src="dist/img/7560647B_8_D_500.jpg" width="100%" alt=""></li>
+    <li class="c-grid__col c-grid__col--2of12 c-thumb c-thumb--small"><img src="dist/img/7560647B_8_D_500.jpg" width="100%" alt=""></li>
+    <li class="c-grid__col c-grid__col--2of12 c-thumb c-thumb--small"><img src="dist/img/7560647B_8_D_500.jpg" width="100%" alt=""></li>
+    <li class="c-grid__col c-grid__col--2of12 c-thumb c-thumb--small"><img src="dist/img/7560647B_8_D_500.jpg" width="100%" alt=""></li>
+  </ul>
+</div>
+```
+
+*/
+.p-carousel__image {
+  margin-bottom: 16px;
+}
+
+.p-carousel__menu {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+/* 
+# color-picker
+
+backgroundはインライン表記で
+※無駄なクラスを多数作らなければいけないため
+
+```
+<span class="p-color-picker" style="background: #fff;"></span>
+```
+
+*/
+.p-color-picker {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  min-height: 16px;
+  border: solid 1px #fff;
+  -webkit-box-shadow: 0 0 1px 0 #9e9e9e;
+  -moz-box-shadow: 0 0 1px 0 #9e9e9e;
+  box-shadow: 0 0 1px 0 #9e9e9e;
+  vertical-align: text-bottom;
+  margin-right: 4px;
+}
+
+.p-color-picker--large {
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+}
+
+.p-color-picker.is-active {
+  border: solid 2px #454545;
+}
+
+/* grand-top
+--------------------------------------------------------- */
+.p-grand-top {
+  width: auto;
+  padding-top: 0;
+}
+
+.p-grand-top__logo {
+  width: auto;
+  font-size: 24px;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.p-grand-top__menu {
+  width: auto;
+  list-style: none;
+}
+.p-grand-top__menu__item {
+  width: auto;
+  float: none;
+  margin: 0 16px 16px;
+}
+
+@media (min-width: 768px) {
+  .p-grand-top {
+    width: 640px;
+    margin: 32px auto;
+  }
+
+  .p-grand-top__logo {
+    width: 640px;
+    font-size: 60px;
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .p-grand-top__menu {
+    width: 640px;
+    list-style: none;
+  }
+  .p-grand-top__menu__item {
+    width: 320px;
+    margin: 0 0 48px;
+    float: left;
+    padding: 0 24px;
+  }
+}
 /*
 # Utility
 ----------------------------------------------- */

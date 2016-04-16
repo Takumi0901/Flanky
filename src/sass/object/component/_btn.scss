@@ -3,26 +3,26 @@
 
 ```
 <p>
-    <a class="c-btn c-btn-default--border" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--border" href="#">ボタン</a>
-    <a class="c-btn c-btn-highlight--border" href="#">ボタン</a>
-    <a class="c-btn c-btn-default--ghost" href="#">ボタン</a>
+  <a class="c-btn c-btn-default--border" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--border" href="#">ボタン</a>
+  <a class="c-btn c-btn-highlight--border" href="#">ボタン</a>
+  <a class="c-btn c-btn-default--ghost" href="#">ボタン</a>
 </p>
 <p>
-    <a class="c-btn c-btn-default--flat" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--flat" href="#">ボタン</a>
-    <a class="c-btn c-btn-highlight--flat" href="#">ボタン</a>
+  <a class="c-btn c-btn-default--flat" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat" href="#">ボタン</a>
+  <a class="c-btn c-btn-highlight--flat" href="#">ボタン</a>
 </p>
 
 <p>
-    <a class="c-btn c-btn-primary--flat c-btn--jumbo" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--flat c-btn--large" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--flat" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--flat c-btn--small" href="#">ボタン</a>
-    <a class="c-btn c-btn-primary--flat c-btn--tiny" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat c-btn--jumbo" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat c-btn--large" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat c-btn--small" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat c-btn--tiny" href="#">ボタン</a>
 </p>
 <p>
-    <a class="c-btn c-btn-primary--flat c-btn--block" href="#">ボタン</a>
+  <a class="c-btn c-btn-primary--flat c-btn--block" href="#">ボタン</a>
 </p>
 ```
 
@@ -55,6 +55,9 @@
   }
 }
 
+
+// Modifier - border
+// --------------------
 .c-btn-default--border{
   @include button-border-color($border-default, $base-color-text, 2px);
 }
@@ -76,6 +79,8 @@
 }
 
 
+// Modifier - flat
+// --------------------
 .c-btn-default--flat{
   @include button-flat-color($base-color-text, $bg-white, $border-lighten, 1px);
 }
@@ -93,7 +98,8 @@
 }
 
 
-
+// Modifier - size
+// --------------------
 .c-btn--jumbo{
   @include button-size(24px, 56px);
 }
@@ -110,7 +116,77 @@
   @include button-size(10px, 16px);
 }
 
+
+// Modifier - display
+// --------------------
 .c-btn--block{
   display: block;
   width: 100%;
+}
+
+// Modifier - circle
+// --------------------
+.c-btn--circle{
+  width: 80px;
+  height: 80px;
+  display: table;
+  padding: 0;
+  line-height: 20px;
+  @include border-radius-per(100%);
+  @include box-shadow(0, 0, 12px, 0, rgba(10, 2, 4, .40));
+  
+  &__inner{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+
+// Block - panel
+// --------------------
+.c-btn-panel{
+  background: $bg-white;
+  padding: $margin-large-xx;
+  display: block;
+  @include box-shadow(0, 0, 10px, 0, rgba(10, 2, 4, .30));
+  -webkit-transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition-property: box-shadow;
+  
+  &:link,&:active,&:visited{
+    color: $text-color-primary;
+    text-decoration: none;
+  }
+  &:hover{
+    color: $text-color-primary;
+    text-decoration: none;
+    @include box-shadow(0, 0, 2px, 0, rgba(10, 2, 4, .23));
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition-property: box-shadow;
+    
+    .c-btn-panel__arrow{
+      -webkit-transition: -webkit-transform .3s;
+      transition: transform .3s;
+      transition-property: transform;
+      -webkit-transform: translateX(4px);
+      transform: translateX(4px);
+    }
+  }
+
+  &__icon{
+    font-size: 64px;
+  }
+
+  &__text{
+    font-size: 16px;
+  }
+
+  &__arrow{
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition-property: transform;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
 }

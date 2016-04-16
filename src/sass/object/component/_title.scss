@@ -12,9 +12,11 @@
 
 .c-title{
   position: relative;
-  margin-top: $margin-large;
 }
 
+
+// Modifier
+// --------------------
 .c-title--primary{
   font-size: 18px;
   font-weight: 700;
@@ -25,6 +27,9 @@
   font-weight: 700;
 }
 
+
+// Element
+// --------------------
 .c-title__sub-text{
   color: $text-color-lighten;
   font-size: 12px;

@@ -43,11 +43,16 @@
   }
 }
 
+
+// Modifier
+// --------------------
 .c-flex--border{
   margin-bottom: $margin-large-x;
   border-bottom: 1px #a27474 dotted;
 }
 
+// Element
+// --------------------
 .c-flex__menu--center{
   -webkit-justify-content: center;
   justify-content: center;

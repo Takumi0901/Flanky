@@ -2,15 +2,7 @@
 # alert
 
 ```
-<div class="c-container">
-    <p class="c-alert">
-        alert
-    </p>
-
-    <p class="c-alert--success">
-        alert
-    </p>
-</div>
+<p class="c-alert">alert</p>
 ```
 
  */
@@ -22,6 +14,8 @@
   padding: $margin-base $margin-large;
 }
 
+// Modifier
+// --------------------
 .c-alert--success{
   color: $text-color-success;
   background: $bg-success;

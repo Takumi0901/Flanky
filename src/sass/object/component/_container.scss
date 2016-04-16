@@ -3,7 +3,16 @@
 
 ```
 <div class="c-container">
-    コンテンツ
+  コンテンツ
+</div>
+<div class="c-container--small">
+  コンテンツ
+</div>
+<div class="c-container--x-small">
+  コンテンツ
+</div>
+<div class="c-container--full">
+  コンテンツ
 </div>
 ```
 */
@@ -12,6 +21,8 @@
   margin:0 $margin-large $margin-large-x;
 }
 
+// Modifier
+// --------------------
 .c-container--small{
   margin:0 $margin-large-x $margin-large-x;
 }

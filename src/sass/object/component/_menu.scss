@@ -3,72 +3,26 @@
 
 ```
 <div class="c-container">
-    <ul class="c-menu">
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー1
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー2
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー3
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-<div class="c-container">
-    <ul class="c-menu c-menu--border">
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー1
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー2
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-        <li class="c-menu__item">
-            <a href="#">
-                メニュー3
-                <i class="c-menu__item__icon fa fa-angle-right"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-<div class="c-container">
-    <div class="c-card c-card--full">
-        <ul class="c-menu">
-            <li class="c-menu__item">
-                <a href="#">
-                    メニュー1
-                    <i class="c-menu__item__icon fa fa-angle-right"></i>
-                </a>
-            </li>
-            <li class="c-menu__item">
-                <a href="#">
-                    メニュー2
-                    <i class="c-menu__item__icon fa fa-angle-right"></i>
-                </a>
-            </li>
-            <li class="c-menu__item">
-                <a href="#">
-                    メニュー3
-                    <i class="c-menu__item__icon fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
+  <ul class="c-menu">
+    <li class="c-menu__item">
+      <a href="#">
+        メニュー1
+        <i class="c-menu__item__icon fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li class="c-menu__item">
+      <a href="#">
+        メニュー2
+        <i class="c-menu__item__icon fa fa-angle-right"></i>
+      </a>
+    </li>
+    <li class="c-menu__item">
+      <a href="#">
+        メニュー3
+        <i class="c-menu__item__icon fa fa-angle-right"></i>
+      </a>
+    </li>
+  </ul>
 </div>
 ```
 
@@ -77,6 +31,8 @@
   list-style: none;
 }
 
+// Modifier
+// --------------------
 .c-menu--border{
   border-top: solid 1px $border-lighten;
   
@@ -85,10 +41,13 @@
   }
 }
 
+// Element
+// --------------------
 .c-menu__item{
   border-bottom: solid 1px $border-lighten;
   position: relative;
   padding: $margin-small;
+  display: block;
   
   &:last-child{
     border: 0;
@@ -96,11 +55,21 @@
 
   a{
     display: block;
+    @include border-radius(4);
     padding: $margin-base $margin-large-xx $margin-base $margin-base;
     text-decoration: none;
     
     &:hover{
       background: $bg-default;
+    }
+  }
+
+  a.is-active{
+    background: $bg-primary;
+    color: $text-color-white;
+    
+    &:hover{
+      background: lighten($bg-primary, 10%);
     }
   }
 }

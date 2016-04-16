@@ -1,0 +1,22 @@
+/* 
+#label
+
+```
+<span class="c-label">ラベル</span>
+```
+
+*/
+.c-label{
+  display: inline-block;
+  padding: $margin-small $margin-large;
+  background: $bg-secondary;
+  font-size: 12px;
+  margin-left: $margin-small;
+  @include border-radius(4);
+}
+
+// Modifier
+// --------------------
+.c-label--disable{
+  background: $bg-default;
+}

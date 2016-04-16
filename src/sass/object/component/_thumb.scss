@@ -1,0 +1,29 @@
+/* 
+#thumb
+
+```
+<p class="c-thumb"><img src="dist/img/7560647B_8_D_500.jpg" width="100%" alt=""></p>
+```
+
+*/
+.c-thumb{
+  padding: $margin-small;
+  border: 2px solid $border-lighten;
+  
+  &:hover,&.is-active{
+    background: $border-default;
+    border-color: $border-default;
+  }
+}
+
+
+// Modifier
+// --------------------
+.c-thumb--small,.c-thumb--medium{
+  padding: 2px;
+  border: 1px solid $border-lighten;
+}
+
+.c-thumb--max-200{
+  max-width: 200px;
+}

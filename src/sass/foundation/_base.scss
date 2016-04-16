@@ -37,14 +37,20 @@ a {
 }
 
 h1,h2,h3,h4,h5,h6{
-  margin-bottom: $margin-large;
+  margin-bottom: $margin-base;
 }
 
 p{
-  margin-bottom: $margin-large;
+  margin-bottom: $margin-base;
 }
 
 input[type="radio"]{
   margin-left: $margin-large;
   margin-right: $margin-base;
+}
+
+@media ( min-width : $breakpoint ) {
+  a:hover img{
+    @include opacity(.7);
+  }
 }

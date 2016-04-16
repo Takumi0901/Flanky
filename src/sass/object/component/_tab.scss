@@ -25,30 +25,6 @@
     </div>
   </div>
 </div>
-
-<div class="c-container">
-  <div class="c-tab c-tab--full js-tab">
-    <ul class="c-tab__menu">
-      <li class="c-tab__menu__item is-active">
-        <a href="#" class="c-tab-btn c-tab-btn--sp js-tab-btn" data-tabid="1">
-          tab1
-        </a>
-      </li>
-      <li class="c-tab__menu__item">
-        <a href="#" class="c-tab-btn c-tab-btn--basic js-tab-btn" data-tabid="2">
-          tab2
-        </a>
-      </li>
-    </ul>
-
-    <div class="c-tab__body js-tab-body" data-contentid="1">
-      コンテンツ1
-    </div>
-    <div class="c-tab__body js-tab-body is-hidden" data-contentid="2">
-      コンテンツ2
-    </div>
-  </div>
-</div>
 ```
 
  */
@@ -56,10 +32,12 @@
   width: 100%;
   display: block;
   
+
+  // Element
+  // --------------------
   &__menu{
     width: 100%;
     list-style: none;
-    overflow: hidden;
     border-bottom: solid 1px $border-lighten;
     margin-bottom: $margin-large;
     
@@ -93,6 +71,9 @@
 
 }
 
+
+// Modifier
+// --------------------
 .c-tab--full .c-tab__menu{
   width: 100%;
   display: -webkit-box;
@@ -124,4 +105,19 @@
 .c-tab__menu__item.is-active a, .c-tab__menu__item a[aria-selected="true"]{
   border-bottom: solid 2px $border-primary;
   color: $text-color-primary;
+  position: relative;
+
+  &:after{
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-top-color: $bg-primary;
+    border-width: 8px;
+    margin-left: -8px;
+  }
 }

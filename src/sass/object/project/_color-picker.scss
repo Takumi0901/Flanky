@@ -1,0 +1,37 @@
+/* 
+# color-picker
+
+backgroundはインライン表記で
+※無駄なクラスを多数作らなければいけないため
+
+```
+<span class="p-color-picker" style="background: #fff;"></span>
+```
+
+*/
+.p-color-picker{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  min-height: 16px;
+  border: solid 1px $border-white;
+  @include box-shadow(0, 0, 1px, 0, $border-default);
+  vertical-align: text-bottom;
+  margin-right: $margin-small;
+}
+
+
+// Modifier
+// --------------------
+.p-color-picker--large{
+  width: 24px;
+  height: 24px;
+  min-height: 24px;
+}
+
+
+// Status
+// --------------------
+.p-color-picker.is-active{
+  border: solid  2px $border-dark;
+}

@@ -1,0 +1,21 @@
+/* 
+# floating-menu
+
+主に中にボタンが入る
+
+```
+<div class="c-floating-menu">
+  <a href="#" class="c-btn c-btn-primary--flat c-btn--circle">
+    <span class="c-btn--circle__inner">
+      <span class="u-fz-12">CSV</span>
+    </span>
+  </a>
+</div>
+```
+
+*/
+.c-floating-menu{
+  position: fixed;
+  right: 10%;
+  bottom: 5%;
+}

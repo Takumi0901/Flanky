@@ -3,18 +3,18 @@
 
 ```
 <ul class="c-nav c-nav--right">
-    <li class="c-nav__item">
-        <a href="#">メニュー1</a>
-    </li>
-    <li class="c-nav__item">
-        <a href="#">メニュー2</a>
-    </li>
-    <li class="c-nav__item">
-        <a href="#">メニュー3</a>
-    </li>
-    <li class="c-nav__item">
-        <a href="#">メニュー4</a>
-    </li>
+  <li class="c-nav__item">
+    <a href="#">メニュー1</a>
+  </li>
+  <li class="c-nav__item">
+    <a href="#">メニュー2</a>
+  </li>
+  <li class="c-nav__item">
+    <a href="#">メニュー3</a>
+  </li>
+  <li class="c-nav__item">
+    <a href="#">メニュー4</a>
+  </li>
 </ul>
 ```
 
@@ -24,6 +24,8 @@
   list-style: none;
 }
 
+// Modifier
+// --------------------
 .c-nav--center{
   text-align: center;
 }
@@ -32,6 +34,8 @@
   text-align: right;
 }
 
+// Element
+// --------------------
 .c-nav__item{
   display: inline-block;
   
@@ -40,9 +44,6 @@
     @include middle-line(54);
     padding: 0 $margin-large-x;
     text-decoration: none;
-    
-    &:hover{
-      background: $bg-default;
-    } 
   }
 }
+

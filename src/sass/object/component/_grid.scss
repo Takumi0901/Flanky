@@ -55,11 +55,13 @@
 ```
  */
 
-$var-breakpoint:        $breakpoint;
-$var-col:               12;
-$var-max-width:         100%;
-$var-col-gutters:       2%;
-$var-col-width:         $var-max-width / $var-col;
+// variables
+// --------------------
+$var-breakpoint:            $breakpoint;
+$var-col:                   12;
+$var-max-width:             100%;
+$var-col-gutters:           3%;
+$var-col-width:             $var-max-width / $var-col;
 $var-col-width-gutters:     ($var-max-width + $var-col-gutters) / $var-col;
 
 .c-grid{
@@ -69,7 +71,11 @@ $var-col-width-gutters:     ($var-max-width + $var-col-gutters) / $var-col;
   -ms-flex-flow:wrap; // IE10用
   -webkit-flow:wrap; // safari（PC）用
   flex-wrap: wrap;
+  list-style: none;
   
+
+  // Modifier
+  // --------------------
   &--top{
     -webkit-box-align: start; // Androidブラウザ用
     -ms-flex-align: start; // IE10
@@ -134,7 +140,40 @@ $var-col-width-gutters:     ($var-max-width + $var-col-gutters) / $var-col;
   }
 }
 
+// Modifier - gutters
+// --------------------
+.c-grid--gutters > .c-grid__col{
+  margin-left: $var-col-gutters;
+  
+  &:first-child{
+    margin: 0;
+  }
+  
+  @for $i from 1 through $var-col{
+    &--#{$i + of + $var-col}{
+      width: $var-col-width-gutters * $i - $var-col-gutters;
+    }
+  }
+}
 
+// Modifier - query
+// --------------------
+.c-grid--query{
+  display: block;
+  
+  > .c-grid__col{
+    width: 100% !important;
+    display: block !important;
+  }
+}
+
+.c-grid--query.c-grid--gutters > .c-grid__col{
+  margin-left: 0;
+}
+
+
+// Element
+// --------------------
 .c-grid__col{
   box-sizing: border-box;
   -ms-flex:0 0 auto;
@@ -155,33 +194,9 @@ $var-col-width-gutters:     ($var-max-width + $var-col-gutters) / $var-col;
   }
 }
 
-.c-grid--gutters .c-grid__col{
-  margin-left: $var-col-gutters;
-  
-  &:first-child{
-    margin: 0;
-  }
-  
-  @for $i from 1 through $var-col{
-    &--#{$i + of + $var-col}{
-      width: $var-col-width-gutters * $i - $var-col-gutters;
-    }
-  }
-}
 
-.c-grid--query{
-  display: block;
-  
-  .c-grid__col{
-    width: 100% !important;
-    display: block !important;
-  }
-}
-
-.c-grid--query.c-grid--gutters .c-grid__col{
-  margin-left: 0;
-}
-
+// PC only
+// --------------------
 @media ( min-width : $var-breakpoint ) {
   .c-grid--query{
     display:-webkit-flex; // safari（PC）用
@@ -191,7 +206,7 @@ $var-col-width-gutters:     ($var-max-width + $var-col-gutters) / $var-col;
     -webkit-flow:wrap; // safari（PC）用
     flex-wrap: wrap;
     
-    .c-grid__col{
+    > .c-grid__col{
       box-sizing: border-box;
       -ms-flex:0 0 auto;
       -webkit-flex-shrink: 1;
@@ -204,7 +219,7 @@ $var-col-width-gutters:     ($var-max-width + $var-col-gutters) / $var-col;
       }
     }
   }
-  .c-grid--query.c-grid--gutters .c-grid__col{
+  .c-grid--query.c-grid--gutters > .c-grid__col{
     margin-left: $var-col-gutters;
     
     &:first-child{

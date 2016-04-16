@@ -3,9 +3,9 @@
 
 ```
 <div class="c-bar">
-    <div class="c-bar__inner">
-        bar
-    </div>
+  <div class="c-bar__inner">
+    bar
+  </div>
 </div>
 ```
 
@@ -20,8 +20,29 @@
   h1,h2,h3,h4,h5,p{
     margin:0;
   }
+  
+  // Modifier
+  // --------------------
+  &--small{
+    @include middle-line(32);
+    color: $text-color-white;
+  }
+
+  &--black{
+    background: $bg-primary;
+  }
+
+  &--fixed-bottom{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid $border-lighten;
+  }
 }
 
+//  Element
+// --------------------
 .c-bar__inner{
   position: relative;
   width: auto;
@@ -36,6 +57,8 @@
   }
 }
 
+// PC only
+// --------------------
 @media ( min-width : $breakpoint ) {
   .c-bar__inner{
     position: relative;
