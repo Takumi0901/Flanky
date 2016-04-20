@@ -2460,20 +2460,28 @@ card、containerと組み合わせて使う
 
  */
 .c-modal {
-  display: none;
-  width: 94%;
-  position: absolute;
-  top: 100px;
-  left: 3%;
-  z-index: 900;
-  background: #fff;
-  -webkit-box-shadow: 0 0 8px rgba(10, 2, 4, 0.5);
-  box-shadow: 0 0 8px rgba(10, 2, 4, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  overflow-y: scroll;
   opacity: 0;
+  display: none;
   animation-duration: 0.5s;
   animation-name: fade-out-100;
   -webkit-animation-duration: 0.5s;
   -webkit-animation-name: fade-out-100;
+}
+
+.c-modal__panel {
+  position: relative;
+  width: 94%;
+  margin: 40px auto;
+  background: #fff;
+  -webkit-box-shadow: 0 0 8px rgba(10, 2, 4, 0.5);
+  box-shadow: 0 0 8px rgba(10, 2, 4, 0.5);
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   border-radius: 8px;
@@ -2497,32 +2505,14 @@ card、containerと組み合わせて使う
 }
 
 .c-modal__overlay {
-  position: fixed;
+  display: block;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
   top: 0;
-  z-index: 850;
+  left: 0;
   width: 100%;
   height: 100%;
-  background: #000;
-  border: solid 1px #000;
-  opacity: 0;
-  display: none;
-}
-
-.c-modal__overlay.is-fadein {
-  display: block;
-  opacity: .6;
-  animation-duration: 0.5s;
-  animation-name: fade-in-60;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-name: fade-in-60;
-}
-
-.c-modal__overlay.is-fadeout {
-  opacity: 0;
-  animation-duration: 0.5s;
-  animation-name: fade-out-60;
-  -webkit-animation-duration: 0.5s;
-  -webkit-animation-name: fade-out-60;
 }
 
 .c-modal__header {

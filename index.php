@@ -664,16 +664,19 @@
         <a href="#groupSuccesModal" class="c-btn c-btn-primary--flat js-modal-btn">modal</a>
       </p>
       <div id="groupSuccesModal" class="js-modal c-modal">
-        <div class="c-modal__header">
-          モーダルタイトル
+        <div class="c-modal__panel">
+          <div class="c-modal__header">
+            モーダルタイトル
+          </div>
+          <div class="c-modal__content">
+            modal
+          </div>
+          <div class="c-modal__bottom">
+            <button class="c-btn c-btn-default--flat js-modal-close-btn">閉じる</button>
+          </div>
+          <i class="js-modal-close-btn c-modal__close fa fa-times-circle"></i>
         </div>
-        <div class="c-modal__content">
-          modal
-        </div>
-        <div class="c-modal__bottom">
-          <button class="c-btn c-btn-default--flat js-modal-close-btn">閉じる</button>
-        </div>
-        <i class="js-modal-close-btn c-modal__close fa fa-times-circle"></i>
+        <div class="js-modal-overlay c-modal__overlay"></div>
       </div>
     </div>
 
