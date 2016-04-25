@@ -343,6 +343,16 @@
     </div>
 
     <div class="c-container">
+      <h1 class="c-title c-title--primary">c-grid Query</h1>
+      <div class="c-grid c-grid--query">
+        <div class="c-grid__col c-grid__col--3of12"><div class="box">3of12</div></div>
+        <div class="c-grid__col c-grid__col--3of12"><div class="box">3of12</div></div>
+        <div class="c-grid__col c-grid__col--3of12"><div class="box">3of12</div></div>
+        <div class="c-grid__col c-grid__col--3of12"><div class="box">3of12</div></div>
+      </div>
+    </div>
+
+    <div class="c-container">
       <p class="c-alert">
         alert
       </p>

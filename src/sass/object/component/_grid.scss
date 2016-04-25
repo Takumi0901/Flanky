@@ -146,7 +146,7 @@ $var-col-width-gutters:     ($var-max-width + $var-col-gutters) / $var-col;
   margin-left: $var-col-gutters;
   
   &:first-child{
-    margin: 0;
+    margin-left: 0;
   }
   
   @for $i from 1 through $var-col{
@@ -164,6 +164,7 @@ $var-col-width-gutters:     ($var-max-width + $var-col-gutters) / $var-col;
   > .c-grid__col{
     width: 100% !important;
     display: block !important;
+    margin-bottom: $margin-large;
   }
 }
 
@@ -211,6 +212,7 @@ $var-col-width-gutters:     ($var-max-width + $var-col-gutters) / $var-col;
       -ms-flex:0 0 auto;
       -webkit-flex-shrink: 1;
       flex-shrink: 0;
+      margin-bottom: 0;
       
       @for $i from 1 through $var-col{
         &--#{$i + of + $var-col}{

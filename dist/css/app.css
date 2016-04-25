@@ -2016,7 +2016,7 @@ inline-blockでのレイアウト用
   margin-left: 3%;
 }
 .c-grid--gutters > .c-grid__col:first-child {
-  margin: 0;
+  margin-left: 0;
 }
 .c-grid--gutters > .c-grid__col--1of12 {
   width: 5.58333%;
@@ -2061,6 +2061,7 @@ inline-blockでのレイアウト用
 .c-grid--query > .c-grid__col {
   width: 100% !important;
   display: block !important;
+  margin-bottom: 16px;
 }
 
 .c-grid--query.c-grid--gutters > .c-grid__col {
@@ -2130,6 +2131,7 @@ inline-blockでのレイアウト用
     -ms-flex: 0 0 auto;
     -webkit-flex-shrink: 1;
     flex-shrink: 0;
+    margin-bottom: 0;
   }
   .c-grid--query > .c-grid__col--1of12 {
     width: 8.33333% !important;
