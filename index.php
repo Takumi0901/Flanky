@@ -1419,7 +1419,7 @@
 <div class="c-container">
   <div class="c-card">
     <div class="c-card__content">
-      <p class="c-thumb"><img src="http://wild-styles.com/wp-content/uploads/2014/06/wildstyles_messi02.jpg" width="100%" alt=""></p>
+      <p class="c-thumb"><img src="dist/img/messi.jpg" width="100%" alt=""></p>
     </div>
   </div>
 <div class="codehilite"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;c-thumb&quot;</span><span class="nt">&gt;&lt;img</span> <span class="na">src=</span><span class="s">&quot;dist/img/hoge.jpg&quot;</span> <span class="na">width=</span><span class="s">&quot;100%&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;/p&gt;</span>
