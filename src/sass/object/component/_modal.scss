@@ -126,8 +126,7 @@
 
 
 @media ( min-width : $breakpoint ) {
-  .c-modal{
-    width: 60%;
-    left: 20%;
+  .c-modal__panel{
+    width: 80%;
   }
 }
