@@ -6,10 +6,10 @@ card、containerと組み合わせて使う
 ```
 <div class="c-container">
   <div class="c-media">
-    <div class="c-media__left">
+    <div class="c-media__content">
       <img src="http://wild-styles.com/wp-content/uploads/2014/06/wildstyles_messi02.jpg" width="100%" alt="">
     </div>
-    <div class="c-media__text">
+    <div class="c-media__content">
       right
     </div>
   </div>
@@ -30,12 +30,6 @@ card、containerと組み合わせて使う
   display: table-cell;
   vertical-align: middle;
   padding-right: $margin-large;
-}
-
-.c-media__right{
-  position: absolute;
-  bottom: $margin-base;
-  right: $margin-large;
 }
 
 .c-media__text__clmap{
