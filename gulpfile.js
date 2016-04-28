@@ -61,7 +61,7 @@ gulp.task('browser-sync', function() {
 // ES6かつJSXなファイル群をbuild/bundle.jsへ変換する
 gulp.task('build', function() {
   browserify({entries: ['./src/js/index.js']})
-    .transform(babelify)
+    .transform("babelify", {presets: ["es2015", "react"]})
     .bundle()
     .on('error', errorHandler)
     .pipe(source('bundle.js'))
@@ -78,7 +78,7 @@ gulp.task('server', function() {
 // ファイル監視
 // ファイルに更新があったらビルドしてブラウザをリロードする
 gulp.task('watch:react', function() {
-  gulp.watch('./src/js/index.js', ['build']);
+  gulp.watch('./srcjs//index.js', ['build']);
   gulp.watch('./index.html', ['build']);
   gulp.watch('./src/js/**/*.js', ['build']);
   gulp.watch('src/sass/**/**/*', function(event) {
