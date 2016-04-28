@@ -52,7 +52,7 @@
 // Container
 // --------------------
 
-.c-modal.is-fadein{
+.c-modal.is-fadein, .c-modal[aria-clicked="true"] {
   display: block;
   opacity: 1;
   animation-duration: 0.5s;
