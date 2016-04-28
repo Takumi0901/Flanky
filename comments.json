@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1388534400000,
+        "author": "Pete Hunt",
+        "text": "Hey there!"
+    },
+    {
+        "id": 1420070400000,
+        "author": "Paul O’Shannessy",
+        "text": "React is *great*!"
+    },
+    {
+        "author": "hogehoge",
+        "text": "hhhh",
+        "id": "1459243459552"
+    },
+    {
+        "author": "hhhh",
+        "text": "hhhh",
+        "id": "1459314941744"
+    },
+    {
+        "author": "xxx",
+        "text": "xxx",
+        "id": "1459322231368"
+    },
+    {
+        "author": "ccc",
+        "text": "ccc",
+        "id": "1459322313401"
+    }
+]

@@ -8,6 +8,13 @@ rename      = require('gulp-rename'),
 sourcemaps	= require('gulp-sourcemaps'),
 styledocco 	= require('gulp-styledocco');
 
+var babelify = require('babelify');
+var browserify = require('browserify');
+var browserSync = require('browser-sync');
+var buffer = require('vinyl-buffer');
+var node = require('node-dev');
+var source = require('vinyl-source-stream');
+
 
 gulp.task('sass', function() {
   return sass('src/sass/app.scss', { style: 'expanded', sourcemap: true })
@@ -36,6 +43,51 @@ gulp.task('sass', function() {
 //     }));
 // });
 
+function errorHandler(err) {
+  console.log('Error: ' + err.message);
+}
+
+// 自動ブラウザリロード
+gulp.task('browser-sync', function() {
+  browserSync({
+    proxy: {
+      target: 'http://localhost:3000'
+    },
+    port: 8080
+  });
+});
+
+// Javascriptへのビルド
+// ES6かつJSXなファイル群をbuild/bundle.jsへ変換する
+gulp.task('build', function() {
+  browserify({entries: ['./src/js/index.js']})
+    .transform(babelify)
+    .bundle()
+    .on('error', errorHandler)
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(gulp.dest('./dist/js'))
+    .pipe(browserSync.reload({stream: true}));
+});
+
+// ローカルサーバーの起動
+gulp.task('server', function() {
+  node(['./server.js']);
+});
+
+// ファイル監視
+// ファイルに更新があったらビルドしてブラウザをリロードする
+gulp.task('watch:react', function() {
+  gulp.watch('./src/js/index.js', ['build']);
+  gulp.watch('./index.html', ['build']);
+  gulp.watch('./src/js/**/*.js', ['build']);
+  gulp.watch('src/sass/**/**/*', function(event) {
+    gulp.run('sass');
+  });
+});
+
+// gulpコマンドで起動したときのデフォルトタスク
+gulp.task('react', ['server', 'build', 'watch:react', 'browser-sync']);
 
 gulp.task('watch', function(){
   gulp.watch('src/sass/**/**/*', function(event) {
