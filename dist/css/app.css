@@ -2329,7 +2329,7 @@ card、containerと組み合わせて使う
   border-radius: 8px;
 }
 
-.c-modal.is-fadein {
+.c-modal.is-fadein, .c-modal[aria-clicked="true"] {
   display: block;
   opacity: 1;
   animation-duration: 0.5s;
@@ -2449,12 +2449,12 @@ card、containerと組み合わせて使う
   <div class="c-tab js-tab">
     <ul class="c-tab__menu">
       <li class="c-tab__menu__item is-active">
-        <a href="#" class="c-tab-btn c-tab-btn--sp js-tab-btn" data-tabid="1">
+        <a href="#" class="c-tab__btn js-tab-btn" data-tabid="1">
           tab1
         </a>
       </li>
       <li class="c-tab__menu__item">
-        <a href="#" class="c-tab-btn c-tab-btn--basic js-tab-btn" data-tabid="2">
+        <a href="#" class="c-tab__btn js-tab-btn" data-tabid="2">
           tab2
         </a>
       </li>
@@ -2491,18 +2491,20 @@ card、containerと組み合わせて使う
   text-justify: auto;
   font-size: 14px;
 }
-.c-tab__menu__item a {
+.c-tab__body {
+  width: 100%;
+  margin-bottom: 24px;
+}
+.c-tab__btn {
   display: inline-block;
   padding: 16px 32px;
   text-decoration: none;
   color: #b7b7b7;
+  outline: none;
 }
-.c-tab__menu__item a:hover {
+.c-tab__btn:hover {
   color: #4bd5f2;
-}
-.c-tab__body {
-  width: 100%;
-  margin-bottom: 24px;
+  text-decoration: none;
 }
 
 .c-tab--full .c-tab__menu {
@@ -2520,7 +2522,7 @@ card、containerと組み合わせて使う
   width: 100%;
   display: block;
 }
-.c-tab--full .c-tab__menu__item a {
+.c-tab--full .c-tab__menu__item .c-tab__btn {
   display: block;
   text-align: center;
 }
@@ -2529,12 +2531,14 @@ card、containerと組み合わせて使う
   display: none;
 }
 
-.c-tab__menu__item.is-active a, .c-tab__menu__item a[aria-selected="true"] {
+.c-tab__menu__item.is-active .c-tab__btn,
+.c-tab__btn[aria-selected="true"] {
   border-bottom: solid 2px #4bd5f2;
   color: #4bd5f2;
   position: relative;
 }
-.c-tab__menu__item.is-active a:after, .c-tab__menu__item a[aria-selected="true"]:after {
+.c-tab__menu__item.is-active .c-tab__btn:after,
+.c-tab__btn[aria-selected="true"]:after {
   top: 100%;
   left: 50%;
   border: solid transparent;

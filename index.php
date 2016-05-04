@@ -1325,12 +1325,12 @@
         <div class="c-tab js-tab">
           <ul class="c-tab__menu">
             <li class="c-tab__menu__item is-active">
-              <a href="#" class="c-tab-btn c-tab-btn--sp js-tab-btn" data-tabid="1">
+              <a href="#" class="c-tab__btn js-tab-btn" data-tabid="1">
                 tab1
               </a>
             </li>
             <li class="c-tab__menu__item">
-              <a href="#" class="c-tab-btn c-tab-btn--basic js-tab-btn" data-tabid="2">
+              <a href="#" class="c-tab__btn js-tab-btn" data-tabid="2">
                 tab2
               </a>
             </li>

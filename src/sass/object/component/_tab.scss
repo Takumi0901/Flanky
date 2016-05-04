@@ -6,12 +6,12 @@
   <div class="c-tab js-tab">
     <ul class="c-tab__menu">
       <li class="c-tab__menu__item is-active">
-        <a href="#" class="c-tab-btn c-tab-btn--sp js-tab-btn" data-tabid="1">
+        <a href="#" class="c-tab__btn js-tab-btn" data-tabid="1">
           tab1
         </a>
       </li>
       <li class="c-tab__menu__item">
-        <a href="#" class="c-tab-btn c-tab-btn--basic js-tab-btn" data-tabid="2">
+        <a href="#" class="c-tab__btn js-tab-btn" data-tabid="2">
           tab2
         </a>
       </li>
@@ -50,17 +50,6 @@
       text-align: left;
       text-justify: auto;
       font-size: 14px;
-      
-      a{
-        display: inline-block;
-        padding: $margin-large $margin-large-xx;
-        text-decoration: none;
-        color: $text-color-lighten;
-        
-        &:hover{
-          color: $text-color-primary;
-        }
-      }
     }
   }
 
@@ -69,6 +58,18 @@
     margin-bottom: $margin-large-x;
   }
 
+  &__btn{
+    display: inline-block;
+    padding: $margin-large $margin-large-xx;
+    text-decoration: none;
+    color: $text-color-lighten;
+    outline: none;
+    
+    &:hover{
+      color: $text-color-primary;
+      text-decoration: none;
+    }
+  }
 }
 
 
@@ -89,7 +90,7 @@
   width: 100%;
   display: block;
 
-  a{
+  .c-tab__btn{
     display: block;
     text-align: center;
   }
@@ -102,7 +103,8 @@
   display: none;
 }
 
-.c-tab__menu__item.is-active a, .c-tab__menu__item a[aria-selected="true"]{
+.c-tab__menu__item.is-active .c-tab__btn,
+ .c-tab__btn[aria-selected="true"]{
   border-bottom: solid 2px $border-primary;
   color: $text-color-primary;
   position: relative;
