@@ -28,7 +28,7 @@
 <body>
   <div class="c-drawer-fixed-bar c-bar">
     <header role="banner" class="l-header c-bar__inner">
-      <h1 class="l-header__logo">c-drawer</h1>
+      <h1 class="l-header__logo">Flanky</h1>
       <span class="c-drawer-btn">
         <i class="c-drawer-btn__icon"></i>
       </span>
