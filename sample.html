@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<style>
+ul{
+  list-style: none;  
+}
+/* Container
+-------------------- */
+.slider {
+    margin: 30px;
+    padding: 20px 20px 0;
+    width: 320px;//コンテンツの幅を指定、はみ出た分は非表示
+    background: #fff;
+    -webkit-box-shadow: 0 0 3px #ccc;
+       -moz-box-shadow: 0 0 3px #ccc;
+            box-shadow: 0 0 3px #ccc;
+}
+.slider__heading__title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.slider__content {
+    position: relative;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;//慣性スクロール
+    transform: translateZ(0);//GPUアクセラレーションを有効にする
+}
+ 
+.slider__content__lists {
+    margin-bottom: 20px;
+    width: 825px;//slider__content__itemの幅
+}
+ 
+.slider__content__item {
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    padding: 15px;
+    width: 235px;
+    background: #f7f7f7;
+}
+.slider__content__image {
+    margin: 0 auto 10px;
+    width: 235px;
+}
+.slider__content__detail-title {
+    font-size: 12px;
+}
+ 
+/* clearfix
+----------------------------------------------------------*/
+.cf:after{
+    display:block;
+    height:0;
+    content:"";
+    visibility:hidden;
+    clear:both;
+}
+.cf{
+    zoom:1;
+}
+</style>
+<body>
+
+<div class="slider">
+    <h1 class="slider__heading__title">スライダー</h1>
+    <div class="slider__content">
+        <ul class="slider__content__lists cf">
+            <li class="slider__content__item">
+                <a href="#">
+                    <p class="slider__content__image"><img src="./dist/img/cr7.jpg" width="235" height="135" alt=""></p>
+                    <p class="slider__content__detail-title">コンテンツ１</p>
+                </a>
+            </li>
+            <li class="slider__content__item">
+                <a href="#">
+                    <p class="slider__content__image"><img src="./dist/img/messi.jpg" width="235" height="135" alt=""></p>
+                    <p class="slider__content__detail-title">コンテンツ２</p>
+                </a>
+            </li>
+            <li class="slider__content__item">
+                <a href="#">
+                    <p class="slider__content__image"><img src="./dist/img/neymar.jpg" width="235" height="135" alt=""></p>
+                    <p class="slider__content__detail-title">コンテンツ３</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+  
+</body>
+</html>
