@@ -23,69 +23,67 @@ containerと併用して使う
 
 */
 
-.c-card{
+.c-card {
   display: block;
   width: 100%;
   background: $card-color;
   margin-bottom: $margin-large;
   position: relative;
+
   @include box-shadow(0, 0, 2px, 0, rgba(10, 2, 4, .23));
 }
 
 // Modifier
 // --------------------
-.c-card--ov-x{
+.c-card--ov-x {
   overflow-x: scroll;
 }
 
-
 // Element
 // --------------------
-.c-card__header{
+.c-card__header {
   border-bottom: 1px solid $border-lighten;
   padding: $margin-large  $margin-large 0;
 }
 
-.c-card__content{
+.c-card__content {
   padding: $margin-large;
-  
-  h2{
-    height: 40px;  
+
+  h2 {
+    height: 40px;
   }
 
-  p{
+  p {
     margin-bottom: $margin-base;
   }
 
-  &--border{
+  &--border {
     border-top: 1px solid $border-lighten;
   }
 }
 
-.c-card__content__clamp{
+.c-card__content__clamp {
   @include line-clamp(3);
 }
 
-
-.c-card__bottom{
+.c-card__bottom {
   border-top: 1px solid $border-lighten;
   padding: $margin-base $margin-large;
   margin: 0;
-  
-  p{
+
+  p {
     margin: 0;
   }
 }
 
-.c-card__thumb{
+.c-card__thumb {
   width: 100%;
   margin-bottom: 0;
 }
 
-
 // Modifier - mark
 // --------------------
-.c-card__check-mark{
+.c-card__check-mark {
   position: absolute;
   top: -$margin-large;
   right: -$margin-large;
@@ -94,16 +92,17 @@ containerと併用して使う
   color: $text-color-white;
   background: $bg-default-darken;
   width: 48px;
+
   @include middle-line(48);
   @include border-radius-per(100%);
   @include box-shadow(0, 0, 10px, 0, rgba(10, 2, 4, .30));
-  
-  &.is-active{
+
+  &.is-active {
     background: $bg-success;
   }
 }
 
-.c-card__favorite-mark{
+.c-card__favorite-mark {
   position: absolute;
   top: -$margin-large;
   right: -$margin-large;
@@ -112,11 +111,12 @@ containerと併用して使う
   color: $text-color-white;
   background: $bg-default-darken;
   width: 48px;
+
   @include middle-line(48);
   @include border-radius-per(100%);
   @include box-shadow(0, 0, 10px, 0, rgba(10, 2, 4, .30));
-  
-  &.is-active{
+
+  &.is-active {
     background: $bg-highlight;
   }
 }

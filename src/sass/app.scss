@@ -4,12 +4,11 @@
 @import "foundation/variables";
 @import "foundation/mixins";
 
-
 /*
 ## Sanitize
 ----------------------------------------------- */
 @import "foundation/sanitize";
- 
+
 /*
 ## Base
 ----------------------------------------------- */
@@ -20,14 +19,11 @@
 ----------------------------------------------- */
 @import "foundation/animations";
 
-
-
 /* ---------------------------------------------------
  # Layout
 --------------------------------------------------- */
 @import "layout/footer";
 @import "layout/wrapper";
-
 
 /* ---------------------------------------------------
  # Object
@@ -63,12 +59,9 @@
 @import "object/component/thumb";
 @import "object/component/title";
 
-
 /*
 # Project
 ----------------------------------------------- */
-
- 
 
 /*
 # Utility

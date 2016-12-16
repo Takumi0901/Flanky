@@ -11,28 +11,34 @@
 
  */
 
-.c-bar{
+.c-bar {
   display: block;
   background: $bg-white;
-  @include middle-line(56);
   border-bottom: 1px solid $border-lighten;
-  
-  h1,h2,h3,h4,h5,p{
-    margin:0;
+
+  @include middle-line(56);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p{
+    margin: 0;
   }
-  
+
   // Modifier
   // --------------------
-  &--small{
+  &--small {
     @include middle-line(32);
     color: $text-color-white;
   }
 
-  &--black{
+  &--black {
     background: $bg-primary;
   }
 
-  &--fixed-bottom{
+  &--fixed-bottom {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -43,24 +49,24 @@
 
 //  Element
 // --------------------
-.c-bar__inner{
+.c-bar__inner {
   position: relative;
   width: auto;
   padding: 0 $margin-large;
 }
 
-.c-bar__inner__btn{
+.c-bar__inner__btn {
   display: block;
-  
-  &:hover{
+
+  &:hover {
     background: $bg-default;
   }
 }
 
 // PC only
 // --------------------
-@media ( min-width : $breakpoint ) {
-  .c-bar__inner{
+@media (min-width: $breakpoint) {
+  .c-bar__inner {
     position: relative;
     max-width: $max-width;
     margin: 0 auto;

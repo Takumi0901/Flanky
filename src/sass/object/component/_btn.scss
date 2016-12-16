@@ -28,7 +28,7 @@
 
  */
 
-.c-btn{
+.c-btn {
   display: inline-block;
   border: 0;
   text-align: center;
@@ -42,7 +42,10 @@
   position: relative; 
   white-space:nowrap;
 
-  &:link,&:active,&:hover,&:visited{
+  &:link,
+  &:active,
+  &:hover,
+  &:visited{
     color: #fff;
     text-decoration: none;
   }
@@ -51,121 +54,122 @@
   &[disabled],
   fieldset[disabled] & {
     cursor: not-allowed;
+
     @include opacity(.65);
   }
 }
 
-
 // Modifier - border
 // --------------------
-.c-btn-default--border{
+.c-btn-default--border {
   @include button-border-color($border-default, $base-color-text, 2px);
 }
 
-.c-btn-primary--border{
+.c-btn-primary--border {
   @include button-border-color($border-primary, $text-color-primary, 2px);
 }
 
-.c-btn-secondary--border{
+.c-btn-secondary--border {
   @include button-border-color($border-secondary, $text-color-secondary, 2px);
 }
 
-.c-btn-highlight--border{
+.c-btn-highlight--border {
   @include button-border-color($border-highlight, $text-color-highlight, 2px);
 }
 
-.c-btn-default--ghost{
+.c-btn-default--ghost {
   @include button-ghost-color($border-white, $text-color-primary, 2px);
 }
 
-
 // Modifier - flat
 // --------------------
-.c-btn-default--flat{
+.c-btn-default--flat {
   @include button-flat-color($base-color-text, $bg-white, $border-lighten, 1px);
 }
 
-.c-btn-primary--flat{
+.c-btn-primary--flat {
   @include button-flat-color($text-color-white, $bg-primary, $border-primary, 1px);
 }
 
-.c-btn-secondary--flat{
+.c-btn-secondary--flat {
   @include button-flat-color($text-color-white, $bg-secondary, $border-secondary, 1px);
 }
 
-.c-btn-highlight--flat{
+.c-btn-highlight--flat {
   @include button-flat-color($text-color-white, $bg-highlight, $border-highlight, 1px);
 }
 
-
 // Modifier - size
 // --------------------
-.c-btn--jumbo{
+.c-btn--jumbo {
   @include button-size(24px, 56px);
 }
 
-.c-btn--large{
+.c-btn--large {
   @include button-size(20px, 48px);
 }
 
-.c-btn--small{
+.c-btn--small {
   @include button-size(12px, 24px);
 }
 
-.c-btn--tiny{
+.c-btn--tiny {
   @include button-size(10px, 16px);
 }
 
-
 // Modifier - display
 // --------------------
-.c-btn--block{
+.c-btn--block {
   display: block;
   width: 100%;
 }
 
 // Modifier - circle
 // --------------------
-.c-btn--circle{
+.c-btn--circle {
   width: 80px;
   height: 80px;
   display: table;
   padding: 0;
   line-height: 20px;
+
   @include border-radius-per(100%);
   @include box-shadow(0, 0, 12px, 0, rgba(10, 2, 4, .40));
-  
-  &__inner{
+
+  &__inner {
     display: table-cell;
     vertical-align: middle;
   }
 }
 
-
 // Block - panel
 // --------------------
-.c-btn-panel{
+.c-btn-panel {
   background: $bg-white;
   padding: $margin-large-xx;
   display: block;
-  @include box-shadow(0, 0, 10px, 0, rgba(10, 2, 4, .30));
   -webkit-transition: -webkit-transform .3s;
   transition: transform .3s;
   transition-property: box-shadow;
-  
-  &:link,&:active,&:visited{
+
+  @include box-shadow(0, 0, 10px, 0, rgba(10, 2, 4, .30));
+
+  &:link,
+  &:active,
+  &:visited {
     color: $text-color-primary;
     text-decoration: none;
   }
-  &:hover{
+
+  &:hover {
     color: $text-color-primary;
     text-decoration: none;
-    @include box-shadow(0, 0, 2px, 0, rgba(10, 2, 4, .23));
     -webkit-transition: -webkit-transform .3s;
     transition: transform .3s;
     transition-property: box-shadow;
-    
-    .c-btn-panel__arrow{
+    @include box-shadow(0, 0, 2px, 0, rgba(10, 2, 4, .23));
+
+    .c-btn-panel__arrow {
       -webkit-transition: -webkit-transform .3s;
       transition: transform .3s;
       transition-property: transform;
@@ -174,15 +178,15 @@
     }
   }
 
-  &__icon{
+  &__icon {
     font-size: 64px;
   }
 
-  &__text{
+  &__text {
     font-size: 16px;
   }
 
-  &__arrow{
+  &__arrow {
     -webkit-transition: -webkit-transform .3s;
     transition: transform .3s;
     transition-property: transform;

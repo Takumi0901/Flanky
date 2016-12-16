@@ -5,18 +5,22 @@
   color: $base-color !important;
   background-color: $background;
   border: solid $border-width $border-color;
-  
+
   @include border-radius(5);
-  
-  &:link{
+
+  &:link {
     color: $base-color !important;
     background-color: $background;
   }
-  &:hover, &:active, &:focus {
+
+  &:hover,
+  &:active,
+  &:focus {
     color: lighten($base-color, 10%) !important;
     background-color: lighten($background, 6%);
     border: solid $border-width lighten($border-color, 6%);
   }
+
   &.disabled,
   &[disabled],
   fieldset[disabled] & {

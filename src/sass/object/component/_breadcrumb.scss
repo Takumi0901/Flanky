@@ -1,4 +1,4 @@
-/* 
+/*
 #beadcrumb
 
 ```
@@ -15,35 +15,33 @@
 ```
 
 */
-
-.c-breadcrumb{
+.c-breadcrumb {
   width: 100%;
   padding: 72px 0 $margin-large;
   background: $bg-white;
   color: $text-color-lighten;
-  
-  a{
-   color: $text-color-lighten;
-   
-   &:hover{
-     color: $text-color-link-hover;
-   }
+
+  a {
+    color: $text-color-lighten;
+
+    &:hover {
+      color: $text-color-link-hover;
+    }
   }
 }
 
 // Element
 // --------------------
-.c-breadcrumb__inner{
+.c-breadcrumb__inner {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 $margin-large;
 }
 
-
 // PC only
 // --------------------
-@media ( min-width : $breakpoint ) {
-  .c-breadcrumb{
+@media (min-width: $breakpoint) {
+  .c-breadcrumb {
     padding: 72px 0 $margin-large;
   }
 }

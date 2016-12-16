@@ -27,54 +27,55 @@
 ```
 
  */
- .c-menu{
+.c-menu {
   list-style: none;
 }
 
 // Modifier
 // --------------------
-.c-menu--border{
+.c-menu--border {
   border-top: solid 1px $border-lighten;
-  
-  .c-menu__item:last-child{
-    border-bottom: solid 1px $border-lighten;   
+
+  .c-menu__item:last-child {
+    border-bottom: solid 1px $border-lighten;
   }
 }
 
 // Element
 // --------------------
-.c-menu__item{
+.c-menu__item {
   border-bottom: solid 1px $border-lighten;
   position: relative;
   padding: $margin-small;
   display: block;
-  
-  &:last-child{
+
+  &:last-child {
     border: 0;
   }
 
-  a{
+  a {
     display: block;
-    @include border-radius(4);
     padding: $margin-base $margin-large-xx $margin-base $margin-base;
     text-decoration: none;
-    
-    &:hover{
+
+    @include border-radius(4);
+
+    &:hover {
       background: $bg-default;
     }
   }
 
-  a.is-active{
+  a.is-active {
     background: $bg-primary;
     color: $text-color-white;
-    
-    &:hover{
+
+    &:hover {
       background: lighten($bg-primary, 10%);
     }
   }
 }
 
-.c-menu__item__icon{
+.c-menu__item__icon {
   position: absolute;
   right: $margin-large;
   top: 50%;

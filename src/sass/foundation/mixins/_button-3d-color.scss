@@ -6,21 +6,25 @@
   background: $background;
   box-shadow:0 0 20px 4px lighten($background, 50%) inset;
   border: solid 1px lighten($background, 70%);
-  
+
   @include border-radius(5);
-  
-  &:link{
+
+  &:link {
     color: $base-color !important;
     background: $background;
   }
-  &:hover, &:active, &:focus {
+
+  &:hover,
+  &:active,
+  &:focus {
     color: $base-color !important;
     background: lighten($background, 5%);
   }
+
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    &:hover{
+    &:hover {
       background-color: $background;
       border-color: $base-color;
     }

@@ -1,120 +1,37 @@
 /*
 # form-control
-
 formデザイン
-
 ```
-<div class="c-container">
-  <form class="c-form">
-    <h3 class="c-form__title">テキスト<span class="c-form__reqiured">必須</span></h3>
-    <p><input type="text"></p>
-
-    <h3 class="c-form__title">URL<span class="c-form__reqiured">必須</span></h3>
-    <p><input type="url"></p>
-
-    <h3 class="c-form__title">パスワード<span class="c-form__reqiured">必須</span></h3>
-    <p><input type="password"></p>
-
-    <h3 class="c-form__title">メール<span class="c-form__reqiured">必須</span></h3>
-    <p><input type="email"></p>
-
-    <h3 class="c-form__title">テキストエリア<span class="c-form__reqiured">必須</span></h3>
-    <p>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-    </p>
-
-    <h3 class="c-form__title">チェックボックス</h3>
-    <p>
-      <input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
-      <input type="checkbox" name="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
-    </p>
-
-    <h3 class="c-form__title">ラジオボタン</h3>
-    <p>
-      <input type="radio" name="radio" id="radio1"><label for="radio1">radio1</label>
-      <input type="radio" name="radio" id="radio2"><label for="radio2">radio2</label>
-    </p>
-    
-    <h3 class="c-form__title">セレクト</h3>
-    <p>
-      <div class="c-form__select">
-        <label><select> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></label>
-      </div>
-    </p>
-    <button type="submit" class="c-btn c-btn-default--flat">Submit</button>
-  </form>
-</div>
-
-<div class="c-container">
-  <form class="c-form">
-    <table class="c-form__table">
-      <tr>
-        <th>テキスト</th>
-        <td><input type="text"></td>
-      </tr>
-      <tr>
-          <th>チェックボックス</th>
-          <td>
-            <input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
-            <input type="checkbox" name="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
-          </td>
-      </tr>
-      <tr>
-          <th>ラジオボタン</th>
-          <td>
-            <input type="radio" name="radio" id="radio1"><label for="radio1">radio1</label>
-            <input type="radio" name="radio" id="radio2"><label for="radio2">radio2</label>
-          </td>
-      </tr>
-      <tr>
-          <th>セレクト</th>
-          <td>
-            <div class="c-form__select">
-              <label><select> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></label>
-            </div>
-          </td>
-      </tr>
-      <tr>
-        <th>テキストエリア</th>
-        <td>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-        </td>
-      </tr>
-    </table>
-  </form>
-</div>
 ```
-
 */
-
-.c-form{
-	
-	input[type=text],
-	input[type=url],
+.c-form {
+  input[type=text],
+  input[type=url],
   input[type=tel],
-	input[type=password],
-	input[type=email],
-	textarea,
-	select{
+  input[type=password],
+  input[type=email],
+  textarea,
+  select {
     background: $bg-white;
     display: block;
     border: solid 1px $border-lighten;
     padding: $margin-base $margin-large;
     width: 100%;
-    -webkit-appearance : none;
+    -webkit-appearance: none;
     font-size: 14px;
+
     @include border-radius(4);
   }
 }
 
-.c-form__search{
-	position: relative;
-  
-  input[type=text]{
+.c-form__search {
+  position: relative;
+
+  input[type=text] {
     padding-left: $margin-large-x;
   }
-  
-  &__icon{
+
+  &__icon {
     position: absolute;
     top: 50%;
     left: $margin-base;
@@ -123,40 +40,40 @@ formデザイン
   }
 }
 
-.c-form__select{
+.c-form__select {
   position: relative;
   margin-bottom: 0;
 }
 
-.c-form__select label:after{
-	bottom: 30%;
-	right: 16px;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-top-color: $border-dark;
-	border-width: 6px;
-	margin-left: 6px;
+.c-form__select label:after {
+  bottom: 30%;
+  right: 16px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-top-color: $border-dark;
+  border-width: 6px;
+  margin-left: 6px;
 }
 
-.c-form__title{
-	font-size: 14px;
-	margin-bottom: $margin-base;
+.c-form__title {
+  font-size: 14px;
+  margin-bottom: $margin-base;
 }
 
-.c-form__reqiured{
-	background: $bg-alert;
-	font-size: 10px;
-	color: $text-color-white;
-	padding: $margin-small $margin-base;
-	margin: 0 $margin-small;
-	@include border-radius(10);
-	vertical-align: 1px;
-}
+.c-form__reqiured {
+  background: $bg-alert;
+  font-size: 10px;
+  color: $text-color-white;
+  padding: $margin-small $margin-base;
+  margin: 0 $margin-small;
+  vertical-align: 1px;
 
+  @include border-radius(10);
+}
 
 // radio checkbox　default style
 .c-form input[type=radio],
@@ -164,9 +81,10 @@ formデザイン
   display: inline-block;
   margin-right: 6px;
 }
+
 .c-form input[type=radio] + label,
 .c-form input[type=checkbox] + label,
-.c-form label input[type=checkbox]{
+.c-form label input[type=checkbox] {
   position: relative;
   display: inline-block;
   margin-right: 12px;
@@ -181,11 +99,13 @@ formデザイン
   margin: 0;
   padding: 0;
 }
+
 .c-form input[type=checkbox].c-form__color-picker + label::before,
-.c-form input[type=checkbox].c-form__color-picker + label::after, {
+.c-form input[type=checkbox].c-form__color-picker + label::after{
   display: none;
 }
-.c-form input[type=checkbox].c-form__color-picker + label{
+
+.c-form input[type=checkbox].c-form__color-picker + label {
   padding: 0;
   display: inline-block;
   width: 24px;
@@ -197,7 +117,7 @@ formデザイン
   text-indent: -99999em;
 }
 
-.c-form input[type=checkbox].c-form__color-picker:checked + label{
+.c-form input[type=checkbox].c-form__color-picker:checked + label {
   border: solid 2px $border-dark;
 }
 
@@ -212,11 +132,13 @@ formデザイン
     display: none;
     margin: 0;
   }
+
   .c-form input[type=radio] + label,
   .c-form input[type=checkbox] + label,
   .c-form label input[type=checkbox] {
     padding: 0 0 0 24px;
   }
+
   .c-form input[type=radio] + label::before,
   .c-form input[type=checkbox] + label::before,
   .c-form label input[type=checkbox]::before {
@@ -233,14 +155,17 @@ formデザイン
     margin-top: -9px;
     background-color: white;
   }
+
   .c-form input[type=radio] + label::before {
     border: 2px solid #c2ced2;
     border-radius: 30px;
   }
+
   .c-form input[type=checkbox] + label::before,
   .c-form label input[type=checkbox]::before {
     border: 2px solid #c2ced2;
   }
+
   .c-form input[type=radio]:checked + label::after,
   .c-form input[type=checkbox]:checked + label::after,
   .c-form label input[type=checkbox]:checked::after {
@@ -251,14 +176,16 @@ formデザイン
     box-sizing: border-box;
     display: block;
   }
+
   .c-form input[type=radio]:checked + label::after {
     left: 5px;
     width: 8px;
     height: 8px;
-    margin-top: -4px; 
+    margin-top: -4px;
     background: #19c5ff;
     border-radius: 8px;
   }
+
   .c-form input[type=checkbox]:checked + label::after,
   .c-form label input[type=checkbox]:checked::after {
     left: 3px;
@@ -273,12 +200,12 @@ formデザイン
 }
 
 
-.c-form__table{
-	width: 100%;
-	
-	tr{
-		border-bottom: solid 1px $border-lighten;
-	}
+.c-form__table {
+  width: 100%;
+
+  tr {
+    border-bottom: solid 1px $border-lighten;
+  }
 
   tr:last-child{
     border-bottom: none;

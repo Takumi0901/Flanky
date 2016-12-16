@@ -102,8 +102,8 @@ textarea {
 }
 
 html {
-  background-color: #FFFFFF;
-  color: #000000;
+  background-color: #FFF;
+  color: #000;
 }
 
 a {
@@ -191,7 +191,7 @@ textarea {
 }
 
 ::selection {
-  background-color: #B3D4FC;
+  background-color: #b3d4fc;
   color: #4c2b03;
   text-shadow: none;
 }
@@ -220,7 +220,8 @@ textarea {
 /*
 ## Base
 ----------------------------------------------- */
-html, body {
+html,
+body {
   overflow-y: hidden;
 }
 
@@ -244,7 +245,6 @@ address {
 }
 
 a {
-  color: inherit;
   cursor: pointer;
   color: #515151;
 }
@@ -256,7 +256,12 @@ a:hover, a:focus, a:active {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: 8px;
 }
 
@@ -380,18 +385,18 @@ input[type="radio"] {
 }
 @-webkit-keyframes bgAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 @-moz-keyframes bgAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
@@ -402,24 +407,24 @@ input[type="radio"] {
 }
 @-o-keyframes bgAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 @keyframes bgAnimation {
   0% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
   50% {
     background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0 50%;
   }
 }
 /* ---------------------------------------------------
@@ -489,10 +494,10 @@ input[type="radio"] {
   height: 60px;
   display: block;
   overflow: hidden;
+  margin: 0 auto;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  margin: 0 auto;
 }
 .c-avatar img {
   margin-left: -30px;
@@ -524,11 +529,16 @@ input[type="radio"] {
 .c-bar {
   display: block;
   background: #fff;
+  border-bottom: 1px solid #e5e5e5;
   height: 56px;
   line-height: 56px;
-  border-bottom: 1px solid #e5e5e5;
 }
-.c-bar h1, .c-bar h2, .c-bar h3, .c-bar h4, .c-bar h5, .c-bar p {
+.c-bar h1,
+.c-bar h2,
+.c-bar h3,
+.c-bar h4,
+.c-bar h5,
+.c-bar p {
   margin: 0;
 }
 .c-bar--small {
@@ -567,7 +577,7 @@ input[type="radio"] {
     margin: 0 auto;
   }
 }
-/* 
+/*
 #beadcrumb
 
 ```
@@ -896,12 +906,12 @@ input[type="radio"] {
   background: #fff;
   padding: 32px;
   display: block;
-  -webkit-box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
-  -moz-box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
-  box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
   -webkit-transition: -webkit-transform .3s;
   transition: transform .3s;
   transition-property: box-shadow;
+  -webkit-box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+  -moz-box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
+  box-shadow: 0 0 10px 0 rgba(10, 2, 4, 0.3);
 }
 .c-btn-panel:link, .c-btn-panel:active, .c-btn-panel:visited {
   color: #4bd5f2;
@@ -910,12 +920,12 @@ input[type="radio"] {
 .c-btn-panel:hover {
   color: #4bd5f2;
   text-decoration: none;
-  -webkit-box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
-  -moz-box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
-  box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
   -webkit-transition: -webkit-transform .3s;
   transition: transform .3s;
   transition-property: box-shadow;
+  -webkit-box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
+  -moz-box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
+  box-shadow: 0 0 2px 0 rgba(10, 2, 4, 0.23);
 }
 .c-btn-panel:hover .c-btn-panel__arrow {
   -webkit-transition: -webkit-transform .3s;
@@ -1061,7 +1071,7 @@ containerと併用して使う
   background: #f24b4b;
 }
 
-/* 
+/*
 # container
 
 ```
@@ -1196,8 +1206,8 @@ containerと併用して使う
   transition: background 0.3s;
 }
 
-.c-drawer-btn__icon:before
-, .c-drawer-btn__icon:after {
+.c-drawer-btn__icon:before,
+.c-drawer-btn__icon:after {
   position: absolute;
   display: block;
   width: 24px;
@@ -1224,13 +1234,13 @@ containerと併用して使う
 }
 
 .is-open.c-drawer-btn .c-drawer-btn__icon:before {
-  -webkit-transform: translateY(0px) rotate(-45deg);
-  transform: translateY(0px) rotate(-45deg);
+  -webkit-transform: translateY(0) rotate(-45deg);
+  transform: translateY(0) rotate(-45deg);
 }
 
 .is-open.c-drawer-btn .c-drawer-btn__icon:after {
-  -webkit-transform: translateY(0px) rotate(45deg);
-  transform: translateY(0px) rotate(45deg);
+  -webkit-transform: translateY(0) rotate(45deg);
+  transform: translateY(0) rotate(45deg);
 }
 
 .c-drawer-fixed-bar {
@@ -1308,7 +1318,7 @@ a自体のスタイルは適用しない方針
   transform: translateX(0);
 }
 
-/* 
+/*
 # floating-menu
 
 主に中にボタンが入る
@@ -1332,91 +1342,9 @@ a自体のスタイルは適用しない方針
 
 /*
 # form-control
-
 formデザイン
-
 ```
-<div class="c-container">
-  <form class="c-form">
-    <h3 class="c-form__title">テキスト<span class="c-form__reqiured">必須</span></h3>
-    <p><input type="text"></p>
-
-    <h3 class="c-form__title">URL<span class="c-form__reqiured">必須</span></h3>
-    <p><input type="url"></p>
-
-    <h3 class="c-form__title">パスワード<span class="c-form__reqiured">必須</span></h3>
-    <p><input type="password"></p>
-
-    <h3 class="c-form__title">メール<span class="c-form__reqiured">必須</span></h3>
-    <p><input type="email"></p>
-
-    <h3 class="c-form__title">テキストエリア<span class="c-form__reqiured">必須</span></h3>
-    <p>
-      <textarea name="" id="" cols="30" rows="10"></textarea>
-    </p>
-
-    <h3 class="c-form__title">チェックボックス</h3>
-    <p>
-      <input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
-      <input type="checkbox" name="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
-    </p>
-
-    <h3 class="c-form__title">ラジオボタン</h3>
-    <p>
-      <input type="radio" name="radio" id="radio1"><label for="radio1">radio1</label>
-      <input type="radio" name="radio" id="radio2"><label for="radio2">radio2</label>
-    </p>
-    
-    <h3 class="c-form__title">セレクト</h3>
-    <p>
-      <div class="c-form__select">
-        <label><select> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></label>
-      </div>
-    </p>
-    <button type="submit" class="c-btn c-btn-default--flat">Submit</button>
-  </form>
-</div>
-
-<div class="c-container">
-  <form class="c-form">
-    <table class="c-form__table">
-      <tr>
-        <th>テキスト</th>
-        <td><input type="text"></td>
-      </tr>
-      <tr>
-          <th>チェックボックス</th>
-          <td>
-            <input type="checkbox" name="checkbox" id="checkbox1"><label for="checkbox1">checkbox1</label>
-            <input type="checkbox" name="checkbox" id="checkbox2"><label for="checkbox2">checkbox2</label>
-          </td>
-      </tr>
-      <tr>
-          <th>ラジオボタン</th>
-          <td>
-            <input type="radio" name="radio" id="radio1"><label for="radio1">radio1</label>
-            <input type="radio" name="radio" id="radio2"><label for="radio2">radio2</label>
-          </td>
-      </tr>
-      <tr>
-          <th>セレクト</th>
-          <td>
-            <div class="c-form__select">
-              <label><select> <option>1</option> <option>2</option> <option>3</option> <option>4</option> <option>5</option> </select></label>
-            </div>
-          </td>
-      </tr>
-      <tr>
-        <th>テキストエリア</th>
-        <td>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-        </td>
-      </tr>
-    </table>
-  </form>
-</div>
 ```
-
 */
 .c-form input[type=text],
 .c-form input[type=url],
@@ -1481,10 +1409,10 @@ formデザイン
   color: #fff;
   padding: 4px 8px;
   margin: 0 4px;
+  vertical-align: 1px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  vertical-align: 1px;
 }
 
 .c-form input[type=radio],
@@ -1661,13 +1589,12 @@ formデザイン
     margin-top: -11px;
   }
 }
-/* 
+/*
 #label
 
 ```
 <span class="c-label">ラベル</span>
 ```
-
 */
 .c-label {
   display: inline-block;
@@ -1697,7 +1624,7 @@ formデザイン
   color: #f2f2f2;
 }
 
-/* 
+/*
 # loading
 
 ```
@@ -1849,7 +1776,7 @@ formデザイン
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
 }
-.c-grid--between {
+.c-grid--betwee n {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   -webkit-justify-content: space-between;
@@ -2132,7 +2059,7 @@ formデザイン
     padding: 0 16px 0 48px;
   }
 }
-/* 
+/*
 # media
 
 card、containerと組み合わせて使う
@@ -2252,11 +2179,11 @@ card、containerと組み合わせて使う
 }
 .c-menu__item a {
   display: block;
+  padding: 8px 32px 8px 8px;
+  text-decoration: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-  padding: 8px 32px 8px 8px;
-  text-decoration: none;
 }
 .c-menu__item a:hover {
   background: #f9f9f9;
@@ -2329,7 +2256,8 @@ card、containerと組み合わせて使う
   border-radius: 8px;
 }
 
-.c-modal.is-fadein, .c-modal[aria-clicked="true"] {
+.c-modal.is-fadein,
+.c-modal[aria-clicked="true"] {
   display: block;
   opacity: 1;
   animation-duration: 0.5s;
@@ -2435,10 +2363,10 @@ card、containerと組み合わせて使う
 }
 .c-nav__item a {
   display: block;
-  height: 54px;
-  line-height: 54px;
   padding: 0 24px;
   text-decoration: none;
+  height: 54px;
+  line-height: 54px;
 }
 
 /*
@@ -2527,7 +2455,8 @@ card、containerと組み合わせて使う
   text-align: center;
 }
 
-.c-tab__body.is-hidden, .c-tab__body[aria-hidden="true"] {
+.c-tab__body.is-hidden,
+.c-tab__body[aria-hidden="true"] {
   display: none;
 }
 
@@ -2584,7 +2513,8 @@ card、containerと組み合わせて使う
 .c-table {
   width: 100%;
 }
-.c-table td, .c-table th {
+.c-table td,
+.c-table th {
   text-align: left;
   padding: 8px;
 }
@@ -2601,12 +2531,14 @@ card、containerと組み合わせて使う
 .c-table--bordered {
   width: 100%;
 }
-.c-table--bordered td, .c-table--bordered th {
+.c-table--bordered td,
+.c-table--bordered th {
   text-align: left;
   padding: 8px;
   border-left: solid 1px #e5e5e5;
 }
-.c-table--bordered td:first-child, .c-table--bordered th:first-child {
+.c-table--bordered td:first-child,
+.c-table--bordered th:first-child {
   border: 0;
 }
 .c-table--bordered tr {
@@ -2616,7 +2548,8 @@ card、containerと組み合わせて使う
   border-bottom: none;
 }
 
-.c-table--padding td, .c-table--padding th {
+.c-table--padding td,
+.c-table--padding th {
   padding: 16px 8px;
 }
 
@@ -2647,7 +2580,7 @@ card、containerと組み合わせて使う
   color: #b7b7b7;
 }
 
-/* 
+/*
 #thumb
 
 ```
@@ -2664,7 +2597,8 @@ card、containerと組み合わせて使う
   border-color: #9e9e9e;
 }
 
-.c-thumb--small, .c-thumb--medium {
+.c-thumb--small,
+.c-thumb--medium {
   padding: 2px;
   border: 1px solid #e5e5e5;
 }

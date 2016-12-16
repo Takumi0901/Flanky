@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------
 //  button-size
 // ---------------------------------------------------------------
-@mixin button-size($base-fs, $height){
+@mixin button-size($base-fs, $height) {
   font-size: $base-fs;
   line-height: $height;
 }

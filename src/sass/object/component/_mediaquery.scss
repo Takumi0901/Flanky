@@ -13,21 +13,20 @@
 
  */
 
-.c-mediaquery--sp{
+.c-mediaquery--sp {
   display: block;
 }
 
-.c-mediaquery--pc{
+.c-mediaquery--pc {
   display: none;
 }
 
-
-@media ( min-width : $breakpoint ) {
-  .c-mediaquery--sp{
+@media (min-width: $breakpoint) {
+  .c-mediaquery--sp {
     display: none;
   }
 
-  .c-mediaquery--pc{
+  .c-mediaquery--pc {
     display: block;
   }
 }

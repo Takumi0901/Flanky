@@ -1,6 +1,5 @@
 /* ### border
 --------------------------------------------------------- */
-
 // border-radius
 .u-br-radius-0 {
   border-radius: 0;
@@ -22,7 +21,6 @@
   @include border-radius(16);
 }
 
-
 // border-none
 .u-br-0 {
   border: none !important;
@@ -43,4 +41,3 @@
 .u-br-l-0 {
   border-left: none !important;
 }
-

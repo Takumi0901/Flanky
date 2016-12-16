@@ -1,4 +1,4 @@
-/* 
+/*
 # media
 
 card、containerと組み合わせて使う
@@ -17,21 +17,20 @@ card、containerと組み合わせて使う
 ```
 */
 
-.c-media{
+.c-media {
   display: table;
   width: 100%;
   position: relative;
 }
 
-
 // Element
 // --------------------
-.c-media__content{
+.c-media__content {
   display: table-cell;
   vertical-align: middle;
   padding-right: $margin-large;
 }
 
-.c-media__text__clmap{
+.c-media__text__clmap {
   @include line-clamp(3);
 }

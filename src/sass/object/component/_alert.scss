@@ -6,8 +6,7 @@
 ```
 
  */
-
-.c-alert{
+.c-alert {
   color: $text-color-alert;
   background: $bg-alert-b;
   border: solid 1px $border-alert;
@@ -16,7 +15,7 @@
 
 // Modifier
 // --------------------
-.c-alert--success{
+.c-alert--success {
   color: $text-color-success;
   background: $bg-success;
   border: solid 1px $border-success;

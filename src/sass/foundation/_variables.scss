@@ -5,13 +5,11 @@ $base-size:                     8;
 $max-width:                     1200px;
 $breakpoint:                    768px;
 
-
 // ---------------------------------------------------------------
 //  Font
 // ---------------------------------------------------------------
 $font-family-base:              Arial,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
 $font-size-base:                14px;
-
 
 // ---------------------------------------------------------------
 //  Line-hieght
@@ -29,7 +27,6 @@ $base-color-border:             #9e9e9e;
 $base-alert:                    #f73b6a;
 $base-success:                  #3c763d;
 
-
 // ---------------------------------------------------------------
 //  Content-color
 // ---------------------------------------------------------------
@@ -37,12 +34,10 @@ $primary-color:                 #4bd5f2;
 $secondary-color:               #2dd885;
 $highlight-color:               #f24b4b;
 
-
 // ---------------------------------------------------------------
 //  Card
 // ---------------------------------------------------------------
 $card-color:                    $base-color-white;
-
 
 // ---------------------------------------------------------------
 //  Text-color
@@ -57,7 +52,6 @@ $text-color-highlight:          $highlight-color;
 $text-color-alert:              $base-alert;
 $text-color-success:            $base-success;
 
-
 // ---------------------------------------------------------------
 //  Background-color
 // ---------------------------------------------------------------
@@ -70,8 +64,6 @@ $bg-highlight:                  $highlight-color;
 $bg-alert:                      $base-alert;
 $bg-alert-b:                    lighten($base-alert, 35%);
 $bg-success:                    lighten($base-success, 20%);
-
-
 
 // ---------------------------------------------------------------
 //  Border-color
@@ -87,15 +79,11 @@ $border-highlight:              $highlight-color;
 $border-alert:                  lighten($base-alert, 30%);
 $border-success:                lighten($base-success, 30%);
 
-
-
 // ---------------------------------------------------------------
 //  Hero
 // ---------------------------------------------------------------
 $hero-color-a:                  $primary-color;
 $hero-color-b:                  $secondary-color;
-
-
 
 // ---------------------------------------------------------------
 //  Margin
