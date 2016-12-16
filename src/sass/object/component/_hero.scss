@@ -17,8 +17,8 @@
  */
 
 .c-hero {
-  margin: 0 0 $margin-large-xx;
-  padding: $margin-large-xx $margin-large $margin-large;
+  margin: 0 0 $margin-base * 4;
+  padding: $margin-base * 4 $margin-base * 2 $margin-base * 2;
   border-bottom: 2px solid $border-lighten;
   border-top: 2px solid $border-lighten;
   position: relative;
@@ -46,18 +46,18 @@
 // --------------------
 .c-hero__inner {
   width: auto;
-  padding: 0 $margin-large;
+  padding: 0 $margin-base * 2;
 }
 
 .c-hero__inner__title {
   font-size: 32px;
   font-weight: normal;
-  margin-bottom: $margin-large;
+  margin-bottom: $margin-base * 2;
   color: $text-color-white;
 }
 
 .c-hero__inner__text {
-  margin-bottom: $margin-large;
+  margin-bottom: $margin-base * 2;
   color: $text-color-white;
 }
 
@@ -76,6 +76,6 @@
   .c-hero__inner {
     max-width: $max-width;
     margin: 0 auto;
-    padding: 0 $margin-large 0 $margin-large-xxxx;
+    padding: 0 $margin-base * 2 0 $margin-base * 6;
   }
 }

@@ -27,7 +27,7 @@ containerと併用して使う
   display: block;
   width: 100%;
   background: $card-color;
-  margin-bottom: $margin-large;
+  margin-bottom: $margin-base * 2;
   position: relative;
 
   @include box-shadow(0, 0, 2px, 0, rgba(10, 2, 4, .23));
@@ -43,11 +43,11 @@ containerと併用して使う
 // --------------------
 .c-card__header {
   border-bottom: 1px solid $border-lighten;
-  padding: $margin-large  $margin-large 0;
+  padding: $margin-base * 2 $margin-base * 2 0;
 }
 
 .c-card__content {
-  padding: $margin-large;
+  padding: $margin-base * 2;
 
   h2 {
     height: 40px;
@@ -68,7 +68,7 @@ containerと併用して使う
 
 .c-card__bottom {
   border-top: 1px solid $border-lighten;
-  padding: $margin-base $margin-large;
+  padding: $margin-base $margin-base * 2;
   margin: 0;
 
   p {
@@ -85,8 +85,8 @@ containerと併用して使う
 // --------------------
 .c-card__check-mark {
   position: absolute;
-  top: -$margin-large;
-  right: -$margin-large;
+  top: -$margin-base * 2;
+  right: -$margin-base * 2;
   font-size: 32px;
   text-align: center;
   color: $text-color-white;
@@ -104,8 +104,8 @@ containerと併用して使う
 
 .c-card__favorite-mark {
   position: absolute;
-  top: -$margin-large;
-  right: -$margin-large;
+  top: -$margin-base * 2;
+  right: -$margin-base * 2;
   font-size: 24px;
   text-align: center;
   color: $text-color-white;

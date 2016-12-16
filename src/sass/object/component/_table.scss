@@ -79,6 +79,6 @@
 .c-table--padding {
   td,
   th {
-    padding: $margin-large $margin-base;
+    padding: $margin-base * 2 $margin-base;
   }
 }

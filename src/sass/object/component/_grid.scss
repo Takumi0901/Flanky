@@ -163,7 +163,7 @@ $var-col-width-gutters:     ($var-max-width + $var-col-gutters) / $var-col;
   > .c-grid__col {
     width: 100% !important;
     display: block !important;
-    margin-bottom: $margin-large;
+    margin-bottom: $margin-base * 2;
   }
 }
 

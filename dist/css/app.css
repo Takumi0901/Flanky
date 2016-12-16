@@ -1,5 +1,8 @@
 @charset "UTF-8";
 /* ---------------------------------------------------
+ # Core
+--------------------------------------------------- */
+/* ---------------------------------------------------
  # Foundation
 --------------------------------------------------- */
 /*
@@ -1450,11 +1453,11 @@ formデザイン
   height: 24px;
   min-height: 24px;
   border: solid 1px #fff;
+  vertical-align: text-bottom;
+  text-indent: -99999em;
   -webkit-box-shadow: 0 0 1px 0 #9e9e9e;
   -moz-box-shadow: 0 0 1px 0 #9e9e9e;
   box-shadow: 0 0 1px 0 #9e9e9e;
-  vertical-align: text-bottom;
-  text-indent: -99999em;
 }
 
 .c-form input[type=checkbox].c-form__color-picker:checked + label {

@@ -28,7 +28,7 @@ card、containerと組み合わせて使う
 .c-media__content {
   display: table-cell;
   vertical-align: middle;
-  padding-right: $margin-large;
+  padding-right: $margin-base * 2;
 }
 
 .c-media__text__clmap {

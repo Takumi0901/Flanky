@@ -88,10 +88,4 @@ $hero-color-b:                  $secondary-color;
 // ---------------------------------------------------------------
 //  Margin
 // ---------------------------------------------------------------
-$margin-base:                   $base-size + px;
-$margin-small:                  $base-size / 2 + px;
-$margin-large:                  $base-size * 2 + px;
-$margin-large-x:                $base-size * 3 + px;
-$margin-large-xx:               $base-size * 4 + px;
-$margin-large-xxx:              $base-size * 5 + px;
-$margin-large-xxxx:             $base-size * 6 + px;
+$margin-base:                   $base-size * 1px;

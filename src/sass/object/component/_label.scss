@@ -7,10 +7,10 @@
 */
 .c-label {
   display: inline-block;
-  padding: $margin-small $margin-large;
+  padding: $margin-base / 2 $margin-base * 2;
   background: $bg-secondary;
   font-size: 12px;
-  margin-left: $margin-small;
+  margin-left: $margin-base / 2;
 
   @include border-radius(4);
 }

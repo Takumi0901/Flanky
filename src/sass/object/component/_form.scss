@@ -15,7 +15,7 @@ formデザイン
     background: $bg-white;
     display: block;
     border: solid 1px $border-lighten;
-    padding: $margin-base $margin-large;
+    padding: $margin-base $margin-base * 2;
     width: 100%;
     -webkit-appearance: none;
     font-size: 14px;
@@ -28,7 +28,7 @@ formデザイン
   position: relative;
 
   input[type=text] {
-    padding-left: $margin-large-x;
+    padding-left: $margin-base * 3;
   }
 
   &__icon {
@@ -68,8 +68,8 @@ formデザイン
   background: $bg-alert;
   font-size: 10px;
   color: $text-color-white;
-  padding: $margin-small $margin-base;
-  margin: 0 $margin-small;
+  padding: $margin-base / 2 $margin-base;
+  margin: 0 $margin-base / 2;
   vertical-align: 1px;
 
   @include border-radius(10);
@@ -112,9 +112,10 @@ formデザイン
   height: 24px;
   min-height: 24px;
   border: solid 1px $border-white;
-  @include box-shadow(0, 0, 1px, 0, $border-default);
   vertical-align: text-bottom;
   text-indent: -99999em;
+
+  @include box-shadow(0, 0, 1px, 0, $border-default);
 }
 
 .c-form input[type=checkbox].c-form__color-picker:checked + label {
@@ -199,7 +200,6 @@ formデザイン
   }
 }
 
-
 .c-form__table {
   width: 100%;
 
@@ -207,15 +207,15 @@ formデザイン
     border-bottom: solid 1px $border-lighten;
   }
 
-  tr:last-child{
+  tr:last-child {
     border-bottom: none;
   }
 
   th{
-    width:  100%;
+    width: 100%;
     font-weight: normal;
     text-align: left;
-    padding: $margin-large $margin-large;
+    padding: $margin-base * 2 $margin-base * 2;
     font-size: 12px;
     position: relative;
     display: block;
@@ -223,42 +223,42 @@ formデザイン
 
   td{
     width: 100%;
-    padding: 0 $margin-large $margin-large;
+    padding: 0 $margin-base * 2 $margin-base * 2;
     display: block;
   }
-  .c-form__reqiured{
+
+  .c-form__reqiured {
     position: static;
-    margin-left: $margin-large;
+    margin-left: $margin-base * 2;
   }
 }
 
-.c-form__table--border{
+.c-form__table--border {
   border-top: solid 1px $border-lighten;
   border-bottom: solid 1px $border-lighten;
 }
 
-
-
 // PC only
 // --------------------
-@media ( min-width : $breakpoint ) {
-  .c-form__table{
+@media (min-width: $breakpoint) {
+  .c-form__table {
 
     th{
-      width:  30%;
+      width: 30%;
       position: relative;
       display: table-cell;
     }
 
     td{
-      width:  70%;
+      width: 70%;
       display: table-cell;
-      padding: $margin-large $margin-large;
+      padding: $margin-base * 2 $margin-base * 2;
     }
+
     .c-form__reqiured{
       position: absolute;
       top: 50%;
-      right: $margin-large;
+      right: $margin-base * 2;
       margin-top: -11px;
     }
   }

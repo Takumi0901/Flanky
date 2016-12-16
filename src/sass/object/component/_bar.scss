@@ -52,7 +52,7 @@
 .c-bar__inner {
   position: relative;
   width: auto;
-  padding: 0 $margin-large;
+  padding: 0 $margin-base * 2;
 }
 
 .c-bar__inner__btn {

@@ -146,7 +146,7 @@
 // --------------------
 .c-btn-panel {
   background: $bg-white;
-  padding: $margin-large-xx;
+  padding: $margin-base * 4;
   display: block;
   -webkit-transition: -webkit-transform .3s;
   transition: transform .3s;

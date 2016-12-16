@@ -18,19 +18,19 @@
 */
 
 .c-container {
-  margin: 0 $margin-large $margin-large-x;
+  margin: 0 $margin-base * 2 $margin-base * 3;
 }
 
 // Modifier
 // --------------------
 .c-container--small {
-  margin: 0 $margin-large-x $margin-large-x;
+  margin: 0 $margin-base * 3 $margin-base * 3;
 }
 
 .c-container--x-small {
-  margin: 0 $margin-large-xx $margin-large-x;
+  margin: 0 $margin-base * 4 $margin-base * 3;
 }
 
 .c-container--full {
-  margin: 0 0 $margin-large-x;
+  margin: 0 0 $margin-base * 3;
 }

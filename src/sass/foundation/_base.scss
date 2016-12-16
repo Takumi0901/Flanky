@@ -52,7 +52,7 @@ p {
 }
 
 input[type="radio"] {
-  margin-left: $margin-large;
+  margin-left: $margin-base * 2;
   margin-right: $margin-base;
 }
 

@@ -170,7 +170,7 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
   height: $hamburger-menu-size;
   position: absolute;
   top: 50%;
-  right: $margin-large;
+  right: $margin-base * 2;
 }
 
 // ---------------------------------------------------------------

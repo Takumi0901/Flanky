@@ -42,7 +42,7 @@
 .c-modal__panel {
   position: relative;
   width: 94%;
-  margin: $margin-large-xxx auto;
+  margin: $margin-base * 5 auto;
   background: #fff;
   -webkit-box-shadow: 0 0 8px rgba(10, 2, 4, .5);
   box-shadow: 0 0 8px rgba(10, 2, 4, .5);
@@ -85,20 +85,20 @@
 
 .c-modal__header {
   border-bottom: 1px solid $border-lighten;
-  padding: $margin-large;
+  padding: $margin-base * 2;
   font-weight: bold;
   font-size: 16px;
 }
 
 .c-modal__content {
   position: relative;
-  padding: $margin-large;
+  padding: $margin-base * 2;
   min-height: 300px;
 }
 
 .c-modal__bottom {
   border-top: 1px solid $border-lighten;
-  padding: $margin-large;
+  padding: $margin-base * 2;
   text-align: right;
 }
 
