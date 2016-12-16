@@ -23,12 +23,13 @@
 
 ```
 sass
-  ├─ foundation
+  ├─ core
   |     ├─ mixins
-  |     ├─ _base.scss
   |     ├─ _mixins.scss
-  |     ├─ _sanitize.scss
   |     └─ _variables.scss
+  ├─ foundation
+  |     ├─ _base.scss
+  |     └─ _sanitize.scss
   ├─ layout
   |     ├─ _header.scss
   |     └─ _footer.scss
