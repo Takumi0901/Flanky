@@ -1,22 +1,22 @@
-/* 
+/*
 #label
 
 ```
 <span class="c-label">ラベル</span>
 ```
-
 */
-.c-label{
+.c-label {
   display: inline-block;
-  padding: $margin-small $margin-large;
-  background: $bg-secondary;
+  padding: $margin-base / 2 $margin-base * 2;
+  background: $secondary-color;
   font-size: 12px;
-  margin-left: $margin-small;
+  margin-left: $margin-base / 2;
+
   @include border-radius(4);
 }
 
 // Modifier
 // --------------------
-.c-label--disable{
-  background: $bg-default;
+.c-label--disable {
+  background: $base-color-lighten;
 }

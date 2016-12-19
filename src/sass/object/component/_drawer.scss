@@ -10,9 +10,9 @@
 $base-width             : 300px;
 
 // Color
-$color-base             : $bg-white;
-$color-primary          : $text-color-primary;
-$color-secondary        : $bg-white;
+$color-base             : $base-color-white;
+$color-primary          : $primary-color;
+$color-secondary        : $base-color-white;
 $color-overlay          : #000;
 
 // z-index
@@ -27,15 +27,11 @@ $fixed-bar-height       : 56px;
 // hamburger
 $hamburger-line-thickness   : 1px;
 
-
-
-
 // ---------------------------------------------------------------
 //  hamburger-menu
 // ---------------------------------------------------------------
-
 // Color
-$hamburger-menu-color     : $text-color-primary;
+$hamburger-menu-color     : $primary-color;
 $hamburger-menu-bg        : $color-base;
 
 // Size
@@ -45,7 +41,6 @@ $hamburger-bar-size       : $base-size * 3 + px;
 // animation / position
 $hamburger-menu-translate-y   : $base-size + px;
 $hamburger-menu-position    : $base-size * 2 + px;
-
 
 // ---------------------------------------------------------------
 //  drawer
@@ -67,11 +62,9 @@ $drawer-padding         : $fixed-bar-height + $base-size * 2;
 // overlay
 $overlay-bg           : $color-overlay;
 
-
 // ---------------------------------------------------------------
 //  fixed-bar
 // ---------------------------------------------------------------
-
 // Color
 $fixed-bar-bg         : $color-base;
 
@@ -81,11 +74,10 @@ $fixed-bar-z-index        : $z-index-base;
 // animarion
 $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
 
-
 // ---------------------------------------------------------------
 //  drawer
 // ---------------------------------------------------------------
-.c-drawer{
+.c-drawer {
   position: fixed;
   top: 0;
   z-index: $drawer-z-index;
@@ -95,11 +87,10 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
   background: $drawer-color;
 }
 
-
 // ---------------------------------------------------------------
 //  drawer - side
 // ---------------------------------------------------------------
-.c-drawer.is-right{
+.c-drawer.is-right {
   right: -$drawer-size;
   -webkit-transition: -webkit-transform $animate-speed;
   transition: transform $animate-speed;
@@ -108,7 +99,7 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
   transform: translateX(0);
 }
 
-.c-drawer.is-left{
+.c-drawer.is-left {
   left: -$drawer-size;
   -webkit-transition: -webkit-transform $animate-speed;
   transition: transform $animate-speed;
@@ -117,24 +108,23 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
   transform: translateX(0);
 }
 
-
 // ---------------------------------------------------------------
 //  drawer - is-open
 // ---------------------------------------------------------------
-.c-drawer.is-open{
+.c-drawer.is-open {
   visibility: visible;
   min-height: 667px;
   box-shadow: 0 0 10px rgba(0, 0, 0, .5);
 }
 
-.c-drawer.is-left.is-open{
+.c-drawer.is-left.is-open {
   -webkit-transition: -webkit-transform $animate-speed;
   transition: transform $animate-speed;
   -webkit-transform: translate3d($drawer-size, 0, 0);
   transform: translate3d($drawer-size, 0, 0);
 }
 
-.c-drawer.is-right.is-open{
+.c-drawer.is-right.is-open {
   -webkit-transition: -webkit-transform $animate-speed;
   transition: transform $animate-speed;
   -webkit-transform: translate3d(-$drawer-size, 0, 0);
@@ -144,17 +134,15 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
 // ---------------------------------------------------------------
 //  drawer-inner
 // ---------------------------------------------------------------
-.c-drawer-inner{
+.c-drawer-inner {
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
 }
 
-
-
 // ---------------------------------------------------------------
 //  drawer-overlay
 // ---------------------------------------------------------------
-.c-drawer-overlay{
+.c-drawer-overlay {
   position: fixed;
   top: 0;
   z-index: $overlay-z-index;
@@ -165,50 +153,44 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
   opacity: 0;
 }
 
-
 // ---------------------------------------------------------------
 //  drawer-overlay - is-fadein
 // ---------------------------------------------------------------
-.c-drawer-overlay.is-fadein{
+.c-drawer-overlay.is-fadein {
   display: block;
   opacity: .2;
 }
 
-
-
 // ---------------------------------------------------------------
 //  drawer-btn
 // ---------------------------------------------------------------
-.c-drawer-btn{
+.c-drawer-btn {
   display: block;
   width: $hamburger-menu-size;
   height: $hamburger-menu-size;
   position: absolute;
   top: 50%;
-  right: $margin-large;
+  right: $margin-base * 2;
 }
-
 
 // ---------------------------------------------------------------
 //  drawer-btn - is-right
 // ---------------------------------------------------------------
-.c-drawer-btn.is-right{
+.c-drawer-btn.is-right {
   right: $hamburger-menu-position;
 }
-
 
 // ---------------------------------------------------------------
 //  drawer-btn - is-left
 // ---------------------------------------------------------------
-.c-drawer-btn.is-left{
+.c-drawer-btn.is-left {
   left: $hamburger-menu-position;
 }
-
 
 // ---------------------------------------------------------------
 //  drawer-btn - icon
 // ---------------------------------------------------------------
-.c-drawer-btn__icon{
+.c-drawer-btn__icon {
   position: relative;
   top: $hamburger-menu-position - 1;
   left: 5px;
@@ -219,8 +201,9 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
   background: $hamburger-menu-color;
   transition: background $animate-speed;
 }
-.c-drawer-btn__icon:before
-,.c-drawer-btn__icon:after{
+
+.c-drawer-btn__icon:before,
+.c-drawer-btn__icon:after {
   position: absolute;
   display: block;
   width: $hamburger-bar-size;
@@ -231,38 +214,38 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
   transition: all $animate-speed !important;
   transform: rotate(0deg);
 }
-.c-drawer-btn__icon:before{
+
+.c-drawer-btn__icon:before {
   -webkit-transform: translateY($hamburger-menu-translate-y);
   transform: translateY($hamburger-menu-translate-y);
 }
-.c-drawer-btn__icon:after{
+
+.c-drawer-btn__icon:after {
   -webkit-transform: translateY(-$hamburger-menu-translate-y);
   transform: translateY(-$hamburger-menu-translate-y);
 }
 
-
 // ---------------------------------------------------------------
 //  drawer-btn - icon animation
 // ---------------------------------------------------------------
-.is-open.c-drawer-btn .c-drawer-btn__icon{
+.is-open.c-drawer-btn .c-drawer-btn__icon {
   background: $hamburger-menu-bg;
 }
-.is-open.c-drawer-btn .c-drawer-btn__icon:before{
-  -webkit-transform: translateY(0px) rotate(-45deg);
-  transform: translateY(0px) rotate(-45deg);
-}
-.is-open.c-drawer-btn .c-drawer-btn__icon:after{
-  -webkit-transform: translateY(0px) rotate(45deg);
-  transform: translateY(0px) rotate(45deg);
+
+.is-open.c-drawer-btn .c-drawer-btn__icon:before {
+  -webkit-transform: translateY(0) rotate(-45deg);
+  transform: translateY(0) rotate(-45deg);
 }
 
-
-
+.is-open.c-drawer-btn .c-drawer-btn__icon:after {
+  -webkit-transform: translateY(0) rotate(45deg);
+  transform: translateY(0) rotate(45deg);
+}
 
 // ---------------------------------------------------------------
 //  c-drawer-fixed-bar
 // ---------------------------------------------------------------
-.c-drawer-fixed-bar{
+.c-drawer-fixed-bar {
   position: fixed;
   width: 100%;
   height: $fixed-bar-height;
@@ -275,11 +258,10 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
   transition-property: box-shadow, transform;
 }
 
-
 // ---------------------------------------------------------------
 //  c-drawer-fixed-bar - is-open
 // ---------------------------------------------------------------
-.c-drawer-fixed-bar.is-open{
+.c-drawer-fixed-bar.is-open {
   box-shadow: 0 0 16px rgba(0, 0, 0, .5);
   -webkit-transition: -webkit-transform $animate-speed;
 }
@@ -287,7 +269,7 @@ $fixed-bar-translate      : $fixed-bar-height + $base-size * 2;
 // ---------------------------------------------------------------
 //  c-fixrd-bar - is-slideout
 // ---------------------------------------------------------------
-.c-drawer-fixed-bar.is-slideout{
+.c-drawer-fixed-bar.is-slideout {
   -webkit-transition: -webkit-transform $animate-speed;
   -webkit-transform: translate3d(0, -$fixed-bar-translate, 0);
 }

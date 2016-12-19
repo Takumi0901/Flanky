@@ -1,4 +1,4 @@
-/* 
+/*
 #beadcrumb
 
 ```
@@ -15,35 +15,33 @@
 ```
 
 */
-
-.c-breadcrumb{
+.c-breadcrumb {
   width: 100%;
-  padding: 72px 0 $margin-large;
-  background: $bg-white;
-  color: $text-color-lighten;
-  
-  a{
-   color: $text-color-lighten;
-   
-   &:hover{
-     color: $text-color-link-hover;
-   }
+  padding: $margin-base * 9 0 $margin-base * 2;
+  background: $base-color-white;
+  color: $default-color-lighten-10;
+
+  a {
+    color: $default-color-lighten-10;
+
+    &:hover {
+      color: $default-color-lighten-20;
+    }
   }
 }
 
 // Element
 // --------------------
-.c-breadcrumb__inner{
+.c-breadcrumb__inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 $margin-large;
+  padding: 0 $margin-base * 2;
 }
-
 
 // PC only
 // --------------------
-@media ( min-width : $breakpoint ) {
-  .c-breadcrumb{
-    padding: 72px 0 $margin-large;
+@media (min-width: $breakpoint) {
+  .c-breadcrumb {
+    padding: $margin-base * 9 0 $margin-base * 2;
   }
 }

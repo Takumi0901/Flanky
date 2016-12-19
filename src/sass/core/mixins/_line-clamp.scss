@@ -5,7 +5,7 @@
 // > @include line-clamp(3);
 //
 // ---------------------------------------------------------------
-@mixin line-clamp($size){
+@mixin line-clamp($size) {
   display: box;
   display: -webkit-box;
   overflow: hidden;

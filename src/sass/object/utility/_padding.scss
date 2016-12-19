@@ -1,6 +1,5 @@
 /* ### padding
 --------------------------------------------------------- */
-
 // Top padding
 @for $value from 1 to 10 {
   .u-pt-#{$value * $base-size - $base-size} {

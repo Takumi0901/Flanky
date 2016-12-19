@@ -27,57 +27,58 @@
 ```
 
  */
- .c-menu{
+.c-menu {
   list-style: none;
 }
 
 // Modifier
 // --------------------
-.c-menu--border{
-  border-top: solid 1px $border-lighten;
-  
-  .c-menu__item:last-child{
-    border-bottom: solid 1px $border-lighten;   
+.c-menu--border {
+  border-top: solid 1px $default-color-lighten-20;
+
+  .c-menu__item:last-child {
+    border-bottom: solid 1px $default-color-lighten-20;
   }
 }
 
 // Element
 // --------------------
-.c-menu__item{
-  border-bottom: solid 1px $border-lighten;
+.c-menu__item {
+  border-bottom: solid 1px $default-color-lighten-20;
   position: relative;
-  padding: $margin-small;
+  padding: $margin-base / 2;
   display: block;
-  
-  &:last-child{
+
+  &:last-child {
     border: 0;
   }
 
-  a{
+  a {
     display: block;
-    @include border-radius(4);
-    padding: $margin-base $margin-large-xx $margin-base $margin-base;
+    padding: $margin-base $margin-base * 4 $margin-base $margin-base;
     text-decoration: none;
-    
-    &:hover{
-      background: $bg-default;
+
+    @include border-radius(4);
+
+    &:hover {
+      background: $base-color-lighten;
     }
   }
 
-  a.is-active{
-    background: $bg-primary;
-    color: $text-color-white;
-    
-    &:hover{
-      background: lighten($bg-primary, 10%);
+  a.is-active {
+    background: $primary-color;
+    color: $base-color-white;
+
+    &:hover {
+      background: lighten($primary-color, 10%);
     }
   }
 }
 
-.c-menu__item__icon{
+.c-menu__item__icon {
   position: absolute;
-  right: $margin-large;
+  right: $margin-base * 2;
   top: 50%;
   margin-top: -8px;
-  color: $text-color-lighten;
+  color: $default-color-lighten-10;
 }

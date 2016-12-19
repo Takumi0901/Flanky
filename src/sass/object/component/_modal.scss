@@ -23,7 +23,7 @@
 
  */
 
-.c-modal{
+.c-modal {
   position: fixed;
   left: 0;
   top: 0;
@@ -39,20 +39,21 @@
   -webkit-animation-name: fade-out-100;
 }
 
-.c-modal__panel{
+.c-modal__panel {
   position: relative;
   width: 94%;
-  margin: $margin-large-xxx auto;
+  margin: $margin-base * 5 auto;
   background: #fff;
-  -webkit-box-shadow: 0 0 8px rgba(10,2,4,.5);
-  box-shadow: 0 0 8px rgba(10,2,4,.5);
+  -webkit-box-shadow: 0 0 8px rgba(10, 2, 4, .5);
+  box-shadow: 0 0 8px rgba(10, 2, 4, .5);
+
   @include border-radius(8);
 }
 
 // Container
 // --------------------
-
-.c-modal.is-fadein, .c-modal[aria-clicked="true"] {
+.c-modal.is-fadein,
+.c-modal[aria-clicked="true"] {
   display: block;
   opacity: 1;
   animation-duration: 0.5s;
@@ -61,7 +62,7 @@
   -webkit-animation-name: fade-in-100;
 }
 
-.c-modal.is-fadeout{
+.c-modal.is-fadeout {
   opacity: 0;
   animation-duration: 0.5s;
   animation-name: fade-out-100;
@@ -69,10 +70,9 @@
   -webkit-animation-name: fade-out-100;
 }
 
-
 // Overlay
 // --------------------
-.c-modal__overlay{
+.c-modal__overlay {
   display: block;
   z-index: -1;
   background: rgba(0, 0, 0, .6);
@@ -83,50 +83,46 @@
   height: 100%;
 }
 
-
-.c-modal__header{
-  border-bottom: 1px solid $border-lighten;
-  padding: $margin-large;
+.c-modal__header {
+  border-bottom: 1px solid $default-color-lighten-20;
+  padding: $margin-base * 2;
   font-weight: bold;
   font-size: 16px;
 }
 
-.c-modal__content{
+.c-modal__content {
   position: relative;
-  padding: $margin-large;
+  padding: $margin-base * 2;
   min-height: 300px;
 }
 
-.c-modal__bottom{
-  border-top: 1px solid $border-lighten;
-  padding: $margin-large;
+.c-modal__bottom {
+  border-top: 1px solid $default-color-lighten-20;
+  padding: $margin-base * 2;
   text-align: right;
 }
 
-.c-modal__close{
+.c-modal__close {
   position: absolute;
   top: 16px;
   right: 16px;
   font-size: 20px;
-  
-  &--circle{
+
+  &--circle {
     top: -38px;
     font-size: 16px;
   }
 }
 
-
 // Full
 // --------------------
-
-.c-modal--full{
+.c-modal--full {
   width: 100%;
   left: 0;
 }
 
-
-@media ( min-width : $breakpoint ) {
-  .c-modal__panel{
+@media (min-width: $breakpoint) {
+  .c-modal__panel {
     width: 80%;
   }
 }

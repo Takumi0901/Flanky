@@ -10,30 +10,28 @@
 
 */
 
-.c-title{
+.c-title {
   position: relative;
 }
 
-
 // Modifier
 // --------------------
-.c-title--primary{
+.c-title--primary {
   font-size: 18px;
   font-weight: 700;
 }
 
-.c-title--secondary{
+.c-title--secondary {
   font-size: 16px;
   font-weight: 700;
 }
 
-
 // Element
 // --------------------
-.c-title__sub-text{
-  color: $text-color-lighten;
+.c-title__sub-text {
+  color: $default-color-lighten-10;
   font-size: 12px;
   display: inline-block;
-  margin-left: $margin-large;
+  margin-left: $margin-base * 2;
   font-weight: normal;
 }

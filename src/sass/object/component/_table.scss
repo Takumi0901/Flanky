@@ -28,48 +28,57 @@
 
  */
 
-.c-table{
+.c-table {
   width: 100%;
 
-  td,th{
+  td,
+  th {
     text-align: left;
     padding: $margin-base;
   }
-  tr{
-    border-bottom: solid 1px $border-lighten;
+
+  tr {
+    border-bottom: solid 1px $default-color-lighten-20;
   }
-  tr:last-child{
+
+  tr:last-child {
     border-bottom: none;
   }
-  tr:hover{
-    background: $bg-default;
+
+  tr:hover {
+    background: $base-color-lighten;
   }
 }
-
 
 // Modifier
 // --------------------
-.c-table--bordered{
+.c-table--bordered {
   width: 100%;
 
-  td,th{
+  td,
+  th {
     text-align: left;
     padding: $margin-base;
-    border-left: solid 1px $border-lighten;
+    border-left: solid 1px $default-color-lighten-20;
   }
-  td:first-child,th:first-child{
+
+  td:first-child,
+  th:first-child {
     border: 0;
   }
-  tr{
-    border-bottom: solid 1px $border-lighten;
+
+  tr {
+    border-bottom: solid 1px $default-color-lighten-20;
   }
-  tr:last-child{
+
+  tr:last-child {
     border-bottom: none;
   }
 }
 
-.c-table--padding{
-  td,th{
-    padding: $margin-large $margin-base;
+.c-table--padding {
+  td,
+  th {
+    padding: $margin-base * 2 $margin-base;
   }
 }

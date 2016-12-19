@@ -1,8 +1,9 @@
-html,body {
+html,
+body {
   overflow-y: hidden;
 }
 
-html{
+html {
   background: $base-color;
 }
 
@@ -14,43 +15,49 @@ body {
   font-size: $font-size-base;
   font-family: $font-family-base;
   line-height: $line-height-base;
-  -webkit-text-size-adjust: 100%
+  -webkit-text-size-adjust: 100%;
 }
 
-address{
+address {
   font-style: normal;
 }
 
 a {
-  color: inherit;
   cursor: pointer;
   color: $base-color-text;
-  
-  &:link{
+
+  &:link {
     color: $base-color-text;
   }
-  
-  &:hover, &:focus, &:active {
-    color: $text-color-link-hover;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $default-color-lighten-20;
     text-decoration: none;
   }
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin-bottom: $margin-base;
 }
 
-p{
+p {
   margin-bottom: $margin-base;
 }
 
-input[type="radio"]{
-  margin-left: $margin-large;
+input[type="radio"] {
+  margin-left: $margin-base * 2;
   margin-right: $margin-base;
 }
 
-@media ( min-width : $breakpoint ) {
-  a:hover img{
+@media (min-width: $breakpoint) {
+  a:hover img {
     @include opacity(.7);
   }
 }

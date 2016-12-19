@@ -16,19 +16,18 @@
 
  */
 
-.c-hero{
-  margin: 0 0 $margin-large-xx;
-  padding: $margin-large-xx $margin-large $margin-large;
-  border-bottom: 2px solid $border-lighten;
-  border-top: 2px solid $border-lighten;
+.c-hero {
+  margin: 0 0 $margin-base * 4;
+  padding: $margin-base * 4 $margin-base * 2 $margin-base * 2;
+  border-bottom: 2px solid $default-color-lighten-20;
+  border-top: 2px solid $default-color-lighten-20;
   position: relative;
 }
 
-
 // Modifier
 // --------------------
-.c-hero--anim{
-  background: linear-gradient(270deg, $hero-color-a, $hero-color-b);
+.c-hero--anim {
+  background: linear-gradient(270deg, $primary-color, $secondary-color);
   background-size: 400% 400%;
   -webkit-animation: bgAnimation 30s ease infinite;
   -moz-animation: bgAnimation 30s ease infinite;
@@ -37,47 +36,46 @@
   position: relative;
 }
 
-.c-hero--bg{
+.c-hero--bg {
   background-size: 120%;
   height: 0;
   padding-top: 40%;
 }
 
-
 // Element
 // --------------------
-.c-hero__inner{
+.c-hero__inner {
   width: auto;
-  padding: 0 $margin-large;
+  padding: 0 $margin-base * 2;
 }
 
-.c-hero__inner__title{
+.c-hero__inner__title {
   font-size: 32px;
   font-weight: normal;
-  margin-bottom: $margin-large;
-  color: $text-color-white;
+  margin-bottom: $margin-base * 2;
+  color: $base-color-white;
 }
 
-.c-hero__inner__text{
-  margin-bottom: $margin-large;
-  color: $text-color-white;
+.c-hero__inner__text {
+  margin-bottom: $margin-base * 2;
+  color: $base-color-white;
 }
 
-.c-hero__icon{
+.c-hero__icon {
   position: absolute;
   bottom: -8%;
   left: 10%;
-  border: solid $border-white 2px;
+  border: solid $base-color-white 2px;
+
   @include box-shadow(0, 0, 12px, 0, rgba(10, 2, 4, .40));
 }
 
-
 // PC only
 // --------------------
-@media ( min-width : $breakpoint ) {
-  .c-hero__inner{
+@media (min-width: $breakpoint) {
+  .c-hero__inner {
     max-width: $max-width;
     margin: 0 auto;
-    padding: 0 $margin-large 0 $margin-large-xxxx;
+    padding: 0 $margin-base * 2 0 $margin-base * 6;
   }
 }
