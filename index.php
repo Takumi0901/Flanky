@@ -237,12 +237,14 @@
         <a class="c-btn c-btn-default--border" href="#">ボタン</a>
         <a class="c-btn c-btn-primary--border" href="#">ボタン</a>
         <a class="c-btn c-btn-highlight--border" href="#">ボタン</a>
+        <a class="c-btn c-btn-info--border" href="#">ボタン</a>
         <a class="c-btn c-btn-default--ghost" href="#">ボタン</a>
       </p>
       <p>
         <a class="c-btn c-btn-default--flat" href="#">ボタン</a>
         <a class="c-btn c-btn-primary--flat" href="#">ボタン</a>
         <a class="c-btn c-btn-highlight--flat" href="#">ボタン</a>
+        <a class="c-btn c-btn-info--flat" href="#">ボタン</a>
       </p>
 
       <p>

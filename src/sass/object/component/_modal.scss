@@ -84,7 +84,7 @@
 }
 
 .c-modal__header {
-  border-bottom: 1px solid $border-lighten;
+  border-bottom: 1px solid $default-color-lighten-20;
   padding: $margin-base * 2;
   font-weight: bold;
   font-size: 16px;
@@ -97,7 +97,7 @@
 }
 
 .c-modal__bottom {
-  border-top: 1px solid $border-lighten;
+  border-top: 1px solid $default-color-lighten-20;
   padding: $margin-base * 2;
   text-align: right;
 }

@@ -34,17 +34,17 @@
 // Modifier
 // --------------------
 .c-menu--border {
-  border-top: solid 1px $border-lighten;
+  border-top: solid 1px $default-color-lighten-20;
 
   .c-menu__item:last-child {
-    border-bottom: solid 1px $border-lighten;
+    border-bottom: solid 1px $default-color-lighten-20;
   }
 }
 
 // Element
 // --------------------
 .c-menu__item {
-  border-bottom: solid 1px $border-lighten;
+  border-bottom: solid 1px $default-color-lighten-20;
   position: relative;
   padding: $margin-base / 2;
   display: block;
@@ -61,16 +61,16 @@
     @include border-radius(4);
 
     &:hover {
-      background: $bg-default;
+      background: $base-color-lighten;
     }
   }
 
   a.is-active {
-    background: $bg-primary;
-    color: $text-color-white;
+    background: $primary-color;
+    color: $base-color-white;
 
     &:hover {
-      background: lighten($bg-primary, 10%);
+      background: lighten($primary-color, 10%);
     }
   }
 }
@@ -80,5 +80,5 @@
   right: $margin-base * 2;
   top: 50%;
   margin-top: -8px;
-  color: $text-color-lighten;
+  color: $default-color-lighten-10;
 }

@@ -7,17 +7,17 @@
 
  */
 .c-alert {
-  color: $text-color-alert;
-  background: $bg-alert-b;
-  border: solid 1px $border-alert;
+  color: $highlight-color;
+  background: $highlight-color-lighten-30;
+  border: solid 1px $highlight-color;
   padding: $margin-base $margin-base * 2;
 }
 
 // Modifier
 // --------------------
 .c-alert--success {
-  color: $text-color-success;
-  background: $bg-success;
-  border: solid 1px $border-success;
+  color: $secondary-color;
+  background: $secondary-color-lighten-30;
+  border: solid 1px $secondary-color;
   padding: $margin-base $margin-base * 2;
 }

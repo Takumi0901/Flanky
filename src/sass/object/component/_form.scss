@@ -12,9 +12,9 @@ formデザイン
   input[type=email],
   textarea,
   select {
-    background: $bg-white;
+    background: $base-color-white;
     display: block;
-    border: solid 1px $border-lighten;
+    border: solid 1px $default-color-lighten-20;
     padding: $margin-base $margin-base * 2;
     width: 100%;
     -webkit-appearance: none;
@@ -36,7 +36,7 @@ formデザイン
     top: 50%;
     left: $margin-base;
     margin-top: -9px;
-    color: $text-color-lighten;
+    color: $default-color-lighten-10;
   }
 }
 
@@ -54,7 +54,7 @@ formデザイン
   width: 0;
   position: absolute;
   pointer-events: none;
-  border-top-color: $border-dark;
+  border-top-color: $default-color-darken;
   border-width: 6px;
   margin-left: 6px;
 }
@@ -65,9 +65,9 @@ formデザイン
 }
 
 .c-form__reqiured {
-  background: $bg-alert;
+  background: $highlight-color;
   font-size: 10px;
-  color: $text-color-white;
+  color: $base-color-white;
   padding: $margin-base / 2 $margin-base;
   margin: 0 $margin-base / 2;
   vertical-align: 1px;
@@ -111,15 +111,15 @@ formデザイン
   width: 24px;
   height: 24px;
   min-height: 24px;
-  border: solid 1px $border-white;
+  border: solid 1px $base-color-white;
   vertical-align: text-bottom;
   text-indent: -99999em;
 
-  @include box-shadow(0, 0, 1px, 0, $border-default);
+  @include box-shadow(0, 0, 1px, 0, $default-color);
 }
 
 .c-form input[type=checkbox].c-form__color-picker:checked + label {
-  border: solid 2px $border-dark;
+  border: solid 2px $default-color-darken;
 }
 
 .c-form input[type=checkbox].c-form__color-picker:checked + label::after,
@@ -204,7 +204,7 @@ formデザイン
   width: 100%;
 
   tr {
-    border-bottom: solid 1px $border-lighten;
+    border-bottom: solid 1px $default-color-lighten-20;
   }
 
   tr:last-child {
@@ -234,8 +234,8 @@ formデザイン
 }
 
 .c-form__table--border {
-  border-top: solid 1px $border-lighten;
-  border-bottom: solid 1px $border-lighten;
+  border-top: solid 1px $default-color-lighten-20;
+  border-bottom: solid 1px $default-color-lighten-20;
 }
 
 // PC only
@@ -243,19 +243,19 @@ formデザイン
 @media (min-width: $breakpoint) {
   .c-form__table {
 
-    th{
+    th {
       width: 30%;
       position: relative;
       display: table-cell;
     }
 
-    td{
+    td {
       width: 70%;
       display: table-cell;
       padding: $margin-base * 2 $margin-base * 2;
     }
 
-    .c-form__reqiured{
+    .c-form__reqiured {
       position: absolute;
       top: 50%;
       right: $margin-base * 2;

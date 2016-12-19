@@ -8,7 +8,7 @@
 .c-label {
   display: inline-block;
   padding: $margin-base / 2 $margin-base * 2;
-  background: $bg-secondary;
+  background: $secondary-color;
   font-size: 12px;
   margin-left: $margin-base / 2;
 
@@ -18,5 +18,5 @@
 // Modifier
 // --------------------
 .c-label--disable {
-  background: $bg-default;
+  background: $base-color-lighten;
 }

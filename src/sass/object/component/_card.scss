@@ -26,7 +26,7 @@ containerと併用して使う
 .c-card {
   display: block;
   width: 100%;
-  background: $card-color;
+  background: $base-color-white;
   margin-bottom: $margin-base * 2;
   position: relative;
 
@@ -42,7 +42,7 @@ containerと併用して使う
 // Element
 // --------------------
 .c-card__header {
-  border-bottom: 1px solid $border-lighten;
+  border-bottom: 1px solid $default-color-lighten-20;
   padding: $margin-base * 2 $margin-base * 2 0;
 }
 
@@ -58,7 +58,7 @@ containerと併用して使う
   }
 
   &--border {
-    border-top: 1px solid $border-lighten;
+    border-top: 1px solid $default-color-lighten-20;
   }
 }
 
@@ -67,7 +67,7 @@ containerと併用して使う
 }
 
 .c-card__bottom {
-  border-top: 1px solid $border-lighten;
+  border-top: 1px solid $default-color-lighten-20;
   padding: $margin-base $margin-base * 2;
   margin: 0;
 
@@ -79,44 +79,4 @@ containerと併用して使う
 .c-card__thumb {
   width: 100%;
   margin-bottom: 0;
-}
-
-// Modifier - mark
-// --------------------
-.c-card__check-mark {
-  position: absolute;
-  top: -$margin-base * 2;
-  right: -$margin-base * 2;
-  font-size: 32px;
-  text-align: center;
-  color: $text-color-white;
-  background: $bg-default-darken;
-  width: 48px;
-
-  @include middle-line(48);
-  @include border-radius-per(100%);
-  @include box-shadow(0, 0, 10px, 0, rgba(10, 2, 4, .30));
-
-  &.is-active {
-    background: $bg-success;
-  }
-}
-
-.c-card__favorite-mark {
-  position: absolute;
-  top: -$margin-base * 2;
-  right: -$margin-base * 2;
-  font-size: 24px;
-  text-align: center;
-  color: $text-color-white;
-  background: $bg-default-darken;
-  width: 48px;
-
-  @include middle-line(48);
-  @include border-radius-per(100%);
-  @include box-shadow(0, 0, 10px, 0, rgba(10, 2, 4, .30));
-
-  &.is-active {
-    background: $bg-highlight;
-  }
 }

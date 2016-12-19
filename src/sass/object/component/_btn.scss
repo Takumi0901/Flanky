@@ -62,41 +62,49 @@
 // Modifier - border
 // --------------------
 .c-btn-default--border {
-  @include button-border-color($border-default, $base-color-text, 2px);
+  @include button-border-color($default-color, $base-color-text, 2px);
 }
 
 .c-btn-primary--border {
-  @include button-border-color($border-primary, $text-color-primary, 2px);
+  @include button-border-color($primary-color, $primary-color, 2px);
 }
 
 .c-btn-secondary--border {
-  @include button-border-color($border-secondary, $text-color-secondary, 2px);
+  @include button-border-color($secondary-color, $secondary-color, 2px);
 }
 
 .c-btn-highlight--border {
-  @include button-border-color($border-highlight, $text-color-highlight, 2px);
+  @include button-border-color($highlight-color, $highlight-color, 2px);
+}
+
+.c-btn-info--border {
+  @include button-border-color($info-color, $info-color, 2px);
 }
 
 .c-btn-default--ghost {
-  @include button-ghost-color($border-white, $text-color-primary, 2px);
+  @include button-ghost-color($base-color-white, $primary-color, 2px);
 }
 
 // Modifier - flat
 // --------------------
 .c-btn-default--flat {
-  @include button-flat-color($base-color-text, $bg-white, $border-lighten, 1px);
+  @include button-flat-color($base-color-text, $base-color-white, $default-color-lighten-20, 1px);
 }
 
 .c-btn-primary--flat {
-  @include button-flat-color($text-color-white, $bg-primary, $border-primary, 1px);
+  @include button-flat-color($base-color-white, $primary-color, $primary-color, 1px);
 }
 
 .c-btn-secondary--flat {
-  @include button-flat-color($text-color-white, $bg-secondary, $border-secondary, 1px);
+  @include button-flat-color($base-color-white, $secondary-color, $secondary-color, 1px);
 }
 
 .c-btn-highlight--flat {
-  @include button-flat-color($text-color-white, $bg-highlight, $border-highlight, 1px);
+  @include button-flat-color($base-color-white, $highlight-color, $highlight-color, 1px);
+}
+
+.c-btn-info--flat {
+  @include button-flat-color($base-color-white, $info-color, $info-color, 1px);
 }
 
 // Modifier - size
@@ -145,7 +153,7 @@
 // Block - panel
 // --------------------
 .c-btn-panel {
-  background: $bg-white;
+  background: $base-color-white;
   padding: $margin-base * 4;
   display: block;
   -webkit-transition: -webkit-transform .3s;
@@ -157,12 +165,12 @@
   &:link,
   &:active,
   &:visited {
-    color: $text-color-primary;
+    color: $primary-color;
     text-decoration: none;
   }
 
   &:hover {
-    color: $text-color-primary;
+    color: $primary-color;
     text-decoration: none;
     -webkit-transition: -webkit-transform .3s;
     transition: transform .3s;

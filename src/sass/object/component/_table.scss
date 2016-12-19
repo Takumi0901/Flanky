@@ -38,7 +38,7 @@
   }
 
   tr {
-    border-bottom: solid 1px $border-lighten;
+    border-bottom: solid 1px $default-color-lighten-20;
   }
 
   tr:last-child {
@@ -46,7 +46,7 @@
   }
 
   tr:hover {
-    background: $bg-default;
+    background: $base-color-lighten;
   }
 }
 
@@ -59,7 +59,7 @@
   th {
     text-align: left;
     padding: $margin-base;
-    border-left: solid 1px $border-lighten;
+    border-left: solid 1px $default-color-lighten-20;
   }
 
   td:first-child,
@@ -68,7 +68,7 @@
   }
 
   tr {
-    border-bottom: solid 1px $border-lighten;
+    border-bottom: solid 1px $default-color-lighten-20;
   }
 
   tr:last-child {

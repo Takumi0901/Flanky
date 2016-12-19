@@ -13,8 +13,8 @@
 
 .c-bar {
   display: block;
-  background: $bg-white;
-  border-bottom: 1px solid $border-lighten;
+  background: $base-color-white;
+  border-bottom: 1px solid $default-color-lighten-20;
 
   @include middle-line(56);
 
@@ -31,11 +31,11 @@
   // --------------------
   &--small {
     @include middle-line(32);
-    color: $text-color-white;
+    color: $base-color-white;
   }
 
   &--black {
-    background: $bg-primary;
+    background: $primary-color;
   }
 
   &--fixed-bottom {
@@ -43,7 +43,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    border-top: 1px solid $border-lighten;
+    border-top: 1px solid $default-color-lighten-20;
   }
 }
 
@@ -59,7 +59,7 @@
   display: block;
 
   &:hover {
-    background: $bg-default;
+    background: $base-color-lighten;
   }
 }
 

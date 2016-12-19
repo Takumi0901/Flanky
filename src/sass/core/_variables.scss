@@ -1,91 +1,74 @@
 // ---------------------------------------------------------------
 //  Base-Size
 // ---------------------------------------------------------------
-$base-size:                     8;
-$max-width:                     1200px;
-$breakpoint:                    768px;
+$base-size: 8;
+$max-width: 1200px;
+$breakpoint: 768px;
 
 // ---------------------------------------------------------------
 //  Font
 // ---------------------------------------------------------------
-$font-family-base:              Arial,"Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
-$font-size-base:                14px;
+$font-family-base: Arial, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+$font-size-base: 14px;
 
 // ---------------------------------------------------------------
 //  Line-hieght
 // ---------------------------------------------------------------
-$line-height-base:              1.4;
+$line-height-base: 1.4;
 
 // ---------------------------------------------------------------
 //  Base-color
 // ---------------------------------------------------------------
-$base-color:                    #f1f1f1;
-$base-color-lighten:            #f9f9f9;
-$base-color-white:              #fff;
-$base-color-text:               #515151;
-$base-color-border:             #9e9e9e;
-$base-alert:                    #f73b6a;
-$base-success:                  #3c763d;
+$base-color: #f1f1f1;
+$base-color-lighten: #f9f9f9;
+$base-color-white: #fff;
+$base-color-text: #515151;
 
 // ---------------------------------------------------------------
 //  Content-color
 // ---------------------------------------------------------------
-$primary-color:                 #4bd5f2;
-$secondary-color:               #2dd885;
-$highlight-color:               #f24b4b;
+$default-color: #aeaeae;
+$primary-color: #4bd5f2;
+$secondary-color: #2dd885;
+$highlight-color: #f24b4b;
+$info-color: #f2e04b;
 
+//  Content-color default
 // ---------------------------------------------------------------
-//  Card
-// ---------------------------------------------------------------
-$card-color:                    $base-color-white;
+$default-color-darken: darken($default-color, 30%);
+$default-color-lighten-10: lighten($default-color, 10%);
+$default-color-lighten-20: lighten($default-color, 20%);
+$default-color-lighten-30: lighten($default-color, 30%);
 
+//  Content-color primary
 // ---------------------------------------------------------------
-//  Text-color
-// ---------------------------------------------------------------
-$text-color-white:              $base-color-white;
-$text-color-lighten:            lighten($base-color-text, 40%);
-$text-color-link-hover:         lighten($base-color-text, 30%);
+$primary-color-darken: darken($primary-color, 30%);
+$primary-color-lighten-10: lighten($primary-color, 10%);
+$primary-color-lighten-20: lighten($primary-color, 20%);
+$primary-color-lighten-30: lighten($primary-color, 30%);
 
-$text-color-primary:            $primary-color;
-$text-color-secondary:          $secondary-color;
-$text-color-highlight:          $highlight-color;
-$text-color-alert:              $base-alert;
-$text-color-success:            $base-success;
+//  Content-color secondary
+// ---------------------------------------------------------------
+$secondary-color-darken: darken($secondary-color, 30%);
+$secondary-color-lighten-10: lighten($secondary-color, 10%);
+$secondary-color-lighten-20: lighten($secondary-color, 20%);
+$secondary-color-lighten-30: lighten($secondary-color, 30%);
 
+//  Content-color highlight
 // ---------------------------------------------------------------
-//  Background-color
-// ---------------------------------------------------------------
-$bg-white:                      $base-color-white;
-$bg-default:                    $base-color-lighten;
-$bg-default-darken:             darken($bg-default, 10%);
-$bg-primary:                    $primary-color;
-$bg-secondary:                  $secondary-color;
-$bg-highlight:                  $highlight-color;
-$bg-alert:                      $base-alert;
-$bg-alert-b:                    lighten($base-alert, 35%);
-$bg-success:                    lighten($base-success, 20%);
+$highlight-color-darken: darken($highlight-color, 30%);
+$highlight-color-lighten-10: lighten($highlight-color, 10%);
+$highlight-color-lighten-20: lighten($highlight-color, 20%);
+$highlight-color-lighten-30: lighten($highlight-color, 30%);
 
+//  Content-color info
 // ---------------------------------------------------------------
-//  Border-color
-// ---------------------------------------------------------------
-$border-white:                  $base-color-white;
-$border-default:                $base-color-border;
-$border-dark:                   darken($border-default, 35%);
-$border-lighten:                lighten($border-default, 28%);
-
-$border-primary:                $primary-color;
-$border-secondary:              $secondary-color;
-$border-highlight:              $highlight-color;
-$border-alert:                  lighten($base-alert, 30%);
-$border-success:                lighten($base-success, 30%);
-
-// ---------------------------------------------------------------
-//  Hero
-// ---------------------------------------------------------------
-$hero-color-a:                  $primary-color;
-$hero-color-b:                  $secondary-color;
+$info-color-darken: darken($info-color, 30%);
+$info-color-lighten-10: lighten($info-color, 10%);
+$info-color-lighten-20: lighten($info-color, 20%);
+$info-color-lighten-30: lighten($info-color, 30%);
 
 // ---------------------------------------------------------------
 //  Margin
 // ---------------------------------------------------------------
-$margin-base:                   $base-size * 1px;
+$margin-base: $base-size * 1px;

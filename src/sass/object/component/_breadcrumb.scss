@@ -18,14 +18,14 @@
 .c-breadcrumb {
   width: 100%;
   padding: $margin-base * 9 0 $margin-base * 2;
-  background: $bg-white;
-  color: $text-color-lighten;
+  background: $base-color-white;
+  color: $default-color-lighten-10;
 
   a {
-    color: $text-color-lighten;
+    color: $default-color-lighten-10;
 
     &:hover {
-      color: $text-color-link-hover;
+      color: $default-color-lighten-20;
     }
   }
 }

@@ -37,7 +37,7 @@
   &__menu {
     width: 100%;
     list-style: none;
-    border-bottom: solid 1px $border-lighten;
+    border-bottom: solid 1px $default-color-lighten-20;
     margin-bottom: $margin-base * 2;
 
     &__item {
@@ -61,11 +61,11 @@
     display: inline-block;
     padding: $margin-base * 2 $margin-base * 4;
     text-decoration: none;
-    color: $text-color-lighten;
+    color: $default-color-lighten-10;
     outline: none;
 
     &:hover {
-      color: $text-color-primary;
+      color: $primary-color;
       text-decoration: none;
     }
   }
@@ -104,8 +104,8 @@
 
 .c-tab__menu__item.is-active .c-tab__btn,
 .c-tab__btn[aria-selected="true"] {
-  border-bottom: solid 2px $border-primary;
-  color: $text-color-primary;
+  border-bottom: solid 2px $primary-color;
+  color: $primary-color;
   position: relative;
 
   &:after {
@@ -117,7 +117,7 @@
     width: 0;
     position: absolute;
     pointer-events: none;
-    border-top-color: $bg-primary;
+    border-top-color: $primary-color;
     border-width: 8px;
     margin-left: -8px;
   }

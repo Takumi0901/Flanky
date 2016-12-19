@@ -8,12 +8,12 @@
 */
 .c-thumb {
   padding: $margin-base / 2;
-  border: 2px solid $border-lighten;
+  border: 2px solid $default-color-lighten-20;
 
   &:hover,
   &.is-active {
-    background: $border-default;
-    border-color: $border-default;
+    background: $default-color;
+    border-color: $default-color;
   }
 }
 
@@ -22,7 +22,7 @@
 .c-thumb--small,
 .c-thumb--medium {
   padding: 2px;
-  border: 1px solid $border-lighten;
+  border: 1px solid $default-color-lighten-20;
 }
 
 .c-thumb--max-200 {

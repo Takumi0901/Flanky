@@ -10,9 +10,9 @@
 $base-width             : 300px;
 
 // Color
-$color-base             : $bg-white;
-$color-primary          : $text-color-primary;
-$color-secondary        : $bg-white;
+$color-base             : $base-color-white;
+$color-primary          : $primary-color;
+$color-secondary        : $base-color-white;
 $color-overlay          : #000;
 
 // z-index
@@ -31,7 +31,7 @@ $hamburger-line-thickness   : 1px;
 //  hamburger-menu
 // ---------------------------------------------------------------
 // Color
-$hamburger-menu-color     : $text-color-primary;
+$hamburger-menu-color     : $primary-color;
 $hamburger-menu-bg        : $color-base;
 
 // Size

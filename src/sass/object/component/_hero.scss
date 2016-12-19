@@ -19,15 +19,15 @@
 .c-hero {
   margin: 0 0 $margin-base * 4;
   padding: $margin-base * 4 $margin-base * 2 $margin-base * 2;
-  border-bottom: 2px solid $border-lighten;
-  border-top: 2px solid $border-lighten;
+  border-bottom: 2px solid $default-color-lighten-20;
+  border-top: 2px solid $default-color-lighten-20;
   position: relative;
 }
 
 // Modifier
 // --------------------
 .c-hero--anim {
-  background: linear-gradient(270deg, $hero-color-a, $hero-color-b);
+  background: linear-gradient(270deg, $primary-color, $secondary-color);
   background-size: 400% 400%;
   -webkit-animation: bgAnimation 30s ease infinite;
   -moz-animation: bgAnimation 30s ease infinite;
@@ -53,19 +53,19 @@
   font-size: 32px;
   font-weight: normal;
   margin-bottom: $margin-base * 2;
-  color: $text-color-white;
+  color: $base-color-white;
 }
 
 .c-hero__inner__text {
   margin-bottom: $margin-base * 2;
-  color: $text-color-white;
+  color: $base-color-white;
 }
 
 .c-hero__icon {
   position: absolute;
   bottom: -8%;
   left: 10%;
-  border: solid $border-white 2px;
+  border: solid $base-color-white 2px;
 
   @include box-shadow(0, 0, 12px, 0, rgba(10, 2, 4, .40));
 }
