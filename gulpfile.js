@@ -14,6 +14,7 @@ gulp.task('sass', function() {
   .pipe(plumber())
   .on('error', sass.logError)
   .pipe(gulp.dest('dist/css'))
+  .pipe(gulp.dest('docs/assets/css'))
   .pipe(header('@charset "utf-8";\n'))
   .pipe(cssmin())
   .pipe(rename({
@@ -24,6 +25,7 @@ gulp.task('sass', function() {
     sourceRoot: '../../src/sass/'
   }))
   .pipe(gulp.dest('dist/css'))
+  .pipe(gulp.dest('docs/assets/css'))
 });
 
 // gulp.task('styledocco', function() {
@@ -42,7 +44,7 @@ gulp.task('watch', function(){
     gulp.run('sass');
   });
     // gulp.watch('css/app.css', function(event) {
-    //     gulp.run('styledocco');
+    //     gulp.run('styledocco');å
     // });
   });
 
